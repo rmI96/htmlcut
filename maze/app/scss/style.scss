@@ -1,0 +1,73 @@
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* GLOBAL SETTINGS */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+html {
+	height: auto;
+}
+
+body {
+	height: auto;
+	overflow: visible;
+}
+
+body ::selection {
+	color: #fff;
+	background: #000;
+}
+
+body ::-moz-selection {
+	color: #fff;
+	background: #000;
+}
+
+.swiper-slide:not(:first-child) {
+	display: block;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* OTHERS STYLES */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+@import 'variables';
+
+@import "popups";
+@import "swiper";
+@import "map";
+@import "form";
+@import 'transitions';
+@import "elements";
+@import "img-tx";
+@import "footer";
+
+
+body.ie{
+	.header-burger{
+		max-width: 40px;
+		position: absolute;
+		top: 50%;
+		right: 120px;
+		transform: translateY(-50%);
+	}
+	.header-logo{
+		height: 68px;
+	}
+	.header .header-logo .dark img{
+		max-width: 500px;
+	}
+	.header.header-light .header-logo .dark{
+		max-width: 500px;
+	}
+	.partners-thumbnail .image{
+		top: -65%;
+	}
+	.mapplic-element{
+		height: 800px!important;
+		.mapplic-map{
+			height: 800px!important;
+		}
+	}
+
+}
+
+

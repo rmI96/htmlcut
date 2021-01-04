@@ -1,0 +1,120 @@
+home (change) (./index.php) - done
+products categorie (./products-categories.php) - done
+products categorie 2 (./products-categorie-2.php) - done
+products (products.php) - done
+product detail (product-detail.php) - done (fix) -----------------
+product detail (type 2) (product-detail-2.php) - done
+compare (/compare.php) - done (menu)
+documentation (/documentation.php) - done
+Payment and delivery (/payment-delivery.php) - done
+news (/news.php) - done
+news detail (/news-detail.php) - done  
+news detail (without banner) (/news-detail-without-banner.php) - done
+Useful Information (/useful-information.php) - done
+Useful Information detail (/useful-information-detail.php) - done
+dealers (/dealers.php) - done (fix) -----------------
+contacts (/contacts.php) - done
+
+about us (/about-us.php) - done 
+production (/production.php) - done
+certificates (/certificates.php) - done 
+fleet (/fleet.php) - done
+product areas (/product-areas.php) - done
+our partners (/our-partners.php) - done
+
+privacy policy (/privacy-policy.php) - done 
+search results (/search-results.php) - done
+404 (/404.php) - done 
+calculator (/calculator.php) - done 
+simple page (calculator) (/simple-page-calculator.php) - done
+
+
+profile (/profile.php) - done
+catalog (/catalog.php) - done
+Order history (/order-history.php) - done 
+Order history 2 (/order-history-2.php) - done 
+Order history detail (/profile-history-detail.php) - done 
+Order (/order.php) - done
+
+
+------------------------------------------------------------------------
+
+home (change) 				(./index.php) - done
+
+
+------------------------------------------------------------------------
+
+products categorie -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/products-categories.php)
+
+products categorie 2 -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/products-categorie-2.php)
+
+products -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/products.php)
+
+product detail -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/product-detail.php)
+
+product detail (type 2)  --  (http://moonart.net.ua/htmlcut/roman_i/eurobud/product-detail-2.php)
+
+compare (http://moonart.net.ua/htmlcut/roman_i/eurobud/compare.php)
+
+documentation -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/documentation.php)
+
+Payment and delivery -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/payment-delivery.php)
+
+news -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/news.php)
+
+news detail -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/news-detail.php)
+
+news detail (without banner) -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/news-detail-without-banner.php)
+
+Useful Information -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/useful-information.php)
+
+Useful Information detail -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/useful-information-detail.php)
+
+dealers -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/dealers.php)
+
+contacts -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/contacts.php)
+
+about us -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/about-us.php)
+
+production -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/production.php)
+
+certificates -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/certificates.php) -
+
+fleet -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/fleet.php)
+
+product areas -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/product-areas.php)
+
+our partners -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/our-partners.php)
+
+privacy policy -- (http://moonart.net.ua/htmlcut/roman_i/eurobud//privacy-policy.php)
+
+search results -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/search-results.php)
+
+404	-- (http://moonart.net.ua/htmlcut/roman_i/eurobud/404.php) 
+
+calculator -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/calculator.php)
+
+simple page calculator -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/simple-page-calculator.php)
+
+profile -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/profile.php)
+
+catalog -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/catalog.php)
+
+Order history -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/order-history.php)
+
+Order history 2 -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/order-history-2.php)
+
+Order history detail -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/profile-history-detail.php)
+
+Order -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/order.php)
+
+
+
+--------------------------------------
+
+dorobki
+
+calculator -- (http://moonart.net.ua/htmlcut/roman_i/eurobud/calculator.php)  (Logic) -----------------------------
+
+
+compare (http://moonart.net.ua/htmlcut/roman_i/eurobud/compare.php) - done (menu) -----------------

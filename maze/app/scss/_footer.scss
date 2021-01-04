@@ -1,0 +1,60 @@
+/*==========  Footer Style  ==========*/
+
+.footer{
+	background-color: $lightBrow;
+	&-inner{
+		padding: 60px 0;
+		border-top: 1px solid $darkBlue;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+/*==========  Hover  ==========*/
+
+// @media (min-width: 1200px){}
+
+/*==========  MEDIA QUERIES  ==========*/
+
+@media (max-width: 1600px), (max-height: 800px){
+	.footer{
+		&-inner{
+			padding: 40px 0;
+		}
+	}
+}
+
+@media (max-width: 1368px){
+	.footer{
+		&-inner{
+			padding: 30px 0;
+		}
+	}
+}
+
+// @media (max-width: 1199px){}
+
+// @media (max-width: 991px){}
+
+// @media (max-width: 768px){}
+    
+@media (max-width: 575px){
+
+	.footer{
+		&-inner{
+			flex-wrap: wrap;
+			justify-content: center;
+			padding: 20px 0;
+		}
+		&-copyright{
+			flex: 0 0 100%;
+			text-align: center;
+			margin-top: 10px;
+		}
+	}
+
+}
+
+        
+

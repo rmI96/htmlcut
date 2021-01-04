@@ -1,0 +1,293 @@
+
+/*==========  TYPOGRAPHY  ==========*/
+	
+body
+	font-family: $mainFont
+	color: #505348
+b, strong
+	font-weight: 700
+a:hover
+	text-decoration: none
+ul, ol
+	list-style: none
+body, .text
+	font-size: 18px
+	font-weight: 300
+	line-height: 1.5em
+
+.text-sm
+	font-size: 16px
+	line-height: 1.6em
+.text-md
+	font-size: 13px
+.text-lg
+	font-size: 20px
+	line-height: 1.6em
+
+.text-light
+	font-weight: 300
+.text-regular
+	font-weight: 400
+.text-midle
+	font-weight: 500
+
+.text > *
+	margin-bottom: 30px
+.text > *:last-child
+	margin-bottom: 0
+.text img
+	max-width: 100%
+	height: auto
+	display: block
+.text ol
+	counter-reset: number
+.text ol li
+	padding-left: 40px
+	margin-bottom: 25px
+	position: relative
+	&:last-of-type
+		margin-bottom: 0
+.text ol li:before
+	counter-increment: number
+	content: '0' counter(number) '.'
+	position: absolute
+	top: 0.05em
+	left: 12px
+	font-weight: 600
+	font-size: 14px
+	color: #707810
+.text ul li
+	padding-left: 40px
+	margin-bottom: 25px
+	position: relative
+	&:last-of-type
+		margin-bottom: 0
+
+.text ul li:before
+	content: ""
+	display: inline-block
+	background-color: #707810
+	background-repeat: no-repeat
+	background-size: contain
+	width: 6px
+	height: 6px
+	border-radius: 50%
+	vertical-align: middle
+	position: absolute
+	left: 17px
+	top: 0.55em
+
+.text blockquote
+	background-color: #ffffff
+	border-radius: 27px
+	color: #707810
+	font-size: 22px
+	line-height: 1.4em
+	padding: 35px 35px 35px 80px
+	border: 1px solid #ebebeb
+	font-weight: 700
+	position: relative
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		height: calc(100% - 80px)
+		width: 3px
+		background-image: linear-gradient(52deg, #91b428 0%, #4f981e 100%)
+		top: 50%
+		transform: translateY(-50%)
+		left: 55px
+.text
+	iframe
+		width: 100%
+		height: 480px
+		max-height: calc(56.3vw - 30px)
+
+.text u 
+	text-decoration: none
+	color: #293202
+	text-transform: uppercase
+
+.text b
+	font-weight: 700
+	color: #707810
+
+.text-2 b
+	color: #293202
+
+.text a 
+	font-weight: 700
+	color: #707810
+	text-decoration: none
+
+.text
+	table
+		border-left: 1px solid #d1d1d1
+		border-top: 1px solid #d1d1d1
+		border-spacing: 0
+		text-align: left
+	th, td
+		padding: 8px
+		border-right: 1px solid #d1d1d1
+		border-bottom: 1px solid #d1d1d1
+	th	
+
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6
+	font-weight: 700
+	color: #293202
+
+h1, .h1
+	font-size: 88px
+	line-height: 1.2em
+
+h2, .h2
+	font-size: 72px
+	line-height: 1.2em
+h3, .h3
+	font-size: 42px
+	line-height: 1.2em
+h4, .h4
+	font-size: 32px
+	line-height: 1.2em
+	&.sm
+		font-size: 28px
+h5, .h5
+	font-size: 22px
+	line-height: 1.4em
+h6, .h6
+	font-size: 18px
+	line-height: 1.4em
+
+.text-left
+	text-align: left
+.text-center
+	text-align: center
+.text-right
+	text-align: right
+
+.color-primary
+	color: #505348 
+.color-secondary
+	color: #293202
+.color-dark
+	color: #242815
+.color-light
+	color: #ffffff
+.color-green
+	color: #707810
+.color-grey
+	color: #676767
+
+.title-wrapper
+	position: relative
+	display: inline-block
+	max-width: 900px
+	margin-bottom: 5px
+.desc-section
+	display: inline-block
+	max-width: 900px
+	margin-top: 30px
+.decor-title
+	font-family: $decorFont, cursive
+	position: relative
+	font-weight: 300
+	line-height: 0.95em
+	&.mr-bottom
+		margin-bottom: 15px
+.bg-title
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -85%)
+	font-size: 130px
+	font-weight: 900
+	color: #f4f4f4
+	white-space: nowrap
+.sub-title
+	font-size: 14px
+	text-transform: uppercase
+	font-weight: 700
+	color: #707810
+	letter-spacing: 3px
+	position: relative
+
+.title-mr-bt
+	margin-bottom: 70px
+
+
+
+/*==========  Hover  ==========*/
+
+@media (min-width: 1200px)
+	.text a:hover
+		opacity: 0.8
+
+
+/*==========  MEDIA QUERIES  ==========*/
+
+@media (max-width: 1368px)
+	h1, .h1
+		font-size: 68px
+	h2, .h2
+		font-size: 62px
+	.bg-title
+		font-size: 100px
+	.title-mr-bt
+		margin-bottom: 50px
+
+@media (max-width: 1199px)
+	.title-mr-bt
+		margin-bottom: 30px
+	.bg-title
+		display: none
+	h2, .h2
+		font-size: 50px
+	h3, .h3
+		font-size: 28px
+	h4, .h4
+		font-size: 24px
+	h5, .h5
+		font-size: 20px
+
+	.text-left-lg
+		text-align: left
+
+	.text > *
+		margin-bottom: 20px
+
+	.text blockquote
+		font-size: 18px
+		padding: 20px 25px 20px 25px
+		&::before
+			display: none
+
+// @media (max-width: 991px)
+
+@media (max-width: 768px)
+	.text 
+		font-size: 16px
+	.text-lg
+		font-size: 16px
+	h1, .h1
+		font-size: 50px
+	.sub-title
+		font-size: 12px
+
+@media (max-width: 575px)
+	.text
+		font-size: 14px
+	.text > *
+		margin-bottom: 15px
+	h2, .h2
+		font-size: 34px
+	.sub-title
+		font-size: 10px
+	.text 
+		ol li
+			margin-bottom: 15px
+		ul li
+			margin-bottom: 15px
+	.text blockquote
+		font-size: 16px
+		padding: 20px

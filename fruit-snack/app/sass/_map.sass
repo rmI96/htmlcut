@@ -1,0 +1,155 @@
+/*==========  Map Style  ==========*/
+
+.map-popup
+	.popup-container
+		border-radius: 0
+	.btn-close
+		top: -18px
+		right: -18px
+	.popup-align
+		padding: 20px
+		position: relative
+
+.block-map
+	position: relative
+	padding-bottom: 45%
+	border-radius: 20px
+	overflow: hidden
+	.map-wrapper 
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+.infoBox > img
+	position: absolute!important
+	top: -8px
+	right: -8px
+	z-index: 2
+	transition: 0.2s
+.informer-map
+	display: flex
+	justify-content: space-between
+	align-items: center
+	width: 100%
+	position: relative
+	&::before
+		content: ''
+		display: block
+		width: 12px
+		height: 12px
+		background-color: #ffffff
+		position: absolute
+		margin-top: -6px
+		top: 50%
+		left: -6px
+		transform: rotate(45deg)
+	.info
+		background-color: #ffffff
+		padding: 15px 30px
+		text-align: left
+		p 
+			color: #505348
+			font-size: 14px
+			margin-top: 8px
+	.image
+		line-height: 0
+		width: 105px
+		img 
+			max-width: 100%
+.info-box
+	background-color: #ffffff
+	text-align: center
+	h5
+		color: #fff
+		font-size: 14px
+		line-height: 22px
+		margin-bottom: 5px
+	p
+		font-size: 13px 
+		line-height: 22px 
+		color: rgba(255,255,255,.7)
+.autocomplete-map
+	position: absolute
+	top: 40px
+	left: 40px
+	width: 100%
+	max-width: 320px
+	z-index: 4444
+	input
+		height: 55px
+		background-color: #ffffff
+		border-radius: 28px
+		font-size: 16px
+		color: #111111
+		padding-left: 75px
+		padding-right: 15px
+		outline: none
+		&::placeholder
+			font-size: 16px
+			color: #293202
+	.icon
+		display: inline-block
+		position: absolute
+		left: 0
+		height: 100%
+		width: 60px
+		border-right: 1px solid #f2f2f2
+		img
+			max-width: 18px
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+
+.pac-container
+	z-index: 666!important
+	background: #fff
+	border-radius: 0
+	.pac-item
+		margin: 0
+		padding: 0 15px
+		border-top: 1px solid #eee
+		font-size: 14px
+		color: #000
+		line-height: 40px
+		font-weight: 300
+		position: relative
+		display: block
+		cursor: pointer
+		transition: all 0.3s ease-in-out
+		&:nth-child(1)
+			border-top: none
+	&.pac-logo:after
+		content: none
+.pac-icon-marker
+	display: none!important
+.pac-item-query
+	font-size: 16px
+	transition: all 0.3s ease-in-out
+
+/*==========  Hover  ==========*/
+
+@media (min-width: 1200px)
+	.infoBox > img:hover
+		opacity: 0.96
+
+/*==========  MEDIA QUERIES  ==========*/
+
+
+@media (max-width: 768px)      
+	.block-map
+		padding-bottom: 100%
+	.autocomplete-map 
+		max-width: calc(100% - 60px)
+		top: 30px
+		left: 30px
+		.icon
+			width: 50px
+		input
+			height: 50px
+			padding-left: 65px
+
+@media (max-width: 575px)
+	.map-popup .popup-align
+		padding: 14px

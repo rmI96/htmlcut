@@ -1,0 +1,150 @@
+/*==========  Form Style  ==========*/
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+	color: $greyText;
+	opacity: 1;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+	color: $greyText;
+	opacity: 1;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+	color: $greyText;
+	opacity: 1;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+	color: $greyText;
+	opacity: 1;
+}
+
+input, textarea, select {
+	border-radius: 0;
+	background: none;
+	border: none;
+	margin: 0;
+	width: 100%;
+	padding: 0;
+}
+
+textarea {
+	display: block;
+	resize: none;
+	overflow: auto;
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+.input {
+	font-size: 15px;
+	height: 51px;
+	border: 1px solid $greyText2;
+	line-height: 51px;
+	padding: 0 15px;
+	outline: none;
+	font-size: 18px;
+	color: $darkText;
+	transition: 0.22s;
+	&::placeholder{
+		font-size: 18px;
+	}
+	&:focus{
+    	border-color: $greyText2;
+    	box-shadow: 0px 0px 0px 1px $greyText2;
+    }
+}
+
+textarea.input {
+	height: 80px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	line-height: 18px;
+}
+
+.invalid {
+	border-color: red;
+	color: red;
+}
+
+.form-group{
+	.input{
+		margin-bottom: 15px;
+	}
+}
+.form-group.row{
+	margin: 0 -7.5px;
+	> div{
+		padding: 0 7.5px;
+	}
+}
+
+
+.form input:not([type=submit]):not([type=file]) {
+	height: 50px;
+	padding: 0 18px;
+	background-color: rgba(1, 1, 1, 0);
+	margin-bottom: 15px;
+	outline: none;
+	border: 1px solid #d9d9d9;
+	border-radius: 5px;
+	transition: 0.1s;
+}
+
+.form input:not([type=submit]):not([type=file])::placeholder {
+	color: #4c4c4c;
+	font-size: 16px;
+}
+
+.form input:not([type=submit]):not([type=file]):focus {
+	border-color: #aaaaaa;
+}
+
+.form input:not([type=submit]):not([type=file]).error {
+	background-color: rgba(246, 96, 92, 0.15);
+	border: 1px solid #fbb6b4;
+	color: rgba(246, 96, 92, 0.7);
+}
+
+form .btn {
+	position: relative;
+}
+
+form .btn input[type=submit] {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	border: none;
+	cursor: pointer;
+	z-index: 1;
+}
+
+
+/*==========  Hover  ==========*/
+
+// @media (min-width: 1200px)
+
+/*==========  MEDIA QUERIES  ==========*/
+
+// @media (max-width: 1368px)
+
+// @media (max-width: 1199px)
+
+// @media (max-width: 991px)
+
+// @media (max-width: 768px)
+            
+// @media (max-width: 575px)
+
+        
+

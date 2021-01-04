@@ -1,0 +1,235 @@
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* GLOBAL SETTINGS */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* main */
+@import "vars";
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+#content-block {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1 0 auto
+}
+
+.footer {
+  flex: 0 0 auto
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+html.overflow-hidden {
+  body {
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1250px
+  }
+}
+
+@media (min-width: 1590px) {
+  .container {
+    max-width: 1590px
+  }
+}
+
+.container-sm {
+  max-width: 1330px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide:not(:first-child) {
+  display: none;
+}
+
+.bg-center {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* spacers */
+.spacer-header {
+  height: 130px;
+  @media (max-width: 1399px) {
+    height: 130px
+  }
+  @media (max-width: 1329px) {
+    height: 60px
+  }
+}
+
+[class*="spacer-"] {
+  margin: 0!important
+}
+
+/*social*/
+.social-list {
+  display: flex;
+  align-items: center;
+}
+
+.social-link {
+  margin-right: 40px;
+  @media (min-width: 992px) {
+    &:hover {
+      svg {
+        fill: $color-blue;
+      }
+    }
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+  svg {
+    display: block;
+    fill: $color-secondary;
+    transition: all .2s ease;
+  }
+}
+
+/*language*/
+.lang {
+  position: relative;
+  width: 77px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  z-index: 2;
+  @media (max-width: 1329px) {
+    z-index: 1;
+  }
+  &:hover {
+    .current-lang {
+      &:after {
+        transform: none;
+      }
+    }
+    ul {
+      top: -13px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  .current-lang {
+    position: relative;
+    padding: 5px 37px 5px 15px;
+    z-index: 2;
+    cursor: pointer;
+    &:after {
+      position: absolute;
+      content: '';
+      top: 8px;
+      right: 16px;
+      width: 10px;
+      height: 6px;
+      background: url("../img/chevron-up.svg") no-repeat center;
+      background-size: 100% auto;
+      transform: rotate(180deg);
+      transition: all .3s linear;
+    }
+  }
+  ul {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    right: 0;
+    border: 1px solid #E6E6E6;
+    padding: 45px 15px 16px;
+    background-color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    transition: all .3s linear;
+  }
+  a {
+    @media (min-width: 992px) {
+      &:hover {
+        color: $color-blue;
+      }
+    }
+  }
+}
+
+/*cookie*/
+.cookie-message {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #CACACA;
+  background-color: $color-secondary;
+  font-weight: 400;
+  z-index: 11;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1560px;
+    margin: 0 auto;
+    padding: 10px 15px;
+    @media (max-width: 767px) {
+      padding: 15px;
+    }
+  }
+  .text {
+    margin-right: 15px;
+    line-height: 1.5;
+    a {
+      color: #FFFFFF;
+      font-weight: 500;
+      text-decoration: underline;
+      border-bottom: none;
+      @media (min-width: 992px) {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

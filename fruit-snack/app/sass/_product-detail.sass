@@ -1,0 +1,197 @@
+/*==========  Product detail Style  ==========*/
+
+.product-detail
+    .breadcrumbs
+        padding: 0 11%
+        margin-top: 18px
+        margin-bottom: 100px
+        a
+            color: #505348
+            &:after
+                background: #505348
+        li
+            &:last-of-type
+                a
+                    color: #293202
+.product-detail-row
+    display: flex
+    justify-content: center
+.product-detail-inner
+    position: relative
+    .product-image
+        flex: 0 0 345px
+        line-height: 0
+        img 
+            max-width: 100%
+    .product-info
+        padding-left: 100px
+        flex: 0 1 550px
+    .name
+        margin-bottom: 30px
+    .text
+        margin-bottom: 35px
+    .amount
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 25px
+    .price-wrapper
+        text-align: left
+        padding-left: 15px
+        .price
+            display: inline-block
+            color: #707810
+            font-size: 26px
+        .old-price
+            display: inline-block
+            margin-left: 15px
+            font-weight: 500
+            font-size: 16px
+            color: #293202
+            text-decoration: line-through
+
+.product-btn-prev
+    height: 330px
+    width: 165px
+    position: absolute
+    margin-top: -165px
+    top: 50%
+    left: 0
+    z-index: 4
+    .circle
+        display: inline-block
+        position: absolute
+        right: 0
+        top: 0
+        width: 200%
+        height: 100%
+        border-radius: 50%
+        background-color: #eac28b
+    .icon-product
+        display: inline-block
+        width: 90px
+        position: absolute
+        top: 50%
+        right: 0
+        transform: translate(30%, -50%)
+        img 
+            max-width: 100%
+    .icon-arr
+        display: inline-block
+        width: 45px
+        line-height: 0
+        position: absolute
+        top: 50%
+        transform: translate(0, -50%)
+        left: 25px
+        img 
+            max-width: 100%
+.product-btn-next
+    height: 330px
+    width: 165px
+    position: absolute
+    margin-top: -165px
+    top: 50%
+    right: 0
+    z-index: 4
+    .circle
+        display: inline-block
+        position: absolute
+        left: 0
+        top: 0
+        width: 200%
+        height: 100%
+        border-radius: 50%
+        background-color: #eac28b
+    .icon-product
+        display: inline-block
+        width: 90px
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translate(-30%, -50%)
+        img 
+            max-width: 100%
+    .icon-arr
+        display: inline-block
+        width: 45px
+        line-height: 0
+        position: absolute
+        top: 50%
+        transform: translate(0, -50%)
+        right: 25px
+        img 
+            max-width: 100%
+
+
+
+
+
+/*==========  Hover  ==========*/
+
+@media (min-width: 1200px)
+    .product-detail .breadcrumbs a:hover
+        color: #293202
+    .product-btn-next .icon-arr:hover,
+    .product-btn-prev .icon-arr:hover
+        opacity: 0.6
+
+
+/*==========  MEDIA QUERIES  ==========*/
+@media (max-width: 1368px)
+    .product-detail 
+        .breadcrumbs
+            margin-bottom: 50px
+    .product-btn-next
+        height: 260px
+        width: 130px
+        .icon-product
+            width: 70px
+        .icon-arr
+            right: 15px
+    .product-btn-prev
+        height: 260px
+        width: 130px
+        .icon-product
+            width: 70px
+        .icon-arr
+            left: 15px
+    .product-detail-inner .product-info
+        padding-left: 30px
+
+@media (max-width: 1199px)
+    .product-detail
+        padding-top: 60px
+    .product-detail-inner 
+        .text
+            margin-bottom: 25px
+        .amount
+            margin-bottom: 25px
+        .name
+            margin-bottom: 25px
+    .product-btn-next,
+    .product-btn-prev
+        display: none
+
+// @media (max-width: 991px)
+
+@media (max-width: 768px)
+    .product-detail-row
+        flex-wrap: wrap  
+    .product-detail-inner 
+        .product-image
+            flex: 0 1 300px
+        .product-info
+            flex: 0 0 100%
+            padding-left: 0
+            margin-top: 30px
+            
+@media (max-width: 575px)
+    .product-detail
+        padding-top: 40px
+    .product-detail-inner 
+        .product-image
+            flex: 0 1 70%
+
+
+

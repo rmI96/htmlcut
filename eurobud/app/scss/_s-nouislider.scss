@@ -1,0 +1,63 @@
+/*==========  nouislider Style  ==========*/
+
+.slider-range.noUi-horizontal{
+    height: 2px;
+    margin-bottom: 40px;
+    &.noUi-target {
+        box-shadow: none;
+        border-radius: 0;
+        border: 0;
+        background-color: #EEEEEE;
+    }
+    .noUi-handle {
+        width: 12px;
+        height: 12px;
+        right: -6px!important;
+        top: -5px;
+        border: 0;
+        background: $color-blue;
+        border-radius: 0;
+        box-shadow: none;
+        cursor: pointer;
+        backface-visibility: hidden;
+        &:after{
+            display: none;
+        }
+        &:before{
+            display: none;
+        }
+    }
+    .noUi-connect{
+        background-color: $color-blue;
+    }
+    .noUi-tooltip{
+      border: 0;
+      font-size: 16px;
+      font-weight: 700;
+      color: $color-blue;
+      background: rgba(1,1,1,0);
+      bottom: auto;
+      top: 120%;
+      backface-visibility: hidden;
+    }
+}
+
+/*==========  Hover  ==========*/
+
+@media (min-width: 1200px){
+}
+
+/*==========  MEDIA QUERIES  ==========*/
+
+@media (max-width: 1368px){}
+
+@media (max-width: 1199px){}
+
+@media (max-width: 991px){}
+
+@media (max-width: 768px){}
+    
+@media (max-width: 575px){}
+
+        
+

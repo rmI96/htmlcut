@@ -1,0 +1,128 @@
+/*==========  Swiper Style  ==========*/
+
+.swiper-entry {
+	position: relative;
+}
+
+.swiper-container {
+	z-index: auto;
+}
+
+.swiper-container:not(.swiper-no-swiping) .swiper-wrapper {
+	cursor: url(../img/drag.png) 16 9, ew-resize;
+}
+
+.swiper-container-vertical:not(.swiper-no-swiping) .swiper-wrapper {
+	cursor: url(../img/drag-vertical.png) 8 16, ns-resize;
+}
+
+.swiper-pagination {
+	line-height: 0;
+	z-index: 2;
+}
+
+.swiper-pagination.swiper-pagination-relative {
+	position: relative;
+	margin-top: 20px;
+	bottom: auto;
+}
+
+.single-slide-swiper .swiper-container .swiper-wrapper {
+	cursor: default;
+}
+
+.cs-swiper{
+	.swiper-pagination{
+		position: absolute;
+		top: 15px;
+		right: 0;
+	}
+	.swiper-pagination-bullet{
+		width: 26px;
+		height: 26px;
+		border: 2px solid #fff;
+		outline: none;
+		opacity: 1;
+		background-color: rgba(1,1,1,0);
+		position: relative;
+		margin: 0 0 0 35px;
+		transition: $transition;
+		&:after{
+			content: '';
+			display: block;
+			position: absolute;
+			width: 0;
+    		height: 0;
+			background-color: #fff;
+			border-radius: 50%;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			transition: $transition; 
+		}
+		&:active{
+			transform: scale(0.92);
+		}
+		&.swiper-pagination-bullet-active{
+			&:after{
+				width: 60%;
+				height: 60%;
+			}
+		}
+	}
+}
+
+/*==========  Hover  ==========*/
+
+@media (min-width: 1200px){
+	.cs-swiper .swiper-pagination-bullet:hover{
+		&:after{
+			width: 60%;
+			height: 60%;
+		}
+	}
+}
+
+/*==========  MEDIA QUERIES  ==========*/
+
+@media (max-width: 1600px), (max-height: 800px){
+	.cs-swiper{
+		.swiper-pagination-bullet{
+			width: 20px;
+			height: 20px;
+			margin-left: 20px;
+		}
+	} 
+}
+
+@media (max-width: 1368px){
+	.cs-swiper{
+		.swiper-pagination-bullet{
+			width: 18px;
+			height: 18px;
+			margin-left: 15px;
+		}
+	}
+}
+
+@media (max-width: 1199px), (max-height: 599px){
+	.cs-swiper{
+		.swiper-pagination{
+			position: static;
+			margin-top: 30px;
+		}
+		.swiper-pagination-bullet{
+			margin: 0 8px;
+		}
+	}
+	
+	
+}
+
+// @media (max-width: 991px){}
+
+// @media (max-width: 768px){}
+            
+// @media (max-width: 575px){}
+
+

@@ -1,0 +1,194 @@
+/*==========  lightbox Style  ==========*/
+
+.lg-backdrop{
+    background-color: #fff;
+}
+
+.lg-outer{
+    .lg-sub-html{
+        top: 0;
+        bottom: auto;
+        text-align: left;
+        font-weight: 500;
+        font-size: 18px;
+        background: #fff;
+        color: #1F1F1F;
+        padding-left: 60px;
+        padding-right: 60px;
+        background: rgba(1,1,1,0);
+    }
+    .lg-toolbar{
+        background: rgba(1,1,1,0);
+        transform: none;
+        opacity: 1;
+        .lg-close{
+            width: 56px;
+            height: 56px;
+            background-color: #034EA2;
+            padding: 0;
+            position: relative;
+            font-size: 18px;
+            transform: none;
+            transition: $transition;
+            &:after{
+                content: "\02715";
+                color: #ffffff;
+                line-height: 0;
+                position: absolute;
+                top: 48%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+    .lg-pager-outer{
+        bottom: 60px;
+    }
+    .lg-pager-cont{
+        margin: 0 20px;
+    }
+    .lg-pager{
+        width: 10px;
+        height: 10px;
+        border: 2px solid rgba(225, 225, 225, 0.9);
+        background: rgba(1,1,1,0);
+        opacity: 1;
+        box-shadow: none!important;
+        transition: $transition;
+    }
+    .lg-pager-thumb-cont{
+        display: none;
+    }
+    .lg-pager-cont.lg-pager-active .lg-pager{
+        background-color: $color-blue;
+        border-color: $color-blue;
+    }
+
+    .lg-actions{
+        .lg-next,
+        .lg-prev{
+            width: 70px;
+            height: 70px;
+            border: 1px solid #E1E1E1;
+            font-size: 0px!important;
+            transition: $transition; 
+            background: #fff;
+            box-sizing: border-box;
+            padding: 0;
+            opacity: 1;
+            transform: none;
+            &:before{
+                content: '';
+                width: 26px;
+                height: 18px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: $transition;
+            }
+        }
+        .lg-prev{
+            left: 60px;
+            &:before{
+                background: url("../img/arrow-left.svg") no-repeat left center;
+            }
+        }
+        .lg-next{
+            right: 60px;
+            &:before{
+                background: url("../img/arrow-right.svg") no-repeat right center;
+            }
+        }
+    }
+
+}
+
+
+/*==========  Hover  ==========*/
+
+@media (min-width: 1200px){
+    .sl-wrapper button:hover {
+        opacity: 1;
+    }
+
+    .lg-outer .lg-actions .lg-next:hover, 
+    .lg-outer .lg-actions .lg-prev:hover{
+        box-shadow: inset 0 0 0 1px #E1E1E1;
+        &:before{
+            width: 18px;
+        }
+    }
+    .lg-outer .lg-toolbar .lg-close:hover{
+        background-color: #003775;
+    }
+    .lg-outer .lg-pager:hover{
+        border-color: $color-blue;
+    }
+}
+
+/*==========  MEDIA QUERIES  ==========*/
+
+@media (max-width: 1368px){}
+
+@media (max-width: 1199px){
+    .lg-outer{
+        .lg-toolbar{
+            .lg-close{
+                width: 45px;
+                height: 45px;
+            }
+        }
+        .lg-actions{
+            .lg-next,
+            .lg-prev{
+                width: 50px;
+                height: 50px;
+            }
+            .lg-next{
+                right: 15px
+            }
+            .lg-prev{
+                left: 15px;
+            }
+        }
+        .lg-sub-html{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .lg-pager-outer{
+            bottom: 15px;
+        }
+        .lg-pager-cont{
+            margin: 0 10px;
+        }
+    }
+}
+
+@media (max-width: 991px){}
+
+@media (max-width: 768px){
+
+    .lg-outer{
+
+        .lg-actions{
+            .lg-next,
+            .lg-prev{
+                display: none;
+            }
+        }
+
+        .lg-pager-cont{
+            margin: 0 5px;
+        }
+    }
+}
+    
+@media (max-width: 575px){
+    .sl-wrapper .sl-navigation button{
+        display: none!important;
+    }
+}
+
+        
+

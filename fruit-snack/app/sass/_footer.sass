@@ -1,0 +1,112 @@
+/*==========  Footer Style  ==========*/
+.footer
+    background-color: #ffffff
+    &-inner
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 10px 0
+    &-menu
+        li
+            display: inline-block
+            padding: 0 25px
+            border-right: 1px solid #e5e5e5
+            line-height: 1.2em
+            &:last-of-type
+                border-right: 0
+            a 
+                text-decoration: none
+                color: #505348
+                font-size: 15px
+    .logo-wrap
+        display: flex
+        align-items: center
+    .logo
+        width: 70px
+        display: block
+        line-height: 0
+        margin-right: 15px
+        img 
+            max-width: 100%
+    .copyright
+        font-size: 14px
+        color: #505348
+    .cart-wrap
+        display: flex
+        .icon
+            display: inline-block
+            width: 55px
+            height: 30px
+            border: 1px solid #ebebeb
+            border-radius: 4px
+            text-align: center
+            margin-right: 10px
+            &:last-of-type
+                margin-right: 0
+            img 
+                max-width: 55%
+                height: 100%
+    .develope
+        display: flex
+        align-items: center
+        color: #505348
+        text-decoration: none
+        font-size: 14px
+        transition: 0.3s
+        position: relative
+        .image
+            width: 70px
+            display: block
+            margin-left: 10px
+            line-height: 0 
+            img
+                max-width: 100%
+
+
+/*==========  Hover  ==========*/
+
+@media (min-width: 1200px)
+    .footer .develope:hover
+        color: $mainColor
+    .footer-menu li a:hover
+        color: $mainColor
+
+/*==========  MEDIA QUERIES  ==========*/
+
+// @media (max-width: 1368px)
+
+// @media (max-width: 1199px)
+
+@media (max-width: 991px)
+    .footer-inner
+        flex-wrap: wrap
+        justify-content: center
+        .logo
+            margin-right: 0
+            margin-bottom: 10px
+        .logo-wrap
+            flex-wrap: wrap
+            justify-content: center
+        .copyright
+            flex: 0 0 100%
+            text-align: center 
+            margin-bottom: 10px
+        .cart-wrap
+            flex: 0 0 100%
+            justify-content: center
+            margin-bottom: 10px
+        .footer-menu
+            flex: 0 0 100%
+            text-align: center
+            margin-bottom: 10px
+            li 
+                padding: 0 15px
+                a
+                    font-size: 14px
+
+// @media (max-width: 768px)
+    
+// @media (max-width: 575px)
+
+        
+

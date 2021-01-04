@@ -1,0 +1,90 @@
+/*==========  Swiper Style  ==========*/
+
+.swiper-entry 
+	position: relative
+.swiper-container
+	z-index: auto
+	&:not(.swiper-no-swiping)
+		.swiper-wrapper
+			cursor: url(../img/drag.png) 16 9, ew-resize 
+.swiper-container-vertical 
+	&:not(.swiper-no-swiping)
+		.swiper-wrapper
+			cursor: url(../img/drag-vertical.png) 8 16, ns-resize 
+.swiper-pagination 
+	line-height: 0
+	z-index: 2 
+	&.swiper-pagination-relative 
+		position: relative 
+		margin-top: 20px
+		bottom: auto
+
+.single-slide-swiper .swiper-container .swiper-wrapper
+	cursor: default
+.style-default
+	.swiper-pagination
+		position: static
+		margin-top: 60px
+		padding: 2px 0
+	.swiper-pagination-bullet
+		background-color: #a3a6a3
+		opacity: 1
+		transition: 0.3s
+		border-radius: 50%
+		outline: none
+	.swiper-pagination-bullet-active
+		background-image: linear-gradient(52deg, #91b428 0%, #4f981e 100%)
+		transform: scale(1.4)
+	.swiper-container-horizontal>.swiper-pagination-bullets 
+		.swiper-pagination-bullet
+			margin: 0 20px
+	.swiper-button-next, 
+	.swiper-button-prev
+		background-image: none
+		width: 45px
+		height: 12px
+		margin-top: -6px
+		line-height: 0
+		outline: none
+		transition: 0.3s
+		.icon
+			line-height: 0
+			img
+				max-width: 100%
+	.swiper-button-next
+		right: -75px 
+	.swiper-button-prev
+		left: -75px
+
+
+/*==========  Hover  ==========*/
+
+@media (min-width: 1200px)
+	.style-default
+		.swiper-pagination-bullet:hover
+			background-image: linear-gradient(52deg, #91b428 0%, #4f981e 100%)
+			transform: scale(1.4)
+	.style-default .swiper-button-next:hover, 
+	.style-default .swiper-button-prev:hover
+		opacity: 0.6
+
+/*==========  MEDIA QUERIES  ==========*/
+
+// @media (max-width: 1368px)
+
+@media (max-width: 1199px)
+	.style-default 
+		.swiper-pagination
+			margin-top: 30px
+		.swiper-container-horizontal 
+			> .swiper-pagination-bullets 
+				.swiper-pagination-bullet
+					margin: 0 10px
+
+// @media (max-width: 991px)
+
+// @media (max-width: 768px)
+            
+// @media (max-width: 575px)
+
+

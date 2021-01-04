@@ -1,0 +1,341 @@
+
+/*==========  TYPOGRAPHY  ==========*/
+	
+body {
+	font-family: $mainFont;
+	color: #111111;
+}
+
+.secondary-font{
+	font-family: $SecondaryFont;
+}
+
+b, strong {
+	font-weight: 700;
+}
+
+a, a:link, a:visited, a:active, a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+}
+a {
+    color: inherit;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+body, .text {
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 1.4em;
+}
+
+.text-sm {
+	font-size: 18px;
+	line-height: 1.5em;
+}
+
+.text-lg {
+	font-size: 22px;
+	line-height: 1.5em;
+}
+
+.text-xl {
+	font-size: 26px;
+	line-height: 1.3em;
+}
+
+.text-light {
+	font-weight: 300;
+}
+
+.text > * {
+	margin-bottom: 25px;
+}
+
+.text > *:last-child {
+	margin-bottom: 0;
+}
+
+.text img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+.text a{
+	color: $darkText;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.text ol {
+	counter-reset: number;
+}
+
+.text ol li {
+	padding-left: 0;
+	margin-bottom: 15px;
+	position: relative;
+}
+
+.text ol li:last-of-type {
+	margin-bottom: 0;
+}
+
+.text ol li:before {
+	counter-increment: number;
+	content: "0" counter(number) ".";
+	margin-right: 8px;
+	font-weight: 700;
+	font-size: 0.8em;
+	color: $darkText;
+}
+
+
+
+.text ul li {
+	margin-bottom: 5px;
+	position: relative;
+}
+
+.text ul li:last-of-type {
+	margin-bottom: 0;
+}
+
+.text ul li:before {
+	content: "";
+	display: inline-block;
+	background-color: currentColor;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	margin-right: 8px;
+	vertical-align: middle;
+}
+
+.style-list2{
+	ul li{
+		padding-left: 18px;
+		position: relative;
+		&:before{
+			content: "-";
+			display: inline;
+			background-color: rgba(1,1,1,0);
+			position: absolute;
+			left: 0;
+			top: 0.04em;
+		}
+	} 
+}
+
+.text blockquote {
+	color: $darkText;
+	font-size: 20px;
+	padding: 5px 5px 5px 25px;
+	border-left: 4px solid $darkText;
+	font-weight: 700;
+}
+
+.text > iframe {
+	width: 100%;
+	height: 480px;
+	max-height: calc(56.3vw - 30px);
+}
+.text{
+	table{
+		border-left: 1px solid #d1d1d1;
+		border-top: 1px solid #d1d1d1;
+		border-spacing: 0;
+		text-align: left;
+	}
+	th, td{
+		padding: 8px;
+		border-right: 1px solid #d1d1d1;
+		border-bottom: 1px solid #d1d1d1;
+	}
+}
+
+.text b {
+	font-weight: 700;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-weight: 400;
+	font-family: $SecondaryFont;
+}
+
+.text{
+	h1, h2, h3, h4, h5, h6{
+		color: $darkBlue;
+		font-weight: 700;
+	}
+}
+
+h1, .h1 {
+	font-size: 72px;
+	line-height: 1.2em;
+}
+
+h2, .h2 {
+	font-size: 65px;
+	line-height: 1.2em;
+}
+
+h3, .h3 {
+	font-size: 40px;
+	line-height: 1.2em;
+}
+
+h4, .h4 {
+	font-size: 34px;
+	line-height: 1.2em;
+}
+
+h5, .h5 {
+	font-size: 24px;
+	line-height: 1.4em;
+}
+
+h6, .h6 {
+	font-size: 18px;
+	line-height: 1.4em;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.color-primary {
+	color: #1f1f1f;
+}
+
+.color-dark {
+	color: $darkText;
+}
+
+.color-light{
+	color: $lightText;
+}
+
+.color-grey{
+	color: $greyText;
+}
+.color-brow{
+	color: $browText;
+}
+
+.light-brow{
+	color: $lightBrow;
+}
+.dark-blue{
+	color: $darkBlue;
+}
+
+
+/*==========  Hover  ==========*/
+
+@media (min-width: 1200px){
+	.text a:hover{
+		opacity: 0.8;
+	}
+}
+
+
+/*==========  MEDIA QUERIES  ==========*/
+
+@media (max-width: 1600px), (max-height: 800px) {
+	h1, .h1{
+		font-size: 56px;
+	}
+	h2, .h2{
+		font-size: 52px;
+	}
+	h3, .h3{
+		font-size: 32px;
+	}
+	h4, .h4{
+		font-size: 28px;
+	}
+	.text-xl{
+		font-size: 20px;
+	}
+	.text > *{
+		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 1368px){
+	h1, .h1{
+		font-size: 46px;
+	}
+	h2, .h2{
+		font-size: 42px;
+	}
+	h3, .h3{
+		font-size: 28px;
+	}
+	h4, .h4{
+		font-size: 24px;
+	}
+	h5, .h5{
+		font-size: 22px;
+	}
+	body, .text{
+		font-size: 18px;
+	}
+	.text-lg{
+		font-size: 20px;
+	}
+	.text-xl{
+		font-size: 18px;
+	}
+
+}
+
+@media (max-width: 1199px), (max-height: 599px){
+	h1, .h1{
+		font-size: 40px;
+	}
+}
+
+// @media (max-width: 991px)
+
+// @media (max-width: 768px)
+
+@media (max-width: 575px){
+	h1, .h1{
+		font-size: 32px;
+	}
+	h2, .h2{
+		font-size: 30px;
+	}
+	h3, .h3{
+		font-size: 22px;
+	}
+	h5, .h5{
+		font-size: 18px;
+	}
+	body, .text{
+		font-size: 16px;
+	}
+	.text-lg{
+		font-size: 18px;
+	}
+	.text-xl{
+		font-size: 16px;
+	}
+}
