@@ -1,0 +1,147 @@
+@import 'global';
+@import 'animations';
+@import 'spacers';
+@import 'section-settings';
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* OTHER ELEMENTS */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* BG */
+.video-bg:after,
+.bg:after {
+	content: '';
+	display: block;
+}
+
+.video-bg,
+.video-bg:after,
+.wr-hd,
+.bg,
+.bg:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.bg {
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.wr-hd {
+	overflow: hidden;
+	z-index: -1;
+}
+
+.video-bg video {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Icon arrow */
+.icon-arrow {
+	position: relative;
+	display: inline-block;
+	width: 7px;
+	height: 7px;
+	&:before,
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		width: 1px;
+		height: 9px;
+		background-color: #111111;
+	}
+	&:before {
+		left: 0;
+		transform: rotate(-45deg);
+	}
+	&:after{
+		right: 0;
+		transform: rotate(45deg);
+	}
+}
+
+/* Main loader */
+#loader-wrapper {
+	position: fixed;
+	left: 0;
+	top: -100px;
+	right: 0;
+	bottom: -100px;
+	background: #ffffff;
+	z-index: 2000;
+}
+
+.separator {
+	border-bottom: 1px solid #dcecf2;
+}
+
+.image-wrapper img {
+	max-width: 100%;
+}
+
+.d-none{
+	display: none;
+}
+
+.main-title{
+	&.t-mx-1{
+		max-width: 780px;
+	}
+}
+
+/*==========  Hover  ==========*/
+
+// @media (min-width: 1200px){}
+
+/*==========  MEDIA QUERIES  ==========*/
+@media (max-width: 1680px){
+	.main-title.t-mx-1 {
+		max-width: 600px;
+	}
+}
+
+@media (max-width: 1368px){}
+
+@media (max-width: 1199px){
+	.d-none-xl {
+		display: none!important;
+	}
+	.d-block-xl {
+		display: block!important;
+	}
+}
+
+@media (max-width: 1024px){
+	.d-none-md {
+		display: none!important;
+	}
+	.d-block-md {
+		display: block!important;
+	}
+}
+
+//@media (max-width: 768px){}
+
+@media (max-width: 575px){
+	.d-none-sm {
+		display: none!important;
+	}
+	.d-block-sm {
+		display: block!important;
+	}
+}
+
+

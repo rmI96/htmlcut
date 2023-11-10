@@ -1,0 +1,49 @@
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* GLOBAL SETTINGS */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	overflow: hidden;
+}
+
+#content-block {
+	overflow: hidden;
+	position: relative;
+	padding-top: 160px;
+}
+
+.overflow-hidden {
+	overflow: hidden;
+}
+
+html.overflow-hidden body {
+	overflow: hidden;
+}
+
+/*==========  MEDIA QUERIES  ==========*/
+@media (max-width: 1680px) {
+	#content-block {
+		padding-top: 120px;
+	}
+}
+@media (max-width: 1024px) {
+	html{
+		&.no-scroll-mob{
+			overflow: hidden;
+		}
+	}
+	#content-block {
+		padding-top: 80px;
+	}
+}
+@media (max-width: 575px) {
+	#content-block {
+		padding-top: 88px;
+	}
+}
+

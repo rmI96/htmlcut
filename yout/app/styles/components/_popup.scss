@@ -1,0 +1,84 @@
+.popup{
+  &-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 888;
+    background-color: rgba(0,0,0,.6);
+    transition: all 0.22s ease-out;
+    opacity: 0;
+    visibility: hidden;
+  }
+  &-conteiner {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.24s ease-out;
+    .btn-close {
+      position: absolute;
+      right: 12px;
+      top: 12px;
+    }
+    &.size-a .popup-content{
+      max-width: 960px;
+    }
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &-content{
+    background: #fff;
+    padding: 75px 30px 15px 30px;
+    z-index: 999;
+    width: 100%;
+  }
+  &-align {
+    padding: 34px 20px 34px 20px;
+    overflow: hidden;
+    position: relative;
+  }
+  &-wrapper{
+    &.active {
+      .popup-overlay {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+/*========== Hover ==========*/
+/*========== MEDIA QUERIES ==========*/
+@media (max-width: 991px) {
+  .popup{
+    &-conteiner.size-a .popup-content {
+      max-width: calc(100% - 40px) !important;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .popup{
+    &-conteiner{
+      &.size-b.popup-align {
+        padding: 18px 30px 20px 30px;
+      }
+    }
+  }
+}
+
+
+
+

@@ -1,0 +1,153 @@
+/*==========  Form Style  ==========*/
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+	color: #222;
+	opacity: 1;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+	color: #222;
+	opacity: 1;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+	color: #222;
+	opacity: 1;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+	color: #222;
+	opacity: 1;
+}
+
+input, textarea, select {
+	border-radius: 0;
+	background: none;
+	border: none;
+	margin: 0;
+	width: 100%;
+	padding: 0;
+}
+
+textarea {
+	display: block;
+	resize: none;
+	overflow: auto;
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+.invalid {
+	border-color: red;
+	color: red;
+}
+
+/*==========  Text fields  ==========*/
+
+.input-error{
+	//display: none;
+	margin-top: 5px;
+	color: #FA665B;
+	font-size: 14px;
+}
+
+.input {
+	font-size: 16px;
+	font-weight: 400;
+	color: var(--black);
+	height: 60px;
+	background-color: var(--white);
+	padding: 0 20px;
+	border-radius: 15px;
+	border: 1px solid #666;
+	outline: none;
+	transition: 0.24s;
+	&::placeholder{
+		font-size: 16px;
+		color: #999;
+	}
+	&:focus{
+		background-color: #e3e3e3;
+	}
+	&:disabled,
+	&.dispbled{
+		pointer-events: none;
+	}
+	&.error{
+		box-shadow: 0px 0px 0px 1.5px  #FA665B;
+		+ .input-error{
+			display: block;
+		}
+	}
+	&.type2{
+		border-radius: 0;
+	}
+}
+
+textarea.input {
+	//height: 80px;
+	padding-top: 15px;
+	line-height: 18px;
+	min-height: 80px;
+}
+
+.form-group{
+	.checkbox-entry,
+	.input{
+		margin-bottom: 16px;
+	}
+	&.sm{
+		.checkbox-entry,
+		.input{
+			margin-bottom: 8px;
+		}
+	}
+}
+
+.global-confirm-checkbox-block{
+	position: relative;
+	padding-left: 20px;
+	display: block;
+	input {
+		position: absolute;
+		left: 0;
+		top: 0.4em;
+		width: 12px;
+		height: 12px;
+	}
+	span.checkbox-text {
+		font-family: var(--font-family2);
+		display: block;
+		text-align: left;
+		font-size: 14px;
+		a{
+			text-decoration: none;
+			color: #337ab7;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+/*==========  Hover  ==========*/
+
+@media (min-width: 1200px){}
+
+/*==========  MEDIA QUERIES  ==========*/
+
+// @media (max-width: 1368px)
+
+// @media (max-width: 1199px){}
+
+// @media (max-width: 991px)
+
+// @media (max-width: 768px)
+
+// @media (max-width: 575px)

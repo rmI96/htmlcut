@@ -1,0 +1,249 @@
+/*==========  Checkbox Style  ==========*/
+.checkbox-entry {
+  display: inline-block;
+  cursor: pointer;
+  margin: 0;
+  position: relative;
+  padding-left: 18px;
+  line-height: 1.4em;
+  color: var(--white);
+  transition: all .34s ease-out;
+  &.checkbox-block{
+    display: block;
+    width: 100%;
+  }
+  .icon{
+    line-height: 0;
+    max-width: 80px;
+    img{
+      max-width: 100%;
+    }
+  }
+  input {
+    display: none;
+  }
+  span {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0.25em;
+    width: 11px;
+    height: 11px;
+    border-radius: 2px;
+    background-color: #fff;
+  }
+  span:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 4px;
+    height: 8px;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    border-right: 2px solid var(--red);
+    border-bottom: 2px solid var(--red);
+  }
+  input:checked + span {
+    border-color: #8768AD;
+    background-color: var(--red);
+  }
+  input:checked + span:after {
+    opacity: 1;
+    visibility: visible;
+    border-color: var(--white)!important;
+  }
+  &.radio{
+    padding-left: 22px;
+  }
+  input[type=radio] + span{
+    width: 11px;
+    height: 11px;
+  }
+  input[type=radio] + span:after{
+    width: 5px;
+    height: 5px;
+    border: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  input[type=radio] + span,
+  input[type=radio] + span:after{
+    border-radius: 50%;
+  }
+  input[type=radio]:checked + span:after {
+    opacity: 1;
+    visibility: visible;
+    background-color: var(--white)!important;
+  }
+  &.disable{
+    pointer-events: none;
+    span:before{
+      background-color: #F0F0F0;
+    }
+  }
+  &.disable-checked{
+    pointer-events: none;
+    input:checked + span:after{
+      border-color: #AAAAAA;
+    }
+    input:checked + span:before {
+      border-color: #F0F0F0;
+      background-color: rgba(1,1,1,0);
+    }
+    input[type=radio] + span:after{
+      background-color: #F0F0F0;
+    }
+  }
+  &.icon{
+    span {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &.mob{
+    span{
+      img{
+        display: none;
+      }
+    }
+  }
+  &.type-02{
+    font-size: 12px;
+    color: var(--black-100);
+    display: block;
+    padding: 9px 15px;
+    position: relative;
+    z-index: 0;
+    span{
+      background-color: #808EAE!important;
+      border-radius: 0;
+      transform: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      display: none;
+      transition: var(--base-transition);
+      &:after{
+        display: none;
+      }
+    }
+    input:checked + span {
+      display: block;
+    }
+  }
+}
+
+.checkbox-wrapper{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: -15px;
+  .label{
+    margin-bottom: 15px;
+    margin-right: 24px;
+  }
+  .checkbox-entry{
+    display: block;
+    margin-bottom: 15px;
+    margin-right: 15px;
+  }
+  &.center{
+    justify-content: center;
+  }
+  &.list{
+    display: block;
+    margin-bottom: -5px;
+    .checkbox-entry{
+      margin-bottom: 5px;
+      margin-right: 0;
+    }
+  }
+}
+
+/*==========  HOVER  ==========*/
+
+@media (min-width: 992px){
+  .checkbox-entry:hover{
+    span{
+      border-color: #8768AD;
+      &:after{
+        opacity: 1;
+        visibility: visible;
+        border-color: #E8E2EF;
+      }
+    }
+  }
+  .checkbox-entry2:hover{
+    background-color: #F5F4FA;
+  }
+  .checkbox-entry.type-02:hover{
+    background-color: rgba(128, 142, 174, 0.3);
+  }
+}
+
+/*==========  MEDIA QUERIES  ==========*/
+@media (max-width: 991px) {
+  .checkbox-wrapper .label{
+    flex: 0 0 100%;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .checkbox-entry{
+    &.mob{
+      background: var(--gray-200);
+      border-radius: 5px;
+      padding: 5px 10px;
+      min-height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 0;
+      span{
+        background-color: var(--red);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transform: none;
+        border-radius: 5px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        opacity: 0;
+        img{
+          display: block;
+          max-width: 50px;
+          max-height: 18px;
+        }
+        &:after {
+          display: none;
+        }
+      }
+      .icon{
+        img{
+          max-width: 50px;
+          max-height: 18px;
+        }
+      }
+      input:checked + span{
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}
+

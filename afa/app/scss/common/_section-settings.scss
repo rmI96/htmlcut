@@ -1,0 +1,127 @@
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* Section settings */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+.section {
+	position: relative;
+	z-index: 0;
+}
+.container-cs{
+	max-width: 1828px;
+	padding-right: 128px;
+	padding-left: 128px;
+	margin-right: auto;
+	margin-left: auto;
+	&.md{
+		max-width: 1520px;
+	}
+}
+
+.row{
+	&.row-5{
+		margin-right: -5px;
+		margin-left: -5px;
+		> [class*=col]{
+			padding-right: 5px;
+			padding-left: 5px;
+		}
+	}
+	&.row-40{
+		margin-right: -20px;
+		margin-left: -20px;
+		> [class*=col]{
+			padding-right: 20px;
+			padding-left: 20px;
+		}
+	}
+	&.row-100{
+		margin-right: -50px;
+		margin-left: -50px;
+		> [class*=col]{
+			padding-right: 50px;
+			padding-left: 50px;
+		}
+	}
+	&.row-140{
+		margin-right: -70px;
+		margin-left: -70px;
+		> [class*=col]{
+			padding-right: 70px;
+			padding-left: 70px;
+		}
+	}
+}
+
+.offset-lf{
+	&-160{
+		padding-left: 160px;
+	}
+}
+
+/*==========  MEDIA QUERIES  ==========*/
+@media (max-width: 1680px){
+	.container-cs{
+		&.md{
+			max-width: 1200px;
+		}
+	}
+	.offset-lf-xl{
+		&-120{
+			padding-left: 120px;
+		}
+	}
+}
+
+@media (max-width: 1368px){
+	.container-cs{
+		&.md{
+			max-width: 1084px;
+		}
+	}
+	.container-cs{
+		padding-right: 115px;
+		padding-left: 115px;
+	}
+}
+
+@media (max-width: 1199px){
+	.container-cs{
+		padding-right: 72px;
+		padding-left: 72px;
+	}
+	.offset-lf-md{
+		&-0{
+			padding-left: 0;
+		}
+	}
+}
+
+
+@media (max-width: 1024px){
+	.row{
+		&.row-md-30{
+			margin-right: -15px;
+			margin-left: -15px;
+			> [class*=col]{
+				padding-right: 15px;
+				padding-left: 15px;
+			}
+		}
+		&.row-md-80{
+			margin-right: -40px;
+			margin-left: -40px;
+			> [class*=col]{
+				padding-right: 40px;
+				padding-left: 40px;
+			}
+		}
+	}
+}
+
+// @media (max-width: 768px){}
+
+@media (max-width: 575px){
+	.container-cs{
+		padding-right: 24px;
+		padding-left: 24px;
+	}
+}

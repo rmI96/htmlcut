@@ -1,0 +1,20 @@
+/*==========  GLOBAL  ==========*/
+body {
+	font-family: var(--font-family);
+	color: var(--dark);
+}
+
+b, strong {
+	font-weight: 700;
+}
+
+a {
+	transition: var(--base-transition);
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+ul, ol {
+	list-style: none;
+}

@@ -1,0 +1,68 @@
+/*==========  TYPOGRAPHY  ==========*/
+/* Align */
+.ff-2{
+	font-family: var(--font-family2);
+}
+.ff-3{
+	font-family: var(--font-family3);
+}
+
+
+/* Align */
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+/* Text weight */
+.fw-light {
+	font-weight: var(--light);
+}
+.fw-regular {
+	font-weight: var(--regular);
+}
+.fw-medium {
+	font-weight: var(--medium);
+}
+.fw-semibold{
+	font-weight: var(--semibold);
+}
+.fw-bold{
+	font-weight: var(--bold);
+}
+
+/* Text color */
+.color-white {
+	color: var(--white);
+}
+.color-dark {
+	color: var(--dark);
+}
+
+
+/*==========  Hover  ==========*/
+
+// @media (min-width: 1200px){}
+
+/*==========  MEDIA QUERIES  ==========*/
+
+// @media (max-width: 1368px)
+
+// @media (max-width: 1199px){}
+
+// @media (max-width: 991px)
+
+// @media (max-width: 768px){}
+
+@media (max-width: 575px){
+	.text-center-sm{
+		text-align: center;
+	}
+}

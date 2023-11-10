@@ -1,0 +1,51 @@
+/*==========  decor Style  ==========*/
+.decor-wrapper{
+  .decor{
+    position: absolute;
+    line-height: 0;
+    img{
+      max-width: 100%;
+    }
+    &.ps-01{
+      width: 320px;
+      left: 53%;
+      transform: translateX(-50%);
+      bottom: 0;
+    }
+  }
+}
+.text-decor{
+  background: rgb(253,206,88);
+  background: linear-gradient(23deg, rgba(255, 18, 0, 1) 0%, rgba(223, 8, 0, 1) 25%, rgba(154, 5, 0, 1) 50%, rgba(131, 5, 0, 1) 75%, rgba(154, 5, 0, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+/*==========  Hover  ==========*/
+
+//@media (min-width: 991px){}
+
+/*==========  MEDIA QUERIES  ==========*/
+
+// @media (max-width: 1368px){}
+
+// @media (max-width: 1199px){}
+
+@media (max-width: 991px){
+  .decor-wrapper{
+    .decor{
+      &.ps-01{
+        display: none;
+      }
+    }
+  }
+}
+
+//@media (max-width: 768px){}
+
+//@media (max-width: 575px){}
+
+
+
+

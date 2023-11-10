@@ -1,0 +1,45 @@
+
+/*==========  RESET STYLES  ==========*/
+
+html {
+	overflow-y: scroll;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	-webkit-text-size-adjust: none;
+	box-sizing: border-box;
+}
+
+html:not(.touch-screen)::-webkit-scrollbar,
+html:not(.touch-screen) *::-webkit-scrollbar {
+	width: 3px;
+	height: 3px;
+}
+
+html:not(.touch-screen)::-webkit-scrollbar-track,
+html:not(.touch-screen) *::-webkit-scrollbar-track {
+	background: #3C4149;
+}
+
+html:not(.touch-screen)::-webkit-scrollbar-thumb,
+html:not(.touch-screen) *::-webkit-scrollbar-thumb {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+/*==========  LOADER  ==========*/
+
+#loader-wrapper {
+	position: fixed;
+	left: 0;
+	top: -100px;
+	right: 0;
+	bottom: -100px;
+	background: #ffffff;
+	z-index: 2000;
+}

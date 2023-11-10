@@ -1,0 +1,87 @@
+/*==========  TYPOGRAPHY  ==========*/
+@import "global";
+@import "size";
+@import "simple-content";
+
+/* Font family */
+.f-family-1 {
+	font-family: $mainFont;
+}
+.f-family-2 {
+	font-family: $secondaryFont;
+}
+
+/* Align */
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+/* Text weight */
+.fw-300 {
+	font-weight: 300;
+}
+.fw-400 {
+	font-weight: 400;
+}
+.fw-500 {
+	font-weight: 500;
+}
+.fw-600 {
+	font-weight: 600;
+}
+.fw-700 {
+	font-weight: 700;
+}
+
+/* Text color */
+.color-primary{
+	color: $colorDark;
+}
+.color-secondary {
+	color: $colorMain;
+}
+.color-white {
+	color: #fff;
+}
+.color-dark {
+	color: #111;
+}
+.color-grey {
+	color: $colorGrey;
+}
+.color-grey2{
+	color: #C4C4C4;
+}
+
+.text-uppercase{
+	text-transform: uppercase;
+}
+
+
+/*==========  Hover  ==========*/
+
+// @media (min-width: 1200px){}
+
+/*==========  MEDIA QUERIES  ==========*/
+
+// @media (max-width: 1368px)
+
+// @media (max-width: 1199px){}
+
+// @media (max-width: 991px)
+
+// @media (max-width: 768px){}
+
+@media (max-width: 575px) {
+	.color-sm-secondary{
+		color: $colorMain;
+	}
+}

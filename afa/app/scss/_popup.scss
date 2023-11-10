@@ -1,0 +1,90 @@
+ /*==========  PopUp Style  ==========*/
+.popup{
+  &-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 22;
+    background-color: rgba(255, 255, 255, 0.85);
+    transition: all .22s ease-out;
+    opacity: 0;
+    visibility: hidden;
+  }
+  &-conteiner{
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: #fff;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+    z-index: 24;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .24s ease-out;
+    &.size-a{
+      max-width: 624px;
+    }
+    &.active{
+      opacity: 1;
+      visibility: visible;
+      top: 50%;
+      transform: translate(-50%, -47%);
+    }
+  }
+  &-align{
+    padding: 60px 72px 80px 72px;
+    overflow: hidden;
+    position: relative;
+    .btn-close{
+      position: absolute;
+      top: 5px;
+      right: 5px;
+    }
+  }
+  &-wrapper{
+    &.active{
+      .popup-overlay{
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+/*==========  Hover  ==========*/
+
+// @media (min-width: 991px){}
+
+/*==========  MEDIA QUERIES  ==========*/
+
+// @media (max-width: 1368px){}
+
+// @media (max-width: 1199px){}
+
+@media (max-width: 1024px){
+  .popup-conteiner{
+    &.size-a {
+      max-width: 94%;
+    }
+  }
+  .popup-align {
+    padding: 40px 24px 80px 24px;
+    overflow: hidden;
+    position: relative;
+  }
+}
+
+// @media (max-width: 768px){}
+
+// @media (max-width: 575px){}
+
+
+
+

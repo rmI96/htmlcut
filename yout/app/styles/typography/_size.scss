@@ -1,0 +1,133 @@
+@use '../config' as *;
+
+/*==========  SIZE  ==========*/
+
+/* Text size */
+body, .text {
+	@include font-size(16px, 1.65em);
+	font-weight: var(--regular);
+}
+.text{
+	&-md{
+		@include font-size(16px, 1.3em);
+	}
+	&-md-1{
+		@include font-size(18px, 1.3em);
+	}
+	&-sm {
+		@include font-size(14px, 1.3em);
+	}
+	&-lg-0 {
+		@include font-size(20px, 1.5em);
+	}
+	&-lg-1 {
+		@include font-size(25px, 1.5em);
+	}
+	&-lg {
+		@include font-size(28px, 1.5em);
+	}
+	&-xl {
+		@include font-size(24px, 1.3em);
+	}
+}
+
+h1, .h1 {
+	@include font-size(72px, 1.3em);
+}
+.h2-1 {
+	@include font-size(58px, 1.3em);
+}
+h2, .h2 {
+	@include font-size(50px, 1.3em);
+}
+
+h3, .h3 {
+	@include font-size(44px, 1.2em);
+}
+.h3-1 {
+	@include font-size(40px, 1.2em);
+}
+.h3-2 {
+	@include font-size(47px, 1.2em);
+}
+.h4-1 {
+	@include font-size(32px, 1.2em);
+}
+h4, .h4 {
+	@include font-size(30px, 1.2em);
+}
+
+h5, .h5 {
+	@include font-size(18px, 1.4em);
+}
+
+h6, .h6 {
+	@include font-size(16px, 1.4em);
+}
+
+/*==========  MEDIA QUERIES  ==========*/
+
+// @media (max-width: 1368px)
+
+@media (max-width: 1199px){
+	.text-lg{
+		font-size: 22px;
+	}
+	.h2-1, .h1, h1 {
+		font-size: 58px;
+	}
+}
+
+@media (max-width: 991px){
+	.text-md-1 {
+		font-size: 16px;
+		line-height: 1.4em;
+	}
+	.text-lg {
+		font-size: 18px;
+	}
+	.text-lg-0 {
+		font-size: 18px;
+		line-height: 1.4em;
+	}
+	.text-lg-1 {
+		font-size: 20px;
+		line-height: 1.4em;
+	}
+	.h2-1, .h2, h2 {
+		font-size: 30px;
+	}
+	.h3 {
+		font-size: 30px;
+	}
+	.h3-1 {
+		font-size: 26px;
+	}
+	.h4, h4{
+		font-size: 26px;
+	}
+}
+
+// @media (max-width: 768px){}
+
+@media (max-width: 575px) {
+	.text-lg{
+		font-size: 16px;
+	}
+	.h1, h1{
+		font-size: 32px;
+	}
+	.h2, .h2-1, .h3, h2 {
+		font-size: 22px;
+	}
+	.h3-1, .h4, h4 {
+		font-size: 22px;
+	}
+	.h3-2{
+		font-size: 30px;
+	}
+	.h4-1{
+		font-size: 28px;
+	}
+
+}

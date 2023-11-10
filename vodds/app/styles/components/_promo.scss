@@ -1,0 +1,65 @@
+/*==========  Promo Style  ==========*/
+.promo-detail{
+  &__image{
+    line-height: 0;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    img{
+      border-radius: 5px;
+      max-width: 100%;
+    }
+  }
+}
+.promo-more{
+  &__title{
+    position: relative;
+    padding-right: 80px;
+    .swiper-controls{
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__content{
+    position: relative;
+    &:after{
+      content: '';
+      display: block;
+      width: 100px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: linear-gradient(270deg,rgba(36,43,53,0.99) 10%,rgba(36,43,53,0));
+      z-index: 4;
+    }
+  }
+}
+
+/*==========  Hover  ==========*/
+
+@media (min-width: 1200px) {}
+
+/*==========  MEDIA QUERIES  ==========*/
+
+// @media (max-width: 1368px){}
+
+@media (max-width: 1199px) {}
+
+//@media (max-width: 991px){}
+
+@media (max-width: 768px) {
+  .promo-detail{
+    &__image {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+// @media (max-width: 575px){}
+
+
+

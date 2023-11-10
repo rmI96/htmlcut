@@ -1,0 +1,27 @@
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* GLOBAL SETTINGS */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
+#content-block {
+	overflow: hidden;
+	position: relative;
+}
+
+.overflow-hidden {
+	overflow: hidden;
+}
+.position-relative{
+	position: relative;
+}
+
+html.overflow-hidden body {
+	overflow: hidden;
+}

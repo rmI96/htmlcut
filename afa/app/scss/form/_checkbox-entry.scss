@@ -1,0 +1,133 @@
+/*==========  Checkbox Style  ==========*/
+.checkbox-entry {
+  display: inline-block;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  padding-left: 24px;
+  transition: all .34s ease-out;
+  &.checkbox-block{
+    display: block;
+    width: 100%;
+  }
+  input {
+    display: none;
+  }
+
+  span {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border: 1px solid #C4C4C4;
+    background-color: #fff;
+    &.dark{
+      border-color: #000000;
+    }
+  }
+
+  span:after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    z-index: 1;
+    backface-visibility: hidden;
+    opacity: 0;
+    visibility: hidden;
+    background-color: $colorMain;
+
+  }
+  input:checked + span {
+    border-color: $colorMain;
+  }
+  input:checked + span:after {
+    opacity: 1;
+    visibility: visible;
+  }
+  &.radio{
+    padding-left: 40px;
+  }
+  input[type=radio] + span{
+    width: 24px;
+    height: 24px;
+  }
+  input[type=radio] + span:after{
+    width: 12px;
+    height: 12px;
+    left: 5px;
+  }
+  input[type=radio] + span,
+  input[type=radio] + span:after{
+    border-radius: 50%;
+  }
+  &.disable{
+    pointer-events: none;
+    span:before{
+      background-color: #F0F0F0;
+    }
+  }
+  &.disable-checked{
+    pointer-events: none;
+    input:checked + span:after{
+      border-color: #AAAAAA;
+    }
+    input:checked + span:before {
+      border-color: #F0F0F0;
+      background-color: rgba(1,1,1,0);
+    }
+    input[type=radio] + span:after{
+      background-color: #F0F0F0;
+    }
+  }
+  &.error{}
+}
+.checkbox-wrapper{
+  .checkbox-entry{
+    display: block;
+    margin-bottom: 8px;
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+}
+.checkbox-entry-wrapper{
+  .error-text{
+    display: none;
+    margin-top: 4px;
+    color: #FA665B;
+    font-size: 14px;
+    line-height: 0.9em;
+  }
+  &.error{
+    .error-text{
+      display: block;
+    }
+  }
+}
+
+/*==========  MEDIA QUERIES  ==========*/
+
+@media (max-width: 1680px){
+  .checkbox-entry{
+    input[type=radio] + span{
+      width: 16px;
+      height: 16px;
+      &:after{
+        width: 8px;
+        height: 8px;
+        left: 3px;
+      }
+    }
+    &.radio{
+      padding-left: 24px;
+    }
+  }
+}

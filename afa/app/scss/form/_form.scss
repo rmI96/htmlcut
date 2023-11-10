@@ -1,0 +1,167 @@
+@import "checkbox-entry";
+@import "select-choices";
+
+/*==========  Form Style  ==========*/
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+	color: #222;
+	opacity: 1;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+	color: #222;
+	opacity: 1;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+	color: #222;
+	opacity: 1;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+	color: #222;
+	opacity: 1;
+}
+
+input, textarea, select {
+	border-radius: 0;
+	background: none;
+	border: none;
+	margin: 0;
+	width: 100%;
+	padding: 0;
+}
+
+textarea {
+	display: block;
+	resize: none;
+	overflow: auto;
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+/*==========  Text fields  ==========*/
+
+.input-error{
+	display: none;
+	margin-top: 5px;
+	color: #FC091B;
+	font-size: 16px;
+}
+
+.input {
+	font-size: 14px;
+	font-weight: 400;
+	color: $colorDark;
+	height: 50px;
+	border: 1px solid $colorGrey;
+	background-color: #fff;
+	padding: 0 8px 0 8px;
+	outline: none;
+	transition: 0.24s;
+	&::placeholder{
+		font-size: 16px;
+		color: $colorGrey;
+	}
+	&:focus{
+		border-color: #3D71BA;
+		box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+	}
+	&:disabled,
+	&.dispbled{
+		pointer-events: none;
+		color: #AAAAAA;
+	}
+	&.error{
+		border-color: #FA665B;
+		+ .input-error{
+			display: block;
+		}
+	}
+}
+
+textarea.input {
+	padding-top: 12px;
+	line-height: 18px;
+	min-height: 100px;
+}
+
+.form-group{
+	.checkbox-entry,
+	.input-inner{
+		margin-bottom: 16px;
+	}
+	&-hidden{
+		display: none;
+	}
+}
+
+
+/*==========  Range  ==========*/
+
+.range-slider{
+	position: relative;
+	.slide {
+		display: block;
+		height: 4px;
+		background-color: #C4C4C4;
+		position: relative;
+		span{
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			background-color: #3D71BA;
+		}
+	}
+	.handle{
+		display: block;
+		width: 15px;
+		height: 15px;
+		margin-left: -7.5px;
+		border-radius: 50%;
+		background-color: #3D71BA;
+		position: absolute;
+		top: -6px;
+	}
+	&-input{
+		position: absolute;
+		z-index: 4;
+		top: -6px;
+		left: -8px;
+		right: -8px;
+		width: calc(100% + 16px);
+		opacity: 0;
+    }
+}
+
+/*==========  Hover  ==========*/
+
+@media (min-width: 1200px){
+	.input:hover{
+		background-color: rgb(245, 245, 245);
+	}
+}
+
+/*==========  MEDIA QUERIES  ==========*/
+
+// @media (max-width: 1368px)
+
+// @media (max-width: 1199px){}
+
+@media (max-width: 1024px) {
+	textarea.input{
+		height: 50px;
+	}
+}
+
+// @media (max-width: 768px)
+
+// @media (max-width: 575px)

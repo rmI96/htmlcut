@@ -1,0 +1,93 @@
+/*==========  TYPOGRAPHY  ==========*/
+
+
+/* Align */
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+/* Text weight */
+.fw-light{
+	font-weight: var(--light);
+}
+.fw-regular{
+	font-weight: var(--regular);
+}
+.fw-medium{
+	font-weight: var(--medium);
+}
+.fw-bold{
+	font-weight: var(--bold);
+}
+
+/* Text color */
+.color-white {
+	color: var(--white);
+}
+.color-dark {
+	color: var(--dark);
+}
+.color-gray {
+	color: var(--gray-500);
+}
+.color-gray-02 {
+	color: var(--gray-600);
+}
+.color-red{
+	color: var(--red);
+}
+.color-green{
+	color: var(--green);
+}
+
+
+/*==========  Hover  ==========*/
+
+// @media (min-width: 1200px){}
+
+/*==========  MEDIA QUERIES  ==========*/
+
+// @media (max-width: 1368px)
+
+@media (max-width: 1199px){
+	/* Align */
+	.text-left-xl {
+		text-align: left;
+	}
+
+	.text-center-xl {
+		text-align: center;
+	}
+
+	.text-right-xl {
+		text-align: right;
+	}
+}
+
+// @media (max-width: 991px)
+
+@media (max-width: 768px){
+	/* Text weight */
+	.fw-light-md{
+		font-weight: var(--light);
+	}
+	.fw-regular-md{
+		font-weight: var(--regular);
+	}
+	.fw-medium-md{
+		font-weight: var(--medium);
+	}
+	.fw-bold-md{
+		font-weight: var(--bold);
+	}
+}
+
+// @media (max-width: 575px)

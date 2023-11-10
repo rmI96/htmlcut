@@ -1,0 +1,157 @@
+/*==========  Footer Style  ==========*/
+.footer{
+  padding: 54px 0 25px 0;
+  background-color: var(--black);
+  color: var(--white);
+  font-size: 14px;
+  line-height: 1.5em;
+  &__inner{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    display: flex;
+    padding-bottom: 30px;
+  }
+  &__col{
+    flex: 0 0 33.33%;
+    &--02{
+      text-align: center;
+      .title{
+        margin-bottom: 30px;
+      }
+      .content{}
+    }
+    &--03{
+      text-align: center;
+      .title{
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &__payments{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .item{
+      flex: 0 0 calc(18.33% - 15px);
+      margin: 0 5px 10px 5px;
+      line-height: 0;
+      img{
+        max-width: 100%;
+      }
+    }
+  }
+  &__email{
+    margin-bottom: 60px;
+  }
+  &__under{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    &__col{
+      &--01,
+      &--03{
+        flex: 0 0 30%;
+      }
+      &--03{
+        text-align: right;
+      }
+    }
+  }
+  &__social{
+    display: flex;
+    align-items: center;
+    a{
+      display: block;
+      width: 25px;
+      margin: 0 18px;
+      line-height: 0;
+      img{
+        max-width: 100%;
+      }
+    }
+  }
+  &__terms_use{
+    display: none;
+  }
+}
+
+/*==========  Hover  ==========*/
+
+//@media (min-width: 1200px){}
+
+/*==========  MEDIA QUERIES  ==========*/
+
+// @media (max-width: 1368px){}
+
+// @media (max-width: 1199px){}
+
+@media (max-width: 991px){
+  .footer{
+    padding: 50px 0 25px;
+    &__inner{
+      flex-wrap: wrap;
+      padding-bottom: 50px;
+    }
+    &__copyright{
+      text-align: center;
+    }
+    &__email{
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    &__payments{
+      .item{
+        max-width: 40px;
+        margin-bottom: 0;
+        img{
+          max-height: 50px;
+        }
+      }
+    }
+    &__col{
+      flex: 0 0 100%;
+      &--01{
+        order: 2;
+      }
+      &--02{
+        order: 0;
+        margin-bottom: 25px;
+        .title{
+          margin-bottom: 10px;
+        }
+      }
+      &--03{
+        order: 1;
+        margin-bottom: 25px;
+      }
+    }
+    &__under {
+      padding-top: 20px;
+      &__col{
+        &--01{
+          display: none;
+        }
+      }
+    }
+    &__social {
+      a {
+        margin: 0 8px;
+        &:first-child{
+          margin-left: 0;
+        }
+      }
+    }
+    &__terms_use{
+      display: block;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+//@media (max-width: 768px){}
+
+// @media (max-width: 575px){}
+
+
+

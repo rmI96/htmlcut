@@ -1,0 +1,120 @@
+ /*==========  Swiper Style  ==========*/
+ /* SWIPER */
+ .swiper-entry{
+   &.style-01{
+     position: relative;
+     padding: 0 70px;
+     margin: 0 -70px;
+     .swiper-pagination {
+       position: relative;
+       line-height: 0;
+       margin-top: 25px;
+       .swiper-pagination-bullet{
+         background-color: #c7c7c7;
+         width: 8px;
+         height: 8px;
+         margin: 0 5px;
+         opacity: 1;
+         transition: 0.2s;
+         &:hover{
+           background-color: #000000;
+         }
+         &.swiper-pagination-bullet-active{
+           background-color: #000000;
+         }
+       }
+     }
+     .swiper-button-next,
+     .swiper-button-prev{
+       width: 40px;
+       height: 40px;
+       margin-top: -20px;
+       background-color: rgb(232, 232, 232);
+       background-image: none;
+       border-radius: 50%;
+       svg{
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         width: 9px;
+       }
+       &:hover{
+         background-color: var(--main);
+         polyline{
+           stroke: #ffffff;
+         }
+       }
+     }
+     .swiper-button-next{
+       right: 0;
+       svg{
+         transform: translate(-55%,-50%);
+       }
+     }
+     .swiper-button-prev{
+       left: 0;
+       svg{
+         transform: translate(-55%,-50%) rotate(180deg);
+       }
+     }
+   }
+ }
+ .swiper-entry{
+   &.style-02{
+     .swiper-controls{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       margin-top: 22px;
+     }
+     .swiper-button-next,
+     .swiper-button-prev{
+       position: static;
+       width: 20px;
+       height: 20px;
+       background-image: none;
+       line-height: 0;
+       margin: 0 20px;
+       svg{
+         width: 20px;
+       }
+     }
+   }
+ }
+
+
+ @media (min-width: 992px) {
+}
+
+/*==========  Hover  ==========*/
+
+// @media (min-width: 991px){}
+
+/*==========  MEDIA QUERIES  ==========*/
+
+@media (max-width: 1320px){
+  .swiper-entry.style-01 {
+    margin: 0 -10px;
+  }
+}
+
+// @media (max-width: 1199px){}
+
+@media (max-width: 991px){
+  .swiper-entry.style-01 {
+    padding: 0;
+    margin: 0;
+    .swiper-button-next,
+    .swiper-button-prev{
+      display: none;
+    }
+  }
+}
+
+// @media (max-width: 768px){}
+
+// @media (max-width: 575px){}
+
+
+
+

@@ -1,0 +1,117 @@
+/*==========  Contact Style  ==========*/
+.contact{
+  &__grid{
+    display: flex;
+    margin: 0 -27px;
+    padding-bottom: 90px;
+  }
+  &__item{
+    padding: 0 27px;
+    &.wd-67{
+      flex: 0 0 67.24%;
+      max-width: 67.24%;
+    }
+    &.wd-32{
+      flex: 0 0 32.76%;
+      max-width: 32.76%;
+    }
+  }
+  &__info{
+    .item{
+      font-size: 14px;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 320px;
+      margin-bottom: 10px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      a{
+        font-size: 14px;
+      }
+      .icon{
+        display: block;
+        flex: 0 0 40px;
+        line-height: 0;
+        margin-right: 14px;
+        img{
+          max-width: 100%;
+        }
+      }
+      .title{
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+/*==========  Hover  ==========*/
+
+// @media (min-width: 1200px){}
+
+/*==========  MEDIA QUERIES  ==========*/
+
+// @media (max-width: 1368px){}
+
+@media (max-width: 1199px) {
+  .contact{
+    &__grid{
+      margin: 0 -10px;
+      padding-bottom: 0;
+    }
+    &__item{
+      padding: 0 10px;
+      &.wd-67{
+        flex: 0 0 59.44%;
+        max-width: 59.44%;
+      }
+      &.wd-32{
+        flex: 0 0 40.56%;
+        max-width: 40.56%;
+      }
+    }
+  }
+}
+
+// @media (max-width: 991px){}
+
+@media (max-width: 768px){
+  .contact{
+    &__grid{
+      flex-wrap: wrap;
+    }
+    &__item{
+      &.wd-67{
+        order: 2;
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      &.wd-32{
+        order: 1;
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+    &__form{
+      box-shadow: 0px 0px 20px #1F2731;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-bottom: 15px;
+      &__head{
+        background-color: #28303A;
+        padding: 22px 30px;
+      }
+      &__content{
+        background-color: #2D363F;
+        padding: 15px 30px;
+      }
+    }
+  }
+}
+
+// @media (max-width: 575px){}
+
+
+

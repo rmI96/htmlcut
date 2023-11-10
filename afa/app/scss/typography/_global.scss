@@ -1,0 +1,17 @@
+/*==========  GLOBAL  ==========*/
+body {
+	font-family: $mainFont;
+	color: #000000;
+}
+
+b, strong {
+	font-weight: 700;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul, ol {
+	list-style: none;
+}

@@ -1,0 +1,224 @@
+//@use 'fonts' as *;
+
+//
+// Custom Properties
+//
+
+@import 'varialbes/index';
+
+//
+// Base Styles
+//
+
+@import 'base/index';
+
+//
+// Base Styles
+//
+
+@import 'typography/index';
+
+//
+// Components
+//
+
+@import 'components/index';
+
+//
+// CrossBrowser
+//
+
+@import 'cross-browser';
+
+/* */
+
+.thumbnail-08{
+  padding: 50px 40px 40px 48px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 3px solid var(--main);
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  &__inner{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &:after{
+    content: '';
+    background: linear-gradient(76deg,red 20%,#ffa88d);
+    display: block;
+    height: 48px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: rotate(18deg) translate(3px,-24px);
+    width: 122px;
+    border-bottom-left-radius: 24px;
+  }
+  &:before{
+    content: '';
+    background: rgb(255,0,0);
+    background: linear-gradient(40deg,red 20%,#ffa88d);
+    display: block;
+    height: 48px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: rotate(18deg) translate(-3px,24px);
+    width: 122px;
+    border-top-right-radius: 24px;
+  }
+  .name{
+    padding-top: 16px;
+    position: relative;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    &:after{
+      content: '';
+      display: block;
+      border-top: 3px solid rgb(51, 51, 51);
+      width: 42px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  .subtitle{
+    font-size: 16px;
+    line-height: 1.4em;
+    font-weight: 400;
+    margin-bottom: 35px;
+  }
+  .price{
+    font-size: 40px;
+    line-height: 1em;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  .content{
+    margin-bottom: 35px;
+    ul li {
+      padding-left: 24px;
+      position: relative;
+      margin-bottom: 6px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      &:before {
+        content: "";
+        display: inline-block;
+        background-color: var(--main);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        vertical-align: middle;
+        position: absolute;
+        left: 0;
+        top: 0.5em;
+      }
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__btn{
+    padding-right: 21px;
+    position: relative;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: auto;
+    .icon{
+      display: block;
+      width: 16px;
+      line-height: 0;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      svg{
+        width: 100%;
+      }
+    }
+  }
+  &__hidden-content{
+    font-size: 40px;
+    line-height: 1em;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    padding: 10px 15px;
+    width: 100%;
+    text-align: center;
+    z-index: 4;
+    display: none;
+  }
+  &:hover:not(.blur) {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 100px 0px rgba(118.99999999999999, 104, 100.99999999999999, 0.3);
+    .thumbnail-08__btn,
+    .price,
+    .name{
+      color: var(--main);
+    }
+  }
+  &.blur{
+    .thumbnail-08{
+      &__inner{
+        filter: blur(6px);
+        pointer-events: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      &__hidden-content{
+        display: block;
+      }
+    }
+  }
+  &__wrapper{
+    margin-bottom: -30px!important;
+    [class*=col-]{
+      margin-bottom: 30px!important;
+    }
+  }
+}
+
+
+/*==========  MEDIA QUERIES  ==========*/
+
+// @media (max-width: 1368px)
+
+// @media (max-width: 1199px){}
+
+@media (max-width: 991px){
+  .thumbnail-08 {
+    .name {
+      font-size: 18px;
+      margin-bottom: 8px;
+      padding-top: 12px;
+    }
+    .subtitle {
+      font-size: 15px;
+      margin-bottom: 22px;
+    }
+    .price {
+      font-size: 28px;
+      margin-bottom: 18px;
+    }
+    .content {
+      margin-bottom: 22px;
+    }
+    &__btn {
+      font-size: 16px;
+    }
+  }
+}

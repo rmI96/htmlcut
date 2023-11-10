@@ -1,0 +1,110 @@
+/*==========  Footer Style  ==========*/
+.swiper-entry{
+  &.style1{
+    padding: 0 75px;
+    margin: 0 -75px;
+    position: relative;
+    //.swiper-container {
+    //  width: calc(100% + 58px);
+    //  padding: 30px 29px;
+    //  margin-left: -29px;
+    //  overflow: hidden;
+    //}
+    //.swiper-slide:not(.swiper-slide-visible){
+    //  .thumbnail_3{
+    //    filter: none;
+    //  }
+    //}
+    .swiper-button-prev,
+    .swiper-button-next{
+      display: block;
+      width: 14px;
+      height: 30px;
+      margin-top: -12px;
+      top: 60px;
+      background-image: none;
+      transition: all .28s ease-out;
+      img{
+        max-width: 100%;
+      }
+    }
+    .swiper-button-prev{
+      left: 30px;
+    }
+    .swiper-button-next{
+      right: 30px;
+    }
+  }
+  &.style2{
+    padding-bottom: 80px;
+    position: relative;
+    .swiper-slide{
+      height: auto;
+    }
+    .swiper-pagination{
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .swiper-pagination-bullet{
+      width: 12px;
+      height: 12px;
+      margin: 0 8px;
+      background-color: #C4C4C4;
+      opacity: 1!important;
+      transition: all 0.24s ease-out;
+      &.swiper-pagination-bullet-active{
+        background-color: #3D71BA;
+      }
+    }
+  }
+}
+
+/*==========  Hover  ==========*/
+
+@media (min-width: 1200px){
+  .swiper-entry.style2 .swiper-pagination-bullet:hover{
+    background-color: #3D71BA;
+  }
+}
+
+/*==========  MEDIA QUERIES  ==========*/
+
+@media (max-width: 1680px){
+  .swiper-entry{
+    &.style2{
+      padding-bottom: 60px;
+    }
+  }
+}
+
+// @media (max-width: 1368px){}
+
+// @media (max-width: 1199px){}
+
+@media (max-width: 1024px){
+  .swiper-entry{
+    &.style2{
+      padding-bottom: 40px;
+    }
+  }
+}
+
+//@media (max-width: 768px){}
+
+@media (max-width: 575px){
+  .swiper-entry{
+    &.style1 {
+      margin: 0 -30px;
+      .swiper-button-prev,
+      .swiper-button-next{
+        top: 55px;
+      }
+    }
+  }
+}
+
+
+

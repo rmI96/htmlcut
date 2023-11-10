@@ -1,0 +1,70 @@
+/* BG */
+.video-bg:after,
+.bg:after {
+	content: '';
+	display: block;
+}
+
+.video-bg,
+.video-bg:after,
+.wr-hd,
+.bg,
+.bg:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.bg {
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.wr-hd {
+	overflow: hidden;
+	z-index: -1;
+}
+
+.video-bg video {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Icon arrow */
+.icon-arrow {
+	position: relative;
+	display: inline-block;
+	width: 7px;
+	height: 7px;
+	&:before,
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		width: 1px;
+		height: 9px;
+		background-color: #111111;
+	}
+	&:before {
+		left: 0;
+		transform: rotate(-45deg);
+	}
+	&:after{
+		right: 0;
+		transform: rotate(45deg);
+	}
+}
+
+.image-wrapper img {
+	max-width: 100%;
+}
