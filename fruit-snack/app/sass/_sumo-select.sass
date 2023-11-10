@@ -1,0 +1,58 @@
+/*==========  SumoSelect Style  ==========*/
+.form
+    .SumoSelect
+        margin-bottom: 15px
+.SumoSelect
+    font-size: 16px
+    > .CaptionCont
+        border: 1px solid #ebebeb
+        background-color: #fff
+        margin: 0
+        height: 55px
+        line-height: 53px
+        padding-left: 20px
+        padding-right: 40px
+        border-radius: 28px
+        > label
+            right: 10px
+    > .optWrapper
+        top: calc(100% - 1px)
+        border: 1px solid #ebebeb
+        display: block
+        transform: translateY(45px)
+        visibility: hidden
+        opacity: 0
+        transition: 0.3s
+        > .options li.opt
+            padding: 5px 20px
+    > .CaptionCont > label > i
+        transition: 0.3s
+    &.open 
+        > .optWrapper
+            transform: none
+            visibility: visible
+            opacity: 1
+        > .CaptionCont > label > i
+            transform: rotate(180deg)
+
+/*==========  Hover  ==========*/
+
+// @media (min-width: 1200px)
+
+/*==========  MEDIA QUERIES  ==========*/
+
+// @media (max-width: 1368px)
+
+@media (max-width: 1199px)
+    .SumoSelect > .CaptionCont
+        height: 45px
+        line-height: 43px
+
+// @media (max-width: 991px)
+
+// @media (max-width: 768px)
+    
+// @media (max-width: 575px)
+
+        
+

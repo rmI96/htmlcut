@@ -1,0 +1,56 @@
+/*==========  Decor Style  ==========*/
+
+.decor{
+	position: absolute;
+	img{
+		max-width: 100%;
+	}
+	&.pos1{
+		bottom: 6%;
+		left: 2%;
+	}
+}
+
+/*==========  Hover  ==========*/
+
+// @media (min-width: 1200px){
+// }
+
+/*==========  MEDIA QUERIES  ==========*/
+
+// @media (max-width: 1368px){}
+
+@media (max-width: 1600px){
+	.decor.pos1{
+		max-width: 350px;
+	}
+}
+
+@media (max-width: 1199px){
+	.decor.pos1{
+		bottom: 0;
+		left: 0;
+		max-width: 300px;
+	}
+}
+
+@media (max-height: 680px){
+	.decor.pos1{
+		bottom: 0;
+		left: 0;
+		max-width: 300px;
+	}	
+}
+
+@media (max-width: 991px){
+	.decor{
+		display: none;
+	}
+}
+
+// @media (max-width: 768px){}
+    
+// @media (max-width: 575px){}
+
+        
+

@@ -1,0 +1,60 @@
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* seo text */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+.info-box{
+	background-color: #000;
+	box-shadow: 0 1px 5px rgba(0,0,0,.15);
+	text-align: center;
+	padding: 15px 30px;
+	h5{
+		color: #fff;
+		font-size: 14px;
+		line-height: 22px;
+		margin-bottom: 5px;
+	}
+	p{
+		font-size: 13px; 
+		line-height: 22px; 
+		color: rgba(255,255,255,.7);
+	}
+}
+
+	
+
+.block-map{
+	position: relative;
+	padding-bottom: 45%;
+	.map-wrapper{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+	
+	 
+		
+
+// @media (min-width: 1200px) {
+//   html:not(.touch-screen) {
+
+//   }
+// }
+
+// @media (max-width: 1199px){
+
+// }
+
+// @media (max-width: 768px){
+
+// }
+
+@media (max-width: 575px){
+  .block-map{
+	padding-bottom: 60%;
+  }
+}
+
+
+

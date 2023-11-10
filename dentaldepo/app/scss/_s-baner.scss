@@ -1,0 +1,138 @@
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* banner */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.banner{
+  position: relative;
+  &-image{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 45%;
+    &:after{
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &.opacity-01{
+      &:after{
+        background-image: url('../img/image-006777.png');
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        background-size: cover;
+      }
+      
+    }
+  }
+
+  .cell-view{
+    height: 68vh;
+    padding: 50px 0;
+    position: relative;
+  }
+  .scroll-btn{
+    position: absolute;
+    bottom: -14px;
+    right: 55%;
+    margin-right: -34px;
+    z-index: 3;
+  }
+  &.mr-bottom{
+    margin-bottom: 105px;
+  }
+  &.mr-bottom-2{
+    margin-bottom: 150px;
+  }
+  .breadcrumbs{
+    position: absolute;
+    top: 15px;
+    left: 0;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  html:not(.touch-screen) {
+
+  }
+}
+
+@media (max-width: 1199px){
+  .banner-image{
+    left: 60%;
+  }
+  .banner .scroll-btn{
+    right: 40%;
+  }
+}
+
+@media (max-width: 991px){
+
+  .banner{
+    .cell-view{
+      height: auto;
+      padding: 30px 0 0;
+    }
+  }
+
+  .banner-image{
+    left: 0;
+    position: relative;
+    width: 100%;
+    padding-bottom: 40%;
+  }
+
+  .banner .scroll-btn{
+    display: none;
+  }
+
+  .banner.mr-bottom-2{
+    margin-bottom: 60px;
+  }
+
+  .banner.mr-bottom{
+    margin-bottom: 60px;
+  }
+  
+}
+
+
+@media (max-width: 768px){
+  .banner{
+    .cell-view{
+      height: auto;
+      padding: 20px 0 0;
+    }
+    
+  }
+  .main_slider-section{
+    .btn-primary{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+
+
+}
+
+@media (max-width: 575px){
+
+  .banner.mr-bottom-2{
+    margin-bottom: 40px;
+  }
+
+  .banner.mr-bottom{
+    margin-bottom: 40px;
+  }
+  
+}
+
+
+

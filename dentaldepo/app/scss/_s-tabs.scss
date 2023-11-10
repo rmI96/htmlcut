@@ -1,0 +1,68 @@
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* TABS */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+
+.tab-toggle{
+	display: flex;
+	li{
+		display: inline-block;
+		padding: 15px 15px 18px 15px;
+		border-top: 1px solid $color-borders;
+		border-bottom: 1px solid $color-borders;
+		text-align: center;
+		flex: auto;
+		position: relative;
+		font-size: 16px;
+		color: $color-default;
+		transition: 0.25s;
+		cursor: pointer;
+		line-height: 1.2em;
+		width: 100%;
+		&:before{
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: -1px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 0;
+			height: 2px;
+			background: $color-secondary;
+			transition: 0.38s;
+		}
+		&.active{
+			font-weight: 600;
+			color: $color-dark;
+			&:before{
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+@media (min-width: 1200px) {
+  html:not(.touch-screen) {
+		.tab-toggle li:hover{
+			font-weight: 600;
+			color: $color-dark;
+			&:before{
+				width: 100%;
+			}
+		}
+  }
+}
+
+@media (max-width: 575px){
+
+	.tab-toggle li{
+		font-size: 14px;
+		padding: 12px 5px 15px 5px;
+		&.active{
+			font-weight: 400;
+		}
+	}
+
+
+}

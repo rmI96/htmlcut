@@ -1,0 +1,254 @@
+
+/*==========  BUTTONS  ==========*/
+
+.btn
+	display: inline-block
+	vertical-align: bottom
+	text-align: center
+	position: relative
+	cursor: pointer
+	text-decoration: none
+	border: none
+	padding: 0
+	background: none
+	outline: none
+	overflow: hidden
+	.icon
+		display: inline-block
+		width: 20px
+		margin-right: 14px
+		line-height: 0
+		img 
+			max-width: 100%
+
+.btn-primary
+	font-size: 12px
+	transition: all .28s, background-position .35s
+	line-height: 20px
+	letter-spacing: .2em
+	font-weight: 800
+	padding: 18px 40px
+	text-transform: uppercase
+	border-radius: 30px
+	color: #FFF
+	background-image: linear-gradient(38deg, #4f981e 0%, #4f981e 20%, #91b428 54%, #91b428 64%, #4f981e 90%, #4f981e 100%)
+	background-size: 200% auto
+	background-position: center center
+	span
+		vertical-align: middle
+	.arr
+		margin-left: 15px
+		position: relative
+		display: inline-block
+		width: 14px 
+		height: 12px
+		background-image: url(../img/arrow-button.svg)
+		background-size: contain
+		background-repeat: no-repeat
+		transition: 0.28s
+	&:active
+		transform: scale(0.98)
+
+.btn-stle-2
+	font-size: 12px
+	transition: all .28s, background-position .35s
+	line-height: 20px
+	letter-spacing: .2em
+	font-weight: 800
+	padding: 16px 40px
+	text-transform: uppercase
+	border-radius: 30px
+	color: #343c14
+	border: 2px solid #ebebeb
+	&:active
+		transform: scale(0.98)
+		
+.btn-secondary
+	font-size: 14px
+	line-height: 1.1em
+	color: #505348
+	letter-spacing: 0.07em
+	font-weight: 600
+	text-transform: uppercase
+	padding: 18px 40px
+	background-color: #f3f3f3
+	border-radius: 24px
+	transition: 0.28s
+
+.btn-link
+	font-size: 16px
+	text-decoration: none
+	color: #707810
+	font-weight: 700
+	transition: all .34s ease-out
+
+.btn-link-2
+	font-size: 16px
+	text-decoration: none
+	color: #676767
+	transition: all .34s ease-out
+
+.btn-link-3
+	font-size: 13px
+	text-decoration: none
+	color: #505348
+	font-weight: 300
+	transition: all .34s ease-out
+	
+.btn-seo
+	font-size: 13px
+	text-transform: uppercase
+	font-weight: 800
+	letter-spacing: 0.2em
+	color: $mainColor
+	transition: .28s
+	&::after
+		content: ''
+		position: relative
+		bottom: 1px
+		display: inline-block
+		vertical-align: middle
+		margin-left: 10px
+		border-style: solid
+		border-width: 5px 4px 0
+		border-color: $mainColor transparent transparent
+		transition: all .37s ease-out
+	&.less
+		&::after
+			transform: rotate(180deg)
+	&:active
+		transform: scale(0.98)
+.btn-block
+	display: block
+	width: 100%
+
+.btn-close
+	width: 40px
+	height: 40px
+	line-height: 42px
+	background-image: linear-gradient(242deg, #91b428 0%, #3f8a0e 100%)
+	background-size: 200% auto
+	background-position: center center
+	font-size: 22px
+	border-radius: 50%
+	position: relative
+	z-index: 1
+	cursor: pointer
+	outline: none
+	display: block
+	text-align: center
+	transition: all .37s ease-out
+	color: #ffffff
+	&:active
+		transform: scale(0.98)
+
+.btn-close:before
+	content: "\02715"
+
+@keyframes scale
+	0%
+		transform: scale(1)
+	50%
+		transform: scale(1.6)
+	to
+		transform: scale(1)
+
+.add-cart-loader
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 100%
+	height: 100%
+	background:  inherit
+	display: none
+	span 
+		display: block
+		width: 8px
+		height: 8px
+		border-radius: 50%
+		background-color: rgba(255, 255, 255,  1)
+		margin: 0 6px
+		animation: scale 1.2s infinite ease
+		&:nth-child(2)
+			animation-delay: .25s
+		&:nth-child(3)
+			animation-delay: .5s
+.add-cart-last
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	background:  inherit
+	justify-content: center
+	align-items: center
+	z-index: 2
+	pointer-events: none
+	display: none
+
+.btn-add-cart
+	.add-cart-last,
+	.add-cart-loader
+		display: flex
+		visibility: hidden
+		opacity: 0
+		border-radius: 30px
+	&.load
+		pointer-events: none
+		.add-cart-loader
+			visibility: visible
+			opacity: 1
+	&.last
+		pointer-events: none
+		.add-cart-last
+			visibility: visible
+			opacity: 1
+
+
+/*==========  Hover  ==========*/
+
+@media (min-width: 1200px)
+	.btn-primary:hover
+		background-position: right center
+		.arr 
+			transform: translateX(4px)
+	.btn-close:hover
+		background-position: left center
+	.btn-link-3:hover,
+	.btn-link-2:hover,
+	.btn-link:hover
+		opacity: 0.8
+	.btn-secondary:hover
+		color: $mainColor
+		background-color: #dcdcdc
+	.btn-stle-2:hover
+		background-color: #ebebeb
+	.btn-seo:hover
+		opacity: 0.8
+		// color: #293202
+		// &::after
+		// 	border-color: #293202 transparent transparent
+
+/*==========  MEDIA QUERIES  ==========*/
+
+@media (max-width: 1368px)
+	.btn-secondary
+		padding: 16px 24px
+@media (max-width: 1199px)
+	.btn-primary
+		padding: 13px 30px
+		.arr
+			margin-left: 8px
+	.btn-stle-2
+		padding: 11px 28px
+
+// @media (max-width: 991px)
+
+// @media (max-width: 768px)
+            
+// @media (max-width: 575px)

@@ -1,0 +1,328 @@
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* FORM ELEMENTS */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{color: $color-default; opacity: 1;}
+input:-moz-placeholder, textarea:-moz-placeholder{color: $color-default; opacity: 1;}
+input::-moz-placeholder, textarea::-moz-placeholder{color: $color-default; opacity: 1;}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder{color: $color-default; opacity: 1;}
+input, textarea, select{border-radius: 0; background: none; border: none; margin: 0; width: 100%; padding: 0;}
+textarea{display: block; resize: none; overflow: auto;}
+select::-ms-expand{display: none;}
+
+.input {
+  font-size: 16px;
+  height: 56px;
+  line-height: 56px;
+  padding: 0 20px;
+  border: 1px solid $color-borders;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: $color-default;
+  transition: 0.2s;
+  font-family: $font-text;
+  &:focus{
+    box-shadow: 0px 0px 0px 1px $color-borders;
+  }
+}
+
+textarea.input {
+  height: 110px;
+  border: 1px solid $color-borders;
+  line-height: 1.2em;
+  padding: 15px 20px 15px 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: $color-default;
+  transition: 0.2s;
+  font-family: $font-text;
+  &:focus{
+    box-shadow: 0px 0px 0px 1px $color-borders;
+  }
+}
+
+.invalid {
+  border-color: red;
+  color: red;
+}
+
+.checkbox-entry {
+  display: inline-block;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  min-width: 30px;
+  min-height: 20px;
+  color: $color-default;
+
+  input {
+    display: none;
+  }
+
+  span {
+    position: relative;
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 26px;
+    display: block;
+    transition: $transition;
+    font-family: $font-text;
+    a {
+      color: $color-secondary;
+    }
+  }
+
+  span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+    border: 1px $color-borders solid;
+    transition: $transition;
+  }
+
+  span:after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 8px;
+    width: 4px;
+    height: 4px;
+    z-index: 1;
+    backface-visibility: hidden;
+    transition: $transition;
+    background-color: #fff;
+  }
+
+  input:checked + span:before {
+    background-color: $color-secondary;
+    border-color: $color-secondary
+  }
+
+  input[type=radio] + span:before,
+  input[type=radio] + span:after{
+    border-radius: 50%;
+  }
+}
+
+.form-group {
+  text-align: left;
+
+  .input {
+    margin-bottom: 15px;
+  }
+
+  .SumoSelect{
+    margin-bottom: 15px;
+  }
+
+  .btn {
+    margin-top: 10px;
+  }
+
+  .checkbox-entry {
+    // margin-top: 5px;
+    margin-bottom: 15px;
+  }
+}
+
+.SumoSelect {
+  cursor: pointer;
+  font-family: $font-text;
+  > .CaptionCont{
+    border: 1px solid #EBEBEB;
+    height: 56px;
+    line-height: 54px;
+    border-radius: 0;
+    min-height: 14px;
+    padding: 0 15px;
+    font-size: 16px;
+    color: #666;
+    cursor: pointer;
+    > label{
+      width: 38px;
+      cursor: pointer;
+    }
+    > span{
+      cursor: pointer;
+    }
+    > label > i{
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      background: none;
+      transition: 0.25s;
+      &:after,
+      &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 2px;
+        height: 8px;
+        background-color: #666666;
+      }
+      &:before{
+        left: 0;
+        transform: rotate(-45deg)
+      }
+      &:after{
+        right: 0;
+        transform: rotate(45deg)
+      }
+    }
+  }
+  .optWrapper {
+    top: 100%;
+    border-color: #EBEBEB;
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: 0.3s;
+    > .options li.opt{
+      padding: 5px 15px;
+      font-size: 16px;
+      color: #666;
+      border-bottom: 1px solid #EBEBEB;
+    }
+  }
+  &.open{
+    > .optWrapper{
+      visibility: visible;
+      opacity: 1;
+      transform: none;
+    }
+    > .CaptionCont > label > i{
+      transform: rotate(180deg)
+    }
+  } 
+}
+
+
+@media (min-width: 992px) {
+  html:not(.touch-screen) {
+
+    .checkbox-entry {
+      &:hover {
+        span {
+          color: rgba(88, 88, 88, 0.7)
+        }
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .SumoSelect > .optWrapper > .options li.opt:hover {
+      background-color: #f9f9f9;
+    }
+
+  }
+}
+@media (max-width: 1366px){
+  .input{
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .input {
+    height: 50px;
+    line-height: 50px;
+  }
+  .SumoSelect > .CaptionCont{
+    height: 50px;
+    line-height: 48px;
+  }
+}
+/* -- -- -- */
+
+/* search input */
+.search {
+
+  &-input {
+    width: 100%;
+    height: 76px;
+    line-height: 76px;
+    border: 0;
+    padding: 0 106px 0 30px;
+    color: $color-primary;
+    &:focus{
+      box-shadow: 0px 0px 0px 0px #EBEBEB;
+    }
+  }
+
+  &-input-wrap {
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 60px;
+    width: 50%;
+    background-color: $color-white;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: $transition;
+
+    .btn-close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 76px;
+      height: 76px;
+      line-height: 76px;
+    }
+  }
+
+  &-form {
+    width: 100%;
+  }
+
+  &-bg-layer {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition;
+  }
+}
+
+@media (max-width: 991px) {
+  .search {
+    &-input-wrap {
+      width: 70%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .search {
+    &-input-wrap {
+      right: 0;
+      width: 100%;
+
+      .btn-close {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+      }
+    }
+
+    &-input {
+      padding-left: 15px;
+      padding-right: 75px;
+      height: 60px;
+      line-height: 60px;
+    }
+  }
+}
+/* end of search input */

@@ -1,0 +1,183 @@
+/*==========  Banner Style  ==========*/
+
+.main-baner{
+	&-block{
+		background-color: #d3ccbd;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		max-width: 450px;
+		padding: 260px 55px 150px 55px;
+		margin-left: auto; 
+		margin-right: 20%;
+		position: relative;
+		.title{
+			margin-bottom: 45px;
+		}
+	}
+	&-bg{
+		.bg{
+			&:nth-child(1){
+				width: 70%;
+				left: 0;
+				right: auto;
+			}
+			&:nth-child(2){
+				width: 30%;
+				left: auto;
+				right: 0;
+				
+			}
+		}
+		
+	}
+}
+
+.baner-scrolled{
+	position: absolute;
+	cursor: pointer;
+	line-height: 0;
+	bottom: 50px;
+	left: 50px;
+	transition: $transition; 
+	.icon{
+		line-height: 0;
+		display: inline-block;
+		width: 45px;
+		transition: $transition; 
+		img{
+			max-width: 100%;
+		}
+	}
+	&:active{
+		.icon{
+			transform: scale(0.9);
+		}
+	}
+}
+
+.baner-full{
+	&-inner{
+		height: 100vh;
+		padding: 50px 0;
+		display: table-cell;
+		vertical-align: middle;
+		width: 999999px;
+		position: relative;
+	}
+}
+
+
+/*==========  Hover  ==========*/
+
+@media (min-width: 1200px){
+	.baner-scrolled:hover{
+		transform: translateY(6px);
+	}
+}
+
+
+
+/*==========  MEDIA QUERIES  ==========*/
+@media (max-width: 1600px), (max-height: 800px){
+	.main-baner{
+		&-block{
+			padding: 180px 35px 100px 35px;
+			.title{
+				margin-bottom: 30px;
+			} 
+		}
+
+	}
+	.baner-scrolled{
+		left: 30px;
+		bottom: 30px;
+		.icon{
+			max-width: 30px;
+		}
+	}
+}
+
+
+@media (max-width: 1368px){
+	.main-baner{
+		&-block {
+		    padding: 140px 35px 100px 35px;
+		    .title{
+		    	margin-bottom: 20px;
+		    }
+		}
+	}
+}
+
+@media (max-width: 1199px), (max-height: 599px){
+	.main-baner{
+		&-block{
+			height: auto;
+			max-width: none;
+			margin: 0 -25px;
+			padding: 50px 25px 110px 25px;
+		}
+		&-bg{
+			.bg{
+				&:nth-child(1){
+					position: static;
+					padding-bottom: 40%;
+					width: 100%;
+				}
+				&:nth-child(2){
+					display: none;
+				}
+			}
+		}
+	}
+
+	.baner-full{
+		margin-top: 75px;
+		&-inner{
+			height: 550px;
+			padding: 70px 0;
+		}
+	}
+
+}
+
+@media (max-width: 991px){
+	.baner-full{
+		&-inner{
+			height: 60vw;
+		}
+	}
+}
+
+// @media (max-width: 768px){}
+            
+@media (max-width: 575px){
+	.main-baner{
+		&-bg{
+			.bg:nth-child(1){
+			 	padding-bottom: 65%;
+			}
+		}
+		&-block{
+			padding: 35px 25px 35px 25px;
+			.title{
+				margin-bottom: 15px;
+			}
+		}
+	}
+	.baner-scrolled{
+		display: none;
+	}
+
+	.baner-full{
+		margin-top: 65px;
+		&-inner{
+			padding: 50px 0;
+		}
+	}
+}
+
+
+
+

@@ -1,0 +1,72 @@
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* seo text */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+.decor{
+	position: absolute;
+	line-height: 0;
+	img{
+		max-width: 100%;
+	}
+	&.reverse{
+		transform: scaleX(-1);
+	}
+	&.reverse-xy{
+		transform: scale(-1);
+	}
+	&.zInx{
+		z-index: -1;
+	}
+	&.pos1{
+		left: 0;
+		top: 0;
+	}
+	&.pos2{
+		bottom: 0;
+		left: 0;
+	}
+	&.pos3{
+		top: 0;
+		right: 0;
+	}
+	&.pos4{
+		bottom: 10%;
+		right: 0;
+	}
+	&.pos5{
+		bottom: 0;
+		right: 0;
+	}
+	&.pos6{
+		left: 0;
+		bottom: 25%;
+	}
+	&.pos7{
+		left: 50%;
+		top: 0;
+		transform: translateX(-50%);
+	}
+}
+
+
+// @media (min-width: 1200px) {
+//   html:not(.touch-screen) {
+
+//   }
+// }
+
+@media (max-width: 1199px){
+	.decor{
+		display: none;
+	}
+}
+
+// @media (max-width: 768px){
+
+// }
+
+// @media (max-width: 575px){
+  
+// }
+
+
+

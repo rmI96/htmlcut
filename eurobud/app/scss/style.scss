@@ -1,0 +1,51 @@
+@import 's-global';
+@import 's-header';
+@import 's-blocks';
+@import 's-popups';
+@import 's-elements';
+@import 's-products-pg';
+@import 's-checkbox';
+@import 's-nouislider';
+@import 's-product-detail';
+@import 's-lightbox';
+@import 's-tabs';
+@import 's-simpl-page';
+@import 's-map';
+@import 's-profile-el';
+@import 's-compare';
+@import 's-footer';
+
+
+.firefox{
+	.quantity-elements input{
+		width: 58px;
+		display: block;
+		box-sizing: border-box;
+	}
+	.quantity-elements .dec, 
+	.quantity-elements .add{
+		display: block;
+		flex: 0 0 40px;
+	}
+}
+
+.ie{
+	.quantity-elements input{
+		line-height: 30px;
+		height: 30px;
+	}
+	.tab-toggle div{
+		max-width: 13%;
+	}
+	.thumbnail-articles-wrap .thumbnail-articles{
+		max-width: 49%;
+	}
+	.thumbnail-gallery-wrap .thumbnail-gallery{
+		max-width: 33%;
+	}
+}
+
+
+
+
+

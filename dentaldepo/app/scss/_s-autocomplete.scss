@@ -1,0 +1,51 @@
+/*--------------------------------------*/
+/* jquery autocomplete */
+/*--------------------------------------*/
+.ui-widget.ui-widget-content {
+  border: 0;
+  border-top: 1px solid $color-borders;
+  padding-bottom: 15px;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+}
+
+.ui-autocomplete {
+  z-index: 110;
+  background: #fff;
+  max-height: 240px;
+  overflow: auto;
+}
+
+.ui-menu .ui-menu-item {
+  font-size: 16px;
+  line-height: 1.5em;
+  padding: 0 30px;
+  color: $color-default;
+
+  &:first-child {
+    margin-top: 15px;
+  }
+}
+
+.ui-menu .ui-menu-item-wrapper {
+  position: relative;
+  display: block;
+  padding: 7px 0;
+}
+
+.ui-menu .ui-menu-item-wrapper .autocomplete-highlight {
+  font-weight: 600; }
+
+.ui-menu-item-wrapper.ui-state-active {
+  color: $color-primary;
+  background-color: #fff;
+  border: none;
+  margin: 0 !important;
+}
+
+@media (max-width: 767px) {
+  .ui-menu .ui-menu-item {
+    padding: 0 15px;
+  }
+}
+/*end of jquery autocomplete*/

@@ -1,0 +1,2176 @@
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* GLOBAL SETTINGS */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+html
+	height: auto
+body
+	height: auto
+	overflow: visible
+body ::selection
+	color: #fff
+	background: #000
+body ::-moz-selection
+	color: #fff
+	background: #000
+.swiper-slide:not(:first-child)
+	display: block
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* POPUPS */ 
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+.popup-wrapper
+	position: fixed
+	z-index: 16
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	left: -100%
+	transition-delay: .3s
+	overflow: hidden
+.popup-wrapper.active
+	left: 0
+	transition-delay: 0s
+.popup-wrapper .bg-layer
+	position: absolute
+	left: 0
+	top: -100px
+	right: 0
+	bottom: -100px
+	background: rgba(0,0,0,.8)
+	transition: all .3s ease-out
+	opacity: 0
+.popup-wrapper.active 
+	.bg-layer
+		opacity: 1
+.popup-content
+	position: absolute
+	top: 0
+	width: 100%
+	height: 100%
+	overflow: auto
+	-webkit-overflow-scrolling: touch
+	font-size: 0
+	text-align: center
+	transition: transform .3s ease-out, opacity .3s ease-out, left 0s .3s
+	transform: scale(1.2)
+	-webkit-transform: scale(1.2)
+	opacity: 0
+	left: -10000px
+	padding: 15px 40px
+	overflow: hidden
+.popup-content.active
+	transform: scale(1)
+	-webkit-transform: scale(1)
+	opacity: 1
+	left: 0
+	transition: transform .3s ease-out, opacity .3s ease-out, left 0s 0s
+	position: relative
+.popup-content:after
+	display: inline-block
+	vertical-align: middle
+	height: 100%
+	content: ""
+.popup-container
+	display: inline-block
+	vertical-align: middle
+	width: 100%
+	position: relative
+	text-align: left
+	background: #fff
+.popup-container.size-1
+	max-width: 570px
+.popup-container.size-2
+	max-width: 850px
+.popup-container.size-3
+	max-width: 1170px
+.popup-content .layer-close
+	position: absolute
+	left: 0
+	bottom: 0
+	right: 0
+	height: 10000px
+.popup-align
+	padding: 60px 70px 70px 70px
+.popup-content
+	.btn-close
+		position: absolute
+		right: -30px
+		top: -20px
+#video-popup 
+	.popup-align
+		padding: 0
+		background-color: #111
+	.embed-responsive
+		position: relative
+		display: block
+		height: 0
+		overflow: hidden
+		padding-bottom: 56%
+.embed-responsive 
+	iframe
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border: 0
+#image-popup
+	text-align: center
+	overflow: auto
+	.popup-container
+		width: auto
+	.popup-align
+		padding: 0
+		img
+			display: block
+			max-width: 100%
+			height: auto
+.popup-content.thanks-contacts
+	.popup-align
+		position: relative
+		&::before
+			content: ''
+			display: block
+			width: calc(100% + 60px)
+			height: 30%
+			position: absolute
+			left: -30px
+			bottom: -30px
+			border: 30px solid #f6f6f6
+			border-top: none
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			background-color: #5a5a5a
+			width: 95%
+			height: 1px
+			top: -20px
+			right: -30px
+		.decor-popup
+			&::after,
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				background-color: #5a5a5a
+				height: 100%
+				width: 1px
+			&::after
+				right: -30px
+				top: -20px
+			&::before
+				left: -30px
+				top: -20px
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* SWIPER */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+.swiper-entry 
+	position: relative 
+.swiper-container 
+	&:not(.swiper-no-swiping) 
+		.swiper-wrapper 
+			cursor: url(../img/drag.png) 16 9, ew-resize 
+.swiper-container-vertical 
+	&:not(.swiper-no-swiping)
+		.swiper-wrapper 
+			cursor: url(../img/drag-vertical.png) 8 16, ns-resize 
+.swiper-pagination 
+	line-height: 0
+	z-index: 2 
+	&.swiper-pagination-relative 
+		position: relative 
+		margin-top: 20px 
+		bottom: auto 
+.sw-custom
+	.swiper-button-next,
+	.swiper-button-prev
+		outline: none
+		width: 50px
+		height: 50px
+		position: absolute
+		background-image: none
+		.halfCircle
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			border: 1px solid #d8d8d8
+			border-radius: 100%
+			clip: rect(0, 50px, 20px, 0)
+			display: block
+			&::before
+				content: ''
+				position: absolute
+				top: -1px
+				left: -1px
+				right: -1px
+				bottom: -1px
+				border: 1px solid #ffffff
+				border-radius: 100%
+				clip: rect(0, 0px, 30px, 0)
+		.leftSide
+			&::before
+				transition: 0.4s
+				
+		.rightSide
+			&::before
+				transition: 0.4s
+				transition-delay: 0.3s
+		.arrow
+			display: block
+			position: absolute
+			width: 10px
+			height: 10px
+			top: 50%
+			right: 50%
+			margin-top: -5px
+			margin-right: -5px
+			transform: rotate(135deg)
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				width: 25px
+				height: 1px 
+				background-color: #6e6c6b
+				bottom: 0
+				right: 0
+				transform-origin: 100% 100%
+				transition: 0.3s
+		
+	.swiper-button-prev
+		left: 2.5%
+		.arrow
+			border-right: 1px solid #6e6c6b
+			border-bottom: 1px solid #6e6c6b
+			margin-right: -7px
+			&::before
+				transform: rotate(45deg) translateX( -18px)
+		.rightSide
+			transform: rotate(-165deg)
+		.leftSide
+			transform: rotate(-15deg)
+		@media (min-width: 991px)
+			&:hover
+				.arrow
+					&::before
+						width: 42px
+						transform: rotate(45deg)  translateX( -1px)
+	.swiper-button-next
+		right: 2.5%
+		.arrow
+			border-left: 1px solid #6e6c6b
+			border-top: 1px solid #6e6c6b
+			margin-right: -3px
+			&::before
+				transform: rotate(45deg) translateX( 28px)
+		.rightSide
+			transform: rotate(-192deg)
+		.leftSide
+			transform: rotate(10deg)
+		@media (min-width: 991px)
+			&:hover
+				.arrow
+					&::before
+						width: 42px
+						transform: rotate(45deg) translateX(28px)
+	.swiper-pagination
+		display: none
+		@media (max-width: 991px)
+			display: block
+	.swiper-pagination-bullet
+		margin: 0 10px
+		outline: none
+	.swiper-pagination-bullet-active
+		background: #353535
+
+.sw-custom-two
+	.swiper-button-wrapper
+		position: absolute
+		bottom: 0
+		right: 0
+		z-index: 4
+		display: flex
+	.swiper-button-next,
+	.swiper-button-prev
+		position: relative
+		left: 0
+		right: 0
+		margin: 0
+		display: inline-block
+		height: 60px
+		width: 60px
+		background-image: none
+		outline: none
+		transition: 0.2s
+		@media (max-width: 575px)
+			height: 45px
+			width: 45px
+		&:hover
+			background-color: rgba(255, 255, 255, 0.2)
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			border-right: 1px solid #ffffff
+			border-bottom: 1px solid #ffffff
+			width: 10px
+			height: 10px
+			top: 50%
+			left: 50%
+			margin-left: -5px
+			margin-top: -5px
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			width: calc(100% + 1px)
+			height: calc(100% + 1px)
+			top: -1px
+			left: -1px
+			border-left: 1px solid rgba(255, 255, 255, 0.2)
+			border-top: 1px solid rgba(255, 255, 255, 0.2)
+	.swiper-button-next
+		&::before
+			transform: rotate(-45deg)
+	.swiper-button-prev
+		margin-right: 1px
+		&::before
+			transform: rotate(135deg)
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* CUSTOM SCROLLBAR */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+.mCustomScrollbar
+	.mCSB_scrollTools 
+		.mCSB_draggerRail
+			background-color: rgba(1,1,1,0)
+		.mCSB_dragger 
+			.mCSB_dragger_bar
+				background-color: #353535
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* lightbox SCROLLBAR */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+a.lightbox
+	display: block
+.sl-overlay
+	background: rgba(0, 0, 0, 0.8)
+	opacity: 1
+.sl-wrapper
+	.sl-close
+		&:hover
+			opacity: 1
+	.btn-close
+		background-color: #353535!important
+		border: 1px solid rgba(255, 255, 255, 0.2)!important
+		line-height: 34px
+		&:hover
+			background-color: rgba(255, 255, 255, 0.2)!important
+			color: #fff
+			opacity: 1
+.sl-navigation
+	.sl-next,
+	.sl-prev
+		margin: 0
+		display: inline-block
+		height: 60px
+		width: 60px
+		background-image: none
+		outline: none
+		transition: 0.2s
+		background-image: none
+		font-size: 0!important
+		&:hover
+			background-color: rgba(255, 255, 255, 0.2)
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			border-right: 1px solid #ffffff
+			border-bottom: 1px solid #ffffff
+			width: 10px
+			height: 10px
+			top: 50%
+			left: 50%
+			margin-left: -5px
+			margin-top: -5px
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			width: -webkit-calc(100% + 1px)
+			width: calc(100% + 1px)
+			height: -webkit-calc(100% + 1px)
+			height: calc(100% + 1px)
+			top: -1px
+			left: -1px
+			border: 1px solid rgba(255, 255, 255, 0.2)
+	.sl-prev
+		&::before
+		    transform: rotate(135deg)
+		    margin-left: -4px
+	.sl-next
+		&::before
+		    transform: rotate(-45deg)
+		    margin-left: -8px
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* OTHERS STYLES */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+.welcome
+	&-block
+		position: relative
+		padding: 60px 18% 65px
+		max-width: 1190px
+		margin: 0 auto
+		@media (max-width: 1320px)
+			padding: 60px 10% 65px
+		@media (max-width: 991px)
+			//padding: 40px 15px 45px
+			padding: 25px 15px
+	&-text
+		font-family: ZingScriptRustL-Base, sans-serif
+		//font-size: 28px
+		font-size: 40px
+		backface-visibility: hidden
+		@media (max-width: 991px)
+			//font-size: 22px
+			font-size: 28px
+.info
+	&-inner
+		display: flex
+		align-items: flex-start
+		max-width: 1570px
+		margin: 0 auto
+		overflow: hidden
+		@media (max-width: 991px)
+			flex-wrap: wrap
+	&-s
+		.area
+			margin-top: 8px
+			@media (max-width: 991px)
+				margin-top: 5px
+		.image
+			padding: 50px 90px 50px 50px
+			position: relative
+			line-height: 0
+			flex: 0 0 65%
+			margin-top: 35px
+			text-align: right
+			max-width: 65%
+			@media (max-width: 1368px)
+				max-width: 60%
+			@media (max-width: 1199px)
+				padding: 20px
+			@media (max-width: 991px)
+				flex: 0 0 100%
+				max-width: 100%
+				padding: 0
+				margin-top: 0
+				margin-bottom: 20px
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				background-color: #f6f6f6
+				width: 40%
+				height: 100%
+				top: 0
+				left: 0
+				z-index: -1
+				@media (max-width: 991px)
+					display: none
+			img
+				max-width: 100%
+		.wr-content
+			padding: 0 110px 110px 30px
+			//border-right: 1px solid #e9e9e8
+			//border-bottom: 1px solid #e9e9e8
+			position: relative
+			@media (max-width: 1368px)
+				padding: 0 70px 110px 30px
+			@media (max-width: 1199px)
+				padding: 0 60px 60px 20px
+			@media (max-width: 991px)
+				padding: 0
+				//border: none
+				&:before, &:after
+					display: none
+
+			&:before, &:after
+				position: absolute
+				content: ''
+				background-color: #e9e9e8
+			&:before
+				right: 0
+				top: 0
+				width: 1px
+				height: 0
+			&:after
+				right: 0
+				bottom: 0
+				height: 1px
+				width: 0
+
+		.decor-text
+			font-family: ZingScriptRustL-Base, sans-serif
+			//font-size: 28px
+			font-size: 40px
+			max-width: 100%
+			color: #646261
+			padding: 0 30px
+			background-color: #ffffff
+			position: absolute
+			bottom: 0
+			left: 0
+			backface-visibility: hidden
+			transform: translateY(50%)
+			z-index: 1
+			@media (max-width: 991px)
+				display: none
+		.image-inner
+			position: relative
+			&::before
+				content: ''
+				display: block
+				width: 1px
+				height: 1px
+				position: absolute
+				bottom: 0
+				right: 0
+				border-radius: 50%
+				box-shadow: -40px -10px 60px 95px rgba(1, 1, 1, 0.5)
+	&-video
+		overflow: hidden
+		position: relative
+		padding-bottom: 68%
+		cursor: pointer
+		.bg
+			transition: 0.8s
+			transform: scale(1.001)
+			&::after
+				background-color: rgba(1,1,1,0.35)
+		&:hover
+			.bg 
+				transform: scale(1.1)
+			.leftSide::before
+				transition: 0.4s
+				transition-delay: 0.3s
+				clip: rect(0, 80px, 30px, 0)
+			.rightSide::before
+				transition: 0.4s
+				clip: rect(0, 80px, 30px, 0)
+	&-image
+		overflow: hidden
+		position: relative
+		padding-bottom: 68%
+	&-image2
+		overflow: hidden
+		position: relative
+		padding-bottom: 82.5%
+	&-image3
+		overflow: hidden
+		position: relative
+		padding-bottom: 53%
+	&-image4
+		overflow: hidden
+		position: relative
+		padding-bottom: 100%
+
+.open-img
+	cursor: pointer 
+	display: block
+	.bg::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-image: inherit
+		background-size: cover
+		transition: .8s
+	@media (min-width: 991px)
+		&:hover
+			.bg:before
+				transform: scale(1.1)
+	.bg
+		transition: .8s
+.info
+	&-r-inner
+		display: flex
+		align-items: flex-start
+		max-width: 1570px
+		margin: 0 auto
+		@media (max-width: 991px)
+			flex-wrap: wrap
+	&-r
+		.area
+			margin-top: 8px
+			padding-left: 80px
+			@media (max-width: 991px)
+				padding-left: 0 
+		.image
+			padding: 50px 50px 50px 90px
+			position: relative
+			line-height: 0
+			flex: 0 0 65%
+			max-width: 65%
+			margin-top: 35px
+			@media (max-width: 1368px)
+				max-width: 60%
+			@media (max-width: 1199px)
+				padding: 20px
+			@media (max-width: 991px)
+				flex: 0 0 100%
+				max-width: 100%
+				padding: 0
+				margin-top: 0
+				margin-bottom: 20px
+				order: 1
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				background-color: #f6f6f6
+				width: 40%
+				height: 100%
+				top: 0
+				right: 0
+				z-index: -1
+				@media (max-width: 991px)
+					display: none
+			img
+				max-width: 100%
+		.text-n
+			@media (max-width: 991px)
+				order: 2
+		.wr-content
+			padding: 0 30px 110px 110px
+			//border-left: 1px solid #e9e9e8
+			//border-bottom: 1px solid #e9e9e8
+			position: relative
+			@media (max-width: 1368px)
+				padding: 0 30px 110px 70px
+			@media (max-width: 1199px)
+				padding: 0 20px 60px 60px
+			@media (max-width: 991px)
+				padding: 0
+				//border: none
+				&:before, &:after
+					display: none
+
+			&:before, &:after
+				position: absolute
+				content: ''
+				background-color: #e9e9e8
+			&:before
+				left: 0
+				top: 0
+				width: 1px
+				height: 0
+			&:after
+				left: 0
+				bottom: 0
+				height: 1px
+				width: 0
+		.title
+			padding-left: 80px
+			@media (max-width: 991px)
+				padding-left: 0 
+		.decor-text
+			font-family: ZingScriptRustL-Base, sans-serif
+			//font-size: 28px
+			font-size: 40px
+			max-width: 100%
+			color: #646261
+			padding: 0 30px
+			background-color: #ffffff
+			position: absolute
+			bottom: 0
+			right: 0
+			transform: translateY(50%)
+			z-index: 1
+			@media (max-width: 991px)
+				display: none
+		.image-inner
+			position: relative
+			&::before
+				content: ''
+				display: block
+				width: 1px
+				height: 1px
+				position: absolute
+				bottom: 0
+				right: 0
+				border-radius: 50%
+				box-shadow: -40px -10px 60px 95px rgba(1, 1, 1, 0.5)
+	&-items
+		display: flex
+		flex-wrap: wrap
+		font-weight: 400
+		margin: 0 -10px
+		.item
+			flex: 0 0 50%
+			padding: 0 10px
+			margin-bottom: 15px
+			font-size: 14px
+			color: #292929
+			@media (max-width: 360px)
+				flex: 0 0 100%
+				margin-bottom: 8px
+		.icon
+			vertical-align: middle
+			display: inline-block
+			width: 25px
+			margin-right: 12px
+			line-height: 1em
+			img 
+				max-width: 100%
+.info-lt
+	&-inner
+		display: flex
+		max-width: 1260px
+		margin: 0 auto
+		align-items: flex-start
+		@media (max-width: 991px)
+			flex-wrap: wrap
+		.image
+			padding: 50px
+			position: relative
+			flex: 0 0 60%
+			line-height: 0
+			max-width: 60%
+			@media (max-width: 1199px)
+				padding: 20px
+			@media (max-width: 991px)
+				flex: 0 0 100%
+				padding: 0
+				text-align: center
+				margin-bottom: 20px
+				max-width: 100%
+			&::before
+				content: ''
+				background-color: #f6f6f6
+				display: block
+				position: absolute
+				height: 100%
+				width: 50%
+				left: 0
+				top: 0
+				z-index: -1
+				@media (max-width: 991px)
+					display: none
+			img
+				max-width: 100%
+		.text-n
+			align-self: center
+			padding-left: 30px
+			@media (max-width: 1199px)
+				padding-left: 10px
+			@media (max-width: 991px)
+				padding-left: 0
+
+.info-rt
+	&-inner
+		display: flex
+		max-width: 1260px
+		margin: 0 auto
+		align-items: flex-start
+		@media (max-width: 991px)
+			flex-wrap: wrap
+		.image
+			padding: 50px
+			position: relative
+			flex: 0 0 60%
+			line-height: 0
+			max-width: 60%
+			@media (max-width: 1199px)
+				padding: 20px
+			@media (max-width: 991px)
+				padding: 0
+				flex: 0 0 100%
+				margin-bottom: 20px
+				text-align: center
+				max-width: 100%
+			&::before
+				content: ''
+				background-color: #f6f6f6
+				display: block
+				position: absolute
+				height: 100%
+				width: 50%
+				right: 0
+				top: 0
+				z-index: -1
+				@media (max-width: 991px)
+					display: none
+			img
+				max-width: 100%
+		.text-n
+			align-self: center
+			padding-right: 30px
+			@media (max-width: 1199px)
+				padding-right: 10px
+			@media (max-width: 991px)
+				order: 2
+				padding-right: 0
+
+
+.reviews
+	position: relative
+	.bg-an
+		//height: 100%
+		@media (max-width: 991px)
+			display: none
+	.anime-slide-left::after
+		background-color: #f6f6f6
+	&-item
+		cursor: pointer 
+		.image
+			position: relative
+			padding-bottom: 70%
+			overflow: hidden
+			margin-bottom: 20px
+		.title
+			font-size: 24px
+			color: #292929
+			font-weight: 500
+			padding: 0 25px
+			transition: 0.2s
+			@media (max-width: 991px)
+				//padding-left: 0 15px
+				padding: 0 15px
+		.bg
+			transition: 0.8s
+			backface-visibility: hidden
+			transform: scale(1.001)
+		&:hover
+			.title
+				color: #646261
+			.bg
+				transform: scale(1.1)
+			.leftSide
+				&::before
+					transition: 0.4s
+					transition-delay: 0.3s
+					clip: rect(0, 80px, 30px, 0)
+			.rightSide
+				&::before
+					transition: 0.4s
+					clip: rect(0, 80px, 30px, 0)
+	.swiper-button-prev,
+	.swiper-button-next
+		margin-top: -45px
+		@media (max-width: 991px)
+			display: none
+.amenities
+	&-s
+	&-inner
+		display: flex
+		align-items: flex-start
+		.image
+			flex: 0 0 55%
+			padding-right: 80px
+			padding-bottom: 80px
+			position: relative
+			line-height: 0
+			@media (max-width: 1199px)
+				flex: 0 0 60%
+				padding-right: 20px
+				padding-bottom: 20px
+			@media (max-width: 991px)
+				display: none
+			.decor-image
+				display: block
+				position: absolute
+				bottom: 0
+				right: 0
+				width: 140%
+				height: 80%
+				z-index: -1
+			img 
+				max-width: 100%
+		.image-inner
+			padding-bottom: 110%
+			position: relative
+			// overflow: hidden
+			.bg
+				opacity: 0
+				visibility: hidden
+				// transform: translateY(-120px)
+				transition: 0.8s
+				&.active
+					transform: none
+					visibility: visible
+					opacity: 1
+		.content
+			margin-top: 60px
+			padding-right: 100px
+			position: relative
+			z-index: 1
+			@media (max-width: 1199px)
+				padding-right: 30px
+				margin-top: 30px
+			@media (max-width: 991px)
+				margin-top: 0
+				padding-right: 0
+	&-item
+		margin-bottom: 60px
+		&:last-of-type
+			margin-bottom: 0
+		@media (max-width: 1199px)
+			margin-bottom: 40px
+		@media (max-width: 991px)
+			margin-bottom: 20px
+		.title
+			margin-bottom: 20px
+			position: relative
+			transition: 0.5s
+			text-decoration: none
+			display: inline-block
+			@media (max-width: 991px)
+				margin-bottom: 5px
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				width: 4px
+				height: 4px
+				top: 50%
+				left: 0
+				transform: translateY(-50%)
+				background-color: #646261
+				border-radius: 50%
+				opacity: 0
+				visibility: hidden
+				transform: translateX(-50px)
+				transition: 0.5s
+			@media (min-width: 991px)
+				&:hover
+					padding-left: 50px
+					&::before
+						transform: none
+						opacity: 1
+						visibility: visible
+			span 
+				display: inline-block
+				margin-right: 15px
+				font-size: 20px
+		.text-n
+			padding-left: 50px
+			@media (max-width: 991px)
+				padding-left: 0
+	&-wrapper
+		padding-left: 30px
+		@media (max-width: 1199px)
+			padding-left: 0
+.events
+	&-s
+		position: relative
+		.decor-events
+			display: block
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 60%
+			@media (max-width: 991px)
+				display: none
+		.swiper-button-prev,
+		.swiper-button-next
+			@media (max-width: 1199px)
+				display: none
+	&-item
+		.image
+			display: block
+			position: relative
+			padding-bottom: 110%
+			margin-bottom: 25px
+			overflow: hidden
+			@media (max-width: 991px)
+				margin-bottom: 15px
+			.bg
+				transition: 0.8s
+		a.image
+			&:hover
+				.bg 
+					transform: scale(1.06)
+		.date
+			padding-left: 20px
+			font-size: 14px
+			color: #8f8f8f
+			margin-bottom: 20px
+			line-height: 1.1
+			@media (max-width: 991px)
+				padding-left: 20px
+				margin-bottom: 10px
+			.icon
+				display: inline-block
+				width: 16px
+				margin-right: 10px
+				vertical-align: middle
+				img 
+					max-width: 100%
+		.title
+			padding: 0 20px
+			display: inline-block
+			text-decoration: none
+			color: #292929
+			font-size: 24px
+			font-weight: 500
+			transition: 0.3s
+			@media (max-width: 991px)
+				font-size: 22px
+		a.title
+			&:hover
+				color: #646261
+.events-s.our-team
+	.date
+		margin-bottom: 10px	
+	.image
+		margin-bottom: 20px	
+	.swiper-button-prev,
+	.swiper-button-next
+		margin-top: 13px
+.events-s
+	.swiper-button-prev,
+	.swiper-button-next
+		margin-top: 23px
+.instagram
+	&-s
+	&-row
+		margin: 0 -2.5px
+		display: flex
+		@media (max-width: 991px)
+			flex-wrap: wrap
+		.col-i
+			padding: 0 2.5px
+			margin-bottom: 5px
+			flex: 0 0 16.66%
+			@media (max-width: 991px)
+				flex: 0 0 25%
+			@media (max-width: 769px)
+				flex: 0 0 33.33%
+	&-photo
+		display: block
+		padding-bottom: 100%
+		position: relative
+		overflow: hidden
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-image: inherit
+			transition: 0.8s
+		&:hover
+			&::before
+				transform: scale(1.06)
+	&-wr-btn
+		text-align: center
+		overflow: hidden
+		a 
+			color: #292929
+			text-decoration: none
+			font-size: 28px
+			font-weight: 500
+			transition: 0.2s
+			position: relative
+			&::before,
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				width: 50vw
+				height: 1px
+				background-color: #e9e9e8
+				top: 50%
+			&::before
+				right: calc(100% + 25px)
+			&::after
+				left: calc(100% + 25px)
+			&:hover
+				color: #646261
+.about-h
+	&-inner
+		display: flex
+		position: relative
+		padding: 70px 0
+		@media (max-width: 991px)
+			flex-wrap: wrap
+			padding: 0
+		.decor-about
+			display: block
+			position: absolute
+			top: 0
+			right: 0
+			width: 80%
+			height: 100%
+			z-index: -1
+			@media (max-width: 991px)
+				display: none
+		.image
+			flex: 0 0 35%
+			line-height: 0
+			@media (max-width: 991px)
+				flex: 0 0 100%
+				margin-bottom: 35px
+				text-align: center
+			img 
+				max-width: 100%
+		.content
+			padding: 30px 100px 30px 55px
+			@media (max-width: 991px)
+				padding: 0
+			
+.footer
+	background-color: #242323
+	padding-top: 50px
+	margin-bottom: 30px
+	@media (max-width: 1199px)
+		margin-bottom: 15px
+	@media (max-width: 991px)
+		padding-top: 40px
+	.title
+		color: #ffffff
+		font-size: 18px
+		font-weight: 500
+		letter-spacing: 0.4px
+		margin-bottom: 10px
+		line-height: 1.1em
+	.contacts
+		text-decoration: none
+		color: #808080
+		font-size: 16px
+		letter-spacing: 0.4px
+		display: block
+		line-height: 1.1em
+		margin-bottom: 10px
+		&:last-of-type
+			margin-bottom: 0
+	a.contacts
+		transition: 0.2s
+		&:hover
+			color: #ffffff
+	.logo-wrapper
+		@media (max-width: 1199px)
+			margin-bottom: 20px
+			flex: 0 0 100%
+			text-align: center
+	.logo
+		width: 170px
+		display: inline-block
+		line-height: 0
+		align-self: center
+		img 
+			max-width: 100%
+	&-block
+		padding: 0 15px
+		@media (max-width: 991px)
+			flex: 0 0 100%
+			text-align: center
+			margin-bottom: 20px
+	&-pr
+		text-align: right
+		line-height: 0
+		@media (max-width: 991px)
+			flex: 0 0 100%
+			text-align: center
+		.img
+			display: inline-block
+			margin-left: 10px
+			line-height: 0
+			img
+				max-width: 100%
+	&-bottom
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 10px 4%
+		@media (max-width: 1199px)
+			padding: 15px
+		@media (max-width: 769px)
+			flex-wrap: wrap
+		.copyright
+			color: #808080
+			font-size: 14px
+			letter-spacing: 1px
+			@media (max-width: 769px)
+				order: 3
+				flex: 0 0 100%
+				text-align: center
+		.social
+			@media (max-width: 769px)
+				flex: 0 0 100%
+				margin-bottom: 10px
+				text-align: center
+			a 
+				text-decoration: none
+				display: inline-block
+				margin: 0 10px
+				line-height: 0
+				svg 
+					fill: #808080
+					transition: 0.2s
+				&:hover
+					svg 
+						fill: #ffffff
+		.img-wr
+			line-height: 0
+			@media (max-width: 769px)
+				flex: 0 0 100%
+				text-align: center
+				margin-bottom: 10px
+			.img
+				display: inline-block
+				line-height: 0
+				margin-left: 10px
+				img 
+					max-width: 100%
+	&-top
+		padding: 0 4%
+		@media (max-width: 1199px)
+			padding: 0 15px
+	&-row
+		display: flex
+		justify-content: space-between
+		@media (max-width: 1199px)
+			flex-wrap: wrap
+.slider-s
+	position: relative
+	.decor-a
+		display: block
+		width: 100%
+		height: 80%
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1
+		@media (max-width: 991px)
+			display: none
+	.swiper-button-prev,
+	.swiper-button-next
+		margin-top: -76px
+		@media (max-width: 991px)
+			display: none
+		&.v-center
+			margin-top: -25px
+	.swiper-button-prev
+		left: 10%
+	.swiper-button-next
+		right: 10%
+	.inner-image
+		position: relative
+		line-height: 0
+		text-align: center
+		img 
+			max-width: 100%
+		&.info-image3
+			padding-bottom: 60%
+
+.reviews-two
+	.swiper-wrapper
+		align-items: stretch
+		.swiper-slide
+			height: auto
+	.swiper-button-prev,
+	.swiper-button-next
+		bottom: -100px
+		top: auto
+		@media (max-width: 575px)
+			display: none
+	.swiper-button-prev
+		left: 0
+	.swiper-button-next
+		right: 0
+	&-item
+		background-color: #f6f6f6
+		padding: 40px 30px
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		@media (max-width: 991px)
+			padding: 30px 20px
+		.date
+			font-size: 14px
+			color: #292929
+			margin-bottom: 25px
+			line-height: 1
+			font-weight: 400
+			@media (max-width: 991px)
+				margin-bottom: 15px
+		.text
+			line-height: 22px
+		.info-user
+			display: flex
+			align-items: center
+			margin-top: 30px
+			@media (max-width: 991px)
+				margin-top: 20px
+		.image
+			width: 72px
+			height: 72px
+			border-radius: 50%
+			margin-right: 15px
+			overflow: hidden
+			img 
+				max-width: 100%
+				height: 100%
+				object-fit: cover
+		.name
+			font-size: 20px
+			font-weight: 500
+			color: #292929
+.video-block
+	position: relative
+	overflow: hidden
+	padding-bottom: 50%
+	cursor: pointer
+	.bg
+		transition: 0.8s
+		transform: scale(1.01)
+		&:after
+			background-color: rgba(1, 1, 1, 0.35)
+	&:hover
+		.bg
+			transform: scale(1.1)
+		.leftSide::before
+			transition: 0.4s
+			transition-delay: 0.3s
+			clip: rect(0, 80px, 30px, 0)
+		.rightSide::before
+			transition: 0.4s
+			clip: rect(0, 80px, 30px, 0)
+.form
+	&-s
+	&-bg 
+		background-color: #f6f6f6
+		padding: 65px 10% 80px 10%
+		@media (max-width: 991px)
+			padding: 35px 15px 40px 15px
+	.btn 
+		input[type=submit]
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			opacity: 0
+			border: none
+			cursor: pointer
+			z-index: 1
+.events-p
+	&-inner
+		display: flex
+		flex-wrap: wrap
+		@media (max-width: 575px)
+			padding-top: 50px
+	&-item
+		flex: 0 0 50%
+		max-width: 50%
+		display: flex
+		align-items: flex-start
+		@media (max-width: 1199px)
+			flex: 0 0 100%
+			max-width: 100%
+		@media (max-width: 575px)
+			flex-wrap: wrap
+			margin-bottom: 50px
+			&:last-of-type
+				margin-bottom: 0
+		.picture
+			flex: 0 0 50% 
+			max-width: 50%
+			@media (max-width: 575px)
+				flex: 0 0 100%
+				max-width: 100%
+				margin-bottom: 30px
+		.image 
+			padding-bottom: 130%
+			position: relative
+			overflow: hidden
+			display: block
+		a.image
+			.bg 
+				transition: 0.8s
+			&:hover
+				.bg 
+					transform: scale(1.06)
+		.video 
+			padding-bottom: 130%
+			position: relative
+			overflow: hidden
+			cursor: pointer
+			.bg
+				transition: 0.8s
+				transform: scale(1.001)
+				&:after
+					background-color: rgba(1, 1, 1, 0.35)
+			&:hover
+				.bg
+					transform: scale(1.1)
+				.leftSide::before
+					transition: 0.4s
+					transition-delay: 0.3s
+					clip: rect(0, 80px, 30px, 0)
+				.rightSide::before
+					transition: 0.4s
+					clip: rect(0, 80px, 30px, 0)
+		.info
+			padding: 50px 30px 40px 40px
+			@media (max-width: 1368px)
+				padding: 25px 20px 25px 20px
+			@media (max-width: 991px)
+				padding: 25px 15px 25px 20px
+			@media (max-width: 575px)
+				height: auto!important
+				padding: 0
+			.scroll-wrapper
+				height: 100%
+				overflow: auto
+				@media (max-width: 991px)
+					padding-right: 15px
+		.btn-type-six
+			margin-top: 25px
+			@media (max-width: 991px)
+				margin-top: 20px
+		.date
+			font-size: 14px
+			color: #8f8f8f
+			margin-bottom: 16px
+			line-height: 1.1
+			.icon
+				display: inline-block
+				width: 16px
+				margin-right: 10px
+				vertical-align: middle
+				img 
+					max-width: 100%
+		.title
+			margin-bottom: 25px
+			@media (max-width: 991px)
+				margin-bottom: 10px
+		a.title
+			text-decoration: none
+			transition: 0.3s
+			display: inline-block
+			&:hover
+				color: #808080
+		
+		&:nth-child(4n),
+		&:nth-child(4n-1)
+			@media (min-width: 1200px)
+				.info
+					order: 1
+				.picture
+					order: 2
+		&:nth-child(2n)
+			@media  (min-width: 576px) and (max-width: 1199px)  
+				.info
+					order: 1
+				.picture
+					order: 2
+		
+.events-detail
+	.video-block
+		margin-top: 35px
+		margin-bottom: 35px
+	.info-image3
+		padding-bottom: 60%
+.social-wrapper
+	display: flex
+	align-items: center
+	a 
+		display: inline-block
+		line-height: 55px 
+		height: 50px
+		width: 50px
+		text-align: center
+		border-radius: 50%
+		border: 1px solid #ececec
+		margin: 0 5px
+		position: relative
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 0
+			height: 0
+			background-color: #353535
+			transition: 0.2s
+			border-radius: 50%
+		svg
+			fill: #353535
+			max-width: 100%
+			position: relative
+			z-index: 2
+			transition: 0.1s
+		@media (min-width: 767px)
+			&:hover
+				&::after
+					width: 100%
+					height: 100%
+				svg
+					fill: #ffffff
+	.social-title
+		color: #262626
+		font-size: 18px
+		font-weight: 500
+		margin-right: 20px
+.pagination
+	display: flex
+	justify-content: center
+	align-items: center
+	.prev a,
+	.next a
+		outline: none
+		width: 50px
+		height: 50px
+		display: block
+		position: relative
+		background-image: none
+		@media (max-width: 769px)
+			display: none
+		.halfCircle
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			border: 1px solid #d8d8d8
+			border-radius: 100%
+			clip: rect(0, 50px, 20px, 0)
+			display: block
+			&::before
+				content: ''
+				position: absolute
+				top: -1px
+				left: -1px
+				right: -1px
+				bottom: -1px
+				border: 1px solid #ffffff
+				border-radius: 100%
+				clip: rect(0, 0px, 30px, 0)
+		.leftSide
+			&::before
+				transition: 0.4s
+				
+		.rightSide
+			&::before
+				transition: 0.4s
+				transition-delay: 0.3s
+		.arrow
+			display: block
+			position: absolute
+			width: 10px
+			height: 10px
+			top: 50%
+			right: 50%
+			margin-top: -5px
+			margin-right: -5px
+			transform: rotate(135deg)
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				width: 25px
+				height: 1px 
+				background-color: #6e6c6b
+				bottom: 0
+				right: 0
+				transform-origin: 98% 100%
+				transition: 0.3s
+	.prev a 
+		.arrow
+			border-right: 1px solid #6e6c6b
+			border-bottom: 1px solid #6e6c6b
+			&::before
+				transform: rotate(45deg) translateX( -18px)
+		.rightSide
+			transform: rotate(-165deg)
+		.leftSide
+			transform: rotate(-15deg)
+		@media (min-width: 991px)
+			&:hover
+				.arrow
+					&::before
+						transform: rotate(45deg) translateX(-1px)
+	.next a 
+		.arrow
+			border-left: 1px solid #6e6c6b
+			border-top: 1px solid #6e6c6b
+			&::before
+				transform: rotate(45deg) translateX( 28px)
+		.rightSide
+			transform: rotate(-192deg)
+		.leftSide
+			transform: rotate(10deg)
+		@media (min-width: 991px)
+			&:hover
+				.arrow
+					&::before
+						transform: rotate(45deg) translateX(11px)
+	.prev
+		margin-right: 45px
+	.next
+		margin-left: 45px
+	li
+		display: inline-block
+	li:not(.prev):not(.next)
+		text-align: center
+		width: 60px
+		flex: 0 0 60px
+		margin: 0 2px
+		@media (max-width: 769px)
+			width: 45px
+			flex: 0 0 45px
+		a
+			display: block
+			width: 60px
+			height: 60px
+			line-height: 60px
+			border-radius: 50%
+			color: #292929
+			text-decoration: none
+			transition: 0.3s
+			font-size: 18px
+			position: relative
+			z-index: 1
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				width: 0
+				height: 0
+				background-color: #242323
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				border-radius: 50%
+				transition: 0.2s
+				z-index: -1
+			@media (max-width: 769px)
+				width: 45px
+				height: 45px
+				line-height: 45px
+				font-size: 16px
+			&:hover
+				color: #fff
+				&::before
+					width: 100%
+					height: 100%
+		&.active
+			a
+				background-color: #242323
+				color: #fff
+				font-weight: 500
+.baner-inner 
+	&.baner-events-d
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: center
+		padding: 10px 15px
+		@media (max-width: 767px)
+			padding: 52px 15px 10px
+		.breadcrumbs
+			flex: 0 0 100%
+	.baner-events-info
+		flex: 0 0 100%
+		align-self: baseline
+		text-align: center
+		max-width: 800px
+		padding: 30px 0
+		@media (max-width: 991px)
+			align-self: center
+		.title
+			margin-bottom: 20px
+			font-size: 56px
+			line-height: 1.2em
+			@media (max-width: 991px)
+				font-size: 34px
+		.date
+			color: #ffffff
+			font-size: 14px
+			line-height: 1.1
+			margin-bottom: 15px
+			.icon
+				display: inline-block
+				vertical-align: middle
+				width: 18px
+				margin-right: 10px
+				img   
+					max-width: 100%
+
+
+.events-detail
+	.inner-image
+		img 
+			max-width: 100%
+	.sw-custom
+		margin: 30px 0
+		.swiper-button-prev
+			left: -100px
+			@media (max-width: 991px)
+				display: none
+		.swiper-button-next
+			right: -100px
+			@media (max-width: 991px)
+				display: none
+	.social-wrapper
+		margin-top: 70px
+		@media (max-width: 991px)
+			margin-top: 30px
+.breadcrumbs
+	line-height: 1.1em
+	@media (max-width: 991px)
+		display: none
+	li  
+		font-size: 10px
+		text-transform: uppercase
+		color: #b2b2b2
+		display: inline-block
+		letter-spacing: 0.4px
+		a 
+			color: #b2b2b2
+			transition: 0.2s
+			text-decoration: none
+			&:hover
+				color: #ffffff
+		span 
+			color: #ffffff
+
+.articles
+	&-other
+		.swiper-button-prev, 
+		.swiper-button-next
+			top: auto
+			bottom: -120px
+			@media (max-width: 769px)
+				display: none
+		.swiper-button-prev
+			left: 0
+		.swiper-button-next
+			right: 0
+	&-item
+		display: flex
+		padding: 45px 0
+		align-items: center
+		position: relative
+		@media (max-width: 1199px)
+			padding: 25px 0
+		@media (max-width: 575px)
+			flex-wrap: wrap
+			padding: 0
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			width: 90%
+			height: 100%
+			right: 0
+			top: 0
+			background-color: #f6f6f6
+			z-index: -1
+			@media (max-width: 575px)
+				display: none
+		.image
+			display: block
+			padding-bottom: 32%
+			flex: 0 0 50%
+			max-width: 50%
+			position: relative
+			overflow: hidden
+			@media (max-width: 575px)
+				padding-bottom: 55%
+				flex: 0 0 100%
+				max-width: 100%
+				margin-bottom: 20px
+			.bg 
+				transition: 0.8s
+			&:hover
+				.bg 
+					transform: scale(1.06)
+		.date
+			color: #8f8f8f
+			margin-bottom: 20px
+			line-height: 1.1em
+			font-size: 14px
+			@media (max-width: 575px)
+				margin-bottom: 10px
+			.icon
+				width: 18px
+				vertical-align: middle
+				img
+					max-width: 100%
+					margin-right: 10px
+					font-size: 14px
+		.title
+			text-decoration: none
+			color: #292929
+			display: inline-block
+			margin-bottom: 25px
+			transition: 0.2s
+			&:hover
+				opacity: 0.8
+		.info
+			padding: 0 80px 0 50px
+			@media (max-width: 1368px)
+				padding: 0 30px 0 20px	
+			@media (max-width: 575px)
+				padding: 0
+.articles
+	&-el
+		display: flex
+		align-items: center
+		margin-bottom: 100px
+		padding: 30px 0
+		position: relative
+		@media (max-width: 1368px)
+			margin-bottom: 50px
+		@media (max-width: 769px)
+			flex-wrap: wrap
+			padding: 0
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			width: 70%
+			height: 100%
+			right: 0
+			top: 0
+			background-color: #f6f6f6
+			z-index: -1
+			@media (max-width: 769px)
+				display: none
+		.info
+			padding: 0 5%
+			@media (max-width: 991px)
+				padding: 0 25px
+			@media (max-width: 769px)
+				padding: 0
+		.date
+			color: #8f8f8f
+			margin-bottom: 20px
+			line-height: 1.1em
+			font-size: 14px
+			@media (max-width: 769px)
+				margin-bottom: 10px
+			.icon
+				width: 18px
+				vertical-align: middle
+				img
+					max-width: 100%
+					margin-right: 10px
+					font-size: 14px
+		.title
+			text-decoration: none
+			color: #292929
+			display: inline-block
+			margin-bottom: 25px
+			transition: 0.2s
+			@media (max-width: 991px)
+				margin-bottom: 10px
+			// &:hover
+			// 	opacity: 0.8
+		a.title 
+			transition: 0.2s
+			&:hover
+				color: #808080
+		.btn-type-six
+			margin-top: 25px
+		.picture
+			position: relative
+			overflow: hidden
+			flex: 0 0 55%
+			max-width: 55%
+			@media (max-width: 769px)
+				flex: 0 0 100%
+				max-width: 100%
+				margin-bottom: 30px
+		.image 
+			padding-bottom: 66%
+			position: relative
+			display: block
+			overflow: hidden
+		a.image
+			.bg 
+				transition: 0.8s
+			&:hover
+				.bg 
+					transform: scale(1.06)
+		.video 
+			padding-bottom: 66%
+			position: relative
+			overflow: hidden
+			cursor: pointer
+			.bg
+				transition: 0.8s
+				transform: scale(1.001)
+				&:after
+					background-color: rgba(1, 1, 1, 0.35)
+			&:hover
+				.bg
+					transform: scale(1.1)
+				.leftSide::before
+					transition: 0.4s
+					transition-delay: 0.3s
+					clip: rect(0, 80px, 30px, 0)
+				.rightSide::before
+					transition: 0.4s
+					clip: rect(0, 80px, 30px, 0)
+		&.reverse
+			&::before
+				left: 0
+			.picture
+				order: 3
+				@media (max-width: 769px)
+					order: 1
+			.info
+				order: 2
+.menu
+	&-title
+		display: none
+		color: #292929
+		text-transform: uppercase
+		font-weight: 500
+		letter-spacing: 1px
+		font-size: 14px
+		border: 1px solid rgba(1, 1, 1, 0.05)
+		padding: 8px 10px
+		background-color: #f6f6f6
+		.icon-arrow
+			position: absolute
+			right: 15px
+			top: 50%
+			transform: translateY(-50%)
+		@media (max-width: 769px)
+			display: block
+	&-list
+		padding: 25px 0
+		background-color: #f6f6f6
+		width: 100%
+		text-align: center
+		@media (max-width: 769px)
+			padding: 10px 0
+			position: absolute
+			top: 100%
+			left: 0
+			right: 0
+			z-index: 4
+			display: none
+		li 
+			display: inline-block
+			padding: 0 65px
+			position: relative
+			@media (max-width: 1568px)
+				padding: 0 35px
+			@media (max-width: 769px)
+				padding: 0
+				display: block
+			&::after
+				content: '\2022'
+				position: absolute
+				top: 50%
+				transform: translate(50%, -50%)
+				right: 0
+				color: #a4a4a4
+				@media (max-width: 769px)
+					display: none
+			&:last-of-type
+				&::after 
+					display: none
+			a 
+				color: #808080
+				text-transform: uppercase
+				font-weight: 500
+				letter-spacing: 1px
+				text-decoration: none
+				transition: 0.2s
+				font-size: 14px
+				@media (max-width: 769px)
+					display: block
+					padding: 5px
+				&:hover
+					color: #292929
+			&.active
+				a 
+					color: #292929
+	&-wrapper
+		width: 100%
+		margin-top: -20px
+		position: relative
+		@media (max-width: 769px)
+			margin-top: 15px
+		&.active
+			.menu-list
+				display: block
+.map
+	&-block
+		height: 570px
+		width: 100%
+		position: relative
+		@media (max-width: 1199px)
+			height: 400px
+	&-wrapper
+		position: relative
+	&-form
+		position: absolute
+		left: 20px
+		bottom: 20px
+		width: calc(100% - 40px)
+		max-width: 380px
+		input
+			background-color: #353535
+			height: 50px
+			width: 100%
+			color: #ffffff
+			font-size: 16px
+			padding: 0 18px
+			&::placeholder
+				color: #ffffff
+				font-size: 16px
+				letter-spacing: 0.8px
+			&:focus
+				outline: 2px solid #6a6a6a
+
+.info-box 
+	background-color: #000 
+	box-shadow: 0 1px 5px rgba(0,0,0,.15) 
+	text-align: center 
+	padding: 15px 30px 
+	h5
+		color: #fff 
+		font-size: 14px 
+		line-height: 22px 
+		margin-bottom: 5px 
+	p 
+		font-size: 13px 
+		line-height: 22px 
+		color: rgba(255,255,255,.7)
+.contacts
+	&-form
+		background-color: #f6f6f6
+		padding: 60px 8% 75px 8%
+		@media (max-width: 991px)
+			margin-top: 30px
+		@media (max-width: 769px)
+			padding: 30px 15px 40px 15px
+	&-info
+		margin-bottom: 45px
+		@media (max-width: 991px)
+			margin-bottom: 20px
+		.title
+			color: #292929
+			font-size: 22px
+			font-weight: 500 
+			margin-bottom: 5px
+			&::before
+				content: '\2022'
+				color: #646261
+				font-size: 16px
+				margin-right: 10px
+		span 
+			color: #808080
+			font-size: 18px
+		a 
+			font-size: 18px
+			color: #808080
+			transition: 0.2s
+			display: block
+			text-decoration: none
+			width: max-content
+			&:hover
+				color: #292929
+
+.blog-grid
+	.grid-sizer,
+	.grid-item
+		width: 33.33%
+		@media (max-width: 991px)
+			width: 50%
+		@media (max-width: 769px)
+			width: 100%
+.blog-grid
+	width: calc(100% + 30px)
+	padding-top: 30px
+	@media (max-width: 991px)
+		padding-top: 15px
+		width: calc(100% + 15px)
+	.grid-item
+		float: left
+		overflow: hidden
+		padding-bottom: 20%
+		width: calc(33.33% - 30px)
+		margin-bottom: 30px
+		@media (max-width: 991px)
+			width: calc(50% - 15px)
+			padding-bottom: 35%
+			margin-bottom: 15px
+		@media (max-width: 769px)
+			width: calc(100% - 15px)
+		&:nth-of-type(5n - 4)
+			width: calc(66.66% - 30px)
+			@media (max-width: 991px)
+				width: calc(100% - 15px)
+		&:nth-of-type(5n - 3)
+			padding-bottom: 35%
+		&:nth-of-type(5n - 2)
+			padding-bottom: 35%
+		&:nth-of-type(5n - 1)
+			padding-bottom: 35%
+		&:nth-of-type(5n)
+			padding-bottom: 20%
+			@media (max-width: 991px)
+				padding-bottom: 35%
+		.title
+			padding: 30px
+			color: #ffffff
+			position: absolute
+			bottom: 0
+			left: 0
+			max-width: 100%
+			max-height: 100%
+			@media (max-width: 991px)
+				padding: 15px
+		.bg 
+			transition: 0.8s
+			&::after
+				background-color: rgba(1,1,1,0.2)
+		&:hover
+			.bg 
+				transform: scale(1.06)
+.content-block-n
+	.image-wrapper
+		overflow: hidden
+		padding-bottom: 60%
+		position: relative
+.privacy-policy
+	.title
+		font-size: 56px
+		@media (max-width: 991px)
+			font-size: 38px
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* CROSSBROWSE */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.ie
+	.baner .play-video
+		margin-bottom: auto
+	.footer-bottom .social a
+		width: 16px
+	.btn
+		overflow: visible

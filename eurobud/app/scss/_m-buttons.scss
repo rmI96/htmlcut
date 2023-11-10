@@ -1,0 +1,756 @@
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* BUTTONS */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+@import "vars";
+.btn {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  background: none;
+  padding: 0;
+  vertical-align: bottom;
+  text-align: center;
+  transition: all .3s ease;
+}
+
+.btn-primary {
+  height: 58px;
+  line-height: 56px;
+  font-weight: 500;
+  font-size: .8125rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  padding: 0 26px 0 64px;
+  @media (min-width: 992px) {
+    &:hover {
+      padding: 0 45px;
+      .anim-border {
+        &:before {
+          width: calc(100% - 100px);
+        }
+        &:after {
+          height: 100%;
+        }
+      }
+    }
+  }
+  &:before {
+    position: absolute;
+    content: '';
+    top: -2px;
+    right: -2px;
+    height: 2px;
+    width: 100px;
+  }
+  &.white {
+    color: #FFFFFF;
+    border-right-color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
+    &:before {
+      background-color: #fff;
+    }
+    .anim-border {
+      &:before,
+      &:after {
+        background-color: #fff;
+      }
+    }
+  }
+  &.blue {
+    color: $color-blue;
+    border-right-color: $color-blue;
+    border-bottom-color: $color-blue;
+    &:before {
+      background-color: $color-blue;
+    }
+    .anim-border {
+      &:before,
+      &:after {
+        background-color: $color-blue;
+      }
+    }
+  }
+  .anim-border {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    &:before,
+    &:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      transition: all .3s ease;
+    }
+    &:before {
+      height: 2px;
+      width: 0;
+      @media (max-width: 767px) {
+        width: calc(100% - 100px);
+      }
+    }
+    &:after {
+      width: 2px;
+      height: 0;
+      @media (max-width: 767px) {
+        height: 100%;
+      }
+    }
+  }
+}
+
+.btn-secondary {
+  background-color: $color-blue;
+  border: 2px solid $color-blue;
+  padding: 19px 30px;
+  text-align: center;
+  font-size: 0.8125rem;
+  line-height: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.1em;
+  transition: $transition;
+}
+
+.btn-3 {
+  display: inline-block;
+  position: relative;
+  font-weight: 500;
+  font-size: .875rem;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  color: $color-blue;
+  text-transform: uppercase;
+  padding-right: 41px;
+  @media (min-width: 992px) {
+    &:hover {
+      .arrow {
+        width: 16px;
+      }
+    }
+  }
+  .arrow {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 1px;
+    width: 26px;
+    background: url("../img/arrow-right.svg") no-repeat right center;
+    background-size: 26px auto;
+    transition: width .2s ease-out;
+    &.white{
+      background: url("../img/arrow-right-white.svg") no-repeat right center;
+    }
+  }
+}
+
+.btn-4 {
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: 700;
+  font-size: .8125rem;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  background-color: $color-blue;
+  padding: 0 10px;
+  transition: all .2s ease;
+  @media (min-width: 992px) {
+    &:hover {
+      background-color: $color-dark-blue-2;
+    }
+  }
+}
+
+
+.btn-5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 50px;
+  background-color: #fff;
+  border: 1px solid $color-grey;
+  transition: all .2s ease;
+  @media (min-width: 992px) {
+    &:hover {
+      background-color: $color-blue;
+      border-color: $color-blue;
+      .icon {
+        svg{
+          fill: #fff;
+        }
+      }
+    }
+  }
+  .icon {
+    width: 26px;
+    line-height: 0;
+    svg{
+      transition: all .2s ease;
+      fill: $color-blue;
+    }
+  }
+}
+
+.compare-button{
+  .compare-inner{
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 13px;
+    color: $color-blue;
+    display: none;
+    transition: $transition; 
+    .icon-cm{
+      display: inline-block;
+      margin-right: 15px;
+      line-height: 0;
+      svg{
+        transition: $transition;
+        stroke: $color-blue;
+      }
+    }
+  }
+  &.compare{
+    border-color: #C1C1C1;
+    .compare-inner{
+      display: flex;
+    }
+  }
+}
+
+.btn-6 {
+  font-size: .8125rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #555555;
+  cursor: pointer;
+  transition: all .2s ease;
+  @media (min-width: 992px) {
+    &:hover {
+      color: $color-blue;
+    }
+  }
+}
+
+.btn-7 {
+  display: inline-block;
+  position: relative;
+  font-weight: 700;
+  font-size: 13px;
+  color: $color-blue;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  line-height: 1.4em;
+  &:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -2px;
+    height: 1px;
+    width: 0;
+    background-color: $color-blue;
+    transition: width .3s ease;
+  }
+  @media (min-width: 992px) {
+    &:hover {
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.arrow-btn {
+  display: inline-block;
+  position: relative;
+  width: 70px;
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #fff;
+  box-sizing: border-box;
+  @media (min-width: 992px) {
+    &:hover {
+      &.left {
+        .arrow {
+          margin-left: 10px;
+          &:before {
+            width: 10px;
+          }
+        }
+      }
+      &.right {
+        .arrow {
+          margin-right: 10px;
+          &:before {
+            width: 10px;
+          }
+        }
+      }
+    }
+  }
+  &.left {
+    .arrow {
+      background-image: url("../img/arrow-left.svg");
+      background-position: left center;
+      &:before {
+        right: 0;
+      }
+    }
+  }
+  &.right {
+    .arrow {
+      background-image: url("../img/arrow-right.svg");
+      background-position: right center;
+      &:before {
+        left: 0;
+      }
+    }
+  }
+  &.top {
+    @media (min-width: 992px) {
+      &:hover {
+        .arrow {
+          margin-top: 19px;
+          &:before {
+            height: 4px;
+          }
+        }
+      }
+    }
+    .arrow {
+      position: relative;
+      height: 20px;
+      width: 13px;
+      background-image: url("../img/arrow-top.svg");
+      background-position: center;
+      background-size: 13px auto;
+      margin-top: 17px;
+      &:before {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 0;
+        width: 100%;
+        transition: all .2s linear;
+      }
+    }
+  }
+  .arrow {
+    display: inline-block;
+    position: relative;
+    width: 26px;
+    height: 38px;
+    margin-top: 1px;
+    background-repeat: no-repeat;
+    background-size: 27px auto;
+    transition: all .2s linear;
+    &:before {
+      position: absolute;
+      content: '';
+      top: 2px;
+      bottom: 2px;
+      width: 0;
+      background-color: #fff;
+      transition: width .2s linear;
+    }
+  }
+}
+
+.play-btn {
+  position: relative;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background-color: $color-blue;
+  transition: all .3s ease;
+  z-index: 1;
+  @media (min-width: 992px) {
+    &:hover {
+      background-color: #fff;
+      &:before {
+        border-color: transparent transparent transparent $color-blue;
+      }
+    }
+  }
+  &:before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    margin-top: -7px;
+    margin-left: -3px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 0 7px 9px;
+    border-color: transparent transparent transparent #FFFFFF;
+    transition: all .3s ease;
+  }
+}
+
+.read-more {
+  display: inline-block;
+  position: relative;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 15px;
+  color: $color-blue;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding-right: 25px;
+  cursor: pointer;
+  @media (min-width: 992px) {
+    &:hover {
+      >* {
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    background: url("../img/chevron-down-2.svg") no-repeat center;
+    background-size: 100% auto;
+    transition: all .3s ease;
+  }
+  &.active {
+    &:after {
+      transform: rotate(-180deg);
+    }
+    .first {
+      display: none;
+    }
+    .second {
+      display: block;
+    }
+  }
+  >* {
+    position: relative;
+    &:before {
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: -5px;
+      height: 1px;
+      width: 0;
+      background-color: $color-blue;
+      transition: width .3s ease;
+    }
+  }
+  .second {
+    display: none;
+  }
+}
+
+.compare-btn{
+  display: block;
+  background-color: #BD2323;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  cursor: pointer;
+  transition: $transition; 
+  .number{
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    line-height: 17px;
+    text-align: center;
+    background-color: #fff;
+    font-weight: 500;
+    font-size: 10px;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+  }
+  .icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 0;
+    img{
+      max-width: 100%;
+    }
+  }
+  &.blue{
+    background-color: $color-blue;
+  }
+  .compare-list{
+    border: 1px solid #E1E1E1;
+    box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.04);
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: calc(100% + 5px);
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.28s;
+    a{
+      font-weight: 500;
+      color: $color-secondary;
+      font-size: 1rem;
+      display: block;
+      padding: 20px;
+      border-bottom: 1px solid #E6E6E6;
+      white-space: nowrap;
+      line-height: 1.4em;
+    }
+    li{
+      &:last-of-type{
+        a{
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.btn-profile-basket{
+  border: 2px solid $color-blue;
+  color: $color-blue;
+  font-weight: 500;
+  font-size: 0.875rem;
+  padding: 14px 40px;
+  .icon{
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    margin-right: 25px;
+    svg{
+      position: relative;
+      z-index: 2;
+      transition: $transition;
+      fill: $color-blue; 
+    }
+  }
+  .number{
+    position: absolute;
+    top: -4px;
+    right: -18px;
+    background-color: #F6F6F6;
+    color: #585858;
+    border-radius: 50%;
+    width: 21px;
+    height: 21px;
+    line-height: 21px;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+  span{
+    vertical-align: middle;
+  }
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-close {
+  flex-shrink: 0;
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color .2s ease;
+  &:before {
+    content: "\02715";
+    color: #ffffff;
+    transition: color .2s ease;
+  }
+  &.style01 {
+    width: 56px;
+    height: 56px;
+    line-height: 56px;
+    background-color: $color-blue;
+    @media (min-width: 992px) {
+      &:hover {
+        background-color: $color-dark-blue-2;
+      }
+    }
+  }
+  &.style02 {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background-color: #3C3C3C;
+    @media (min-width: 992px) {
+      &:hover {
+        background-color: $color-blue;
+      }
+    }
+  }
+}
+
+.btn-toggle{
+  font-size: 0.8125rem;
+  font-weight: bold;
+  color: $color-blue;
+  transition: $transition;
+  .second{
+    display: none;
+  }
+  span{
+    vertical-align: middle;
+  }
+  .icon{
+    display: inline-block;
+    max-width: 28px;
+    margin-right: 20px;
+    img{
+      max-width: 100%;
+    }
+  }
+  &.added{
+    .first{
+      display: none;
+    }
+    .second{
+      display: block;
+    }
+  }
+}
+
+
+/*==========  Hover  ==========*/
+
+@media (min-width: 1200px){
+  .compare-btn:hover{
+    background-color: #ad2020;
+  }
+  .compare-btn.blue:hover{
+    background-color: #003775;
+  }
+  .compare-button.compare:hover{
+    border-color: $color-blue;
+    .compare-inner{
+      background-color: $color-blue;
+      color: #fff;
+      .icon-cm svg{
+        stroke: #fff;
+      }
+    }
+    
+  }
+  .btn-secondary:hover{
+    background-color: rgba(1,1,1,0);
+    color: $color-blue;
+  }
+  .btn-toggle:hover{
+    opacity: 0.8;
+  }
+  .btn-profile-basket:hover{
+    background-color: $color-blue;
+    color: #fff;
+    .icon{
+      svg{
+        fill: #fff;
+      }
+    }
+  }
+  .compare-btn .compare-list a:hover{
+    color: $color-blue;
+  }
+  .compare-btn:hover{
+    .compare-list{
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+    }
+  }
+}
+
+/*==========  MEDIA QUERIES  ==========*/
+
+@media (max-width: 1399px){
+}
+
+@media (max-width: 1199px){
+  .play-btn{
+    width: 55px;
+    height: 55px;
+  }
+  .compare-btn{
+    &.active{
+      .compare-list{
+        visibility: visible;
+        opacity: 1;
+        transform: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px){
+  .btn-close.style01 {
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      background-color: #034EA2;
+      font-size: 20px;
+  }
+  .btn-profile-basket{
+    padding: 10px 25px;
+  }
+  .compare-btn .compare-list a{
+    padding: 12px 15px;
+  }
+}
+
+@media (max-width: 767px){
+  .btn-primary{
+    height: 45px;
+    line-height: 41px;
+    padding: 0 20px;
+  }
+  .btn-secondary{
+    padding: 13px 15px;
+  }
+  .compare-btn{
+    width: 50px;
+    height: 50px;
+  }
+
+}
+
+@media (max-width: 575px){
+  .btn-3{
+    padding-right: 30px;
+    .arrow{
+      width: 20px;
+    }
+  }
+  .btn-4{
+    height: 45px;
+    line-height: 45px;
+  }
+  .btn-5{
+    height: 45px;
+  }
+}

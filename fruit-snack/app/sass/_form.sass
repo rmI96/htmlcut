@@ -1,0 +1,250 @@
+/*==========  Form Style  ==========*/
+
+input::-webkit-input-placeholder, 
+textarea::-webkit-input-placeholder
+	color: #222
+	opacity: 1
+input:-moz-placeholder,
+textarea:-moz-placeholder
+	color: #222
+	opacity: 1
+input::-moz-placeholder, 
+textarea::-moz-placeholder
+	color: #222
+	opacity: 1
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder
+	color: #222
+	opacity: 1
+input, textarea, select
+	border-radius: 0
+	background: none
+	border: none
+	margin: 0
+	width: 100%
+	padding: 0
+textarea
+	display: block
+	resize: none
+	overflow: auto
+select::-ms-expand
+	display: none
+.input
+	font-size: 15px
+	height: 51px
+	border: 1px solid #222
+	line-height: 51px
+	padding: 0 15px
+textarea.input
+	height: 80px
+	padding-top: 5px
+	padding-bottom: 5px
+	line-height: 18px
+.invalid
+	border-color: red
+	color: red
+
+.form  
+    input,
+    textarea,
+    input::placeholder,
+    textarea::placeholder
+        font-size: 16px
+    input:not([type=submit]):not([type=file])
+        background-color: #ffffff
+        height: 55px
+        padding: 0 20px
+        border-radius: 28px
+        margin-bottom: 15px
+        outline: none
+        border: 1px solid #ebebeb
+        transition: 0.2s
+        &::placeholder
+            color: #293202
+            font-size: 16px
+            font-weight: 300
+        &:focus
+            box-shadow: 0px 0px 0px 1px #ebebeb
+        &.error
+            border: 1px solid #f00000
+            color: #f00000
+            &::placeholder
+                color: #f00000
+    textarea
+        background-color: #ffffff
+        height: 120px
+        padding: 12px 20px
+        border-radius: 28px
+        margin-bottom: 15px
+        outline: none
+        border: 1px solid #ebebeb
+        transition: 0.2s
+        &::placeholder
+            color: #293202
+            font-size: 16px
+            font-weight: 300
+        &:focus
+            box-shadow: 0px 0px 0px 1px #ebebeb
+    &.row
+        margin: 0 -9px
+        > div
+            padding: 0 9px
+    .label
+        margin-bottom: 12px 
+        &.mr-top
+            margin-top: 25px
+.input-wrapper-material 
+    label
+        left: 15px
+        top: 50%
+        padding: 0 5px
+        background-color: #ffffff
+        transform: translateY(-50%)
+        font-size: 16px
+        line-height: 1.1em
+        color: #a3a3a3
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+        position: absolute
+        pointer-events: none
+        transition: 0.3s
+    &.focus
+        label
+            top: -8px
+            font-size: 13px
+
+form
+    .btn
+        position: relative
+        input[type=submit]
+            position: absolute
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+            opacity: 0
+            border: none
+            cursor: pointer
+            z-index: 1
+
+.checkbox-entry
+    display: flex
+    justify-content: space-between
+    width: 100%
+    cursor: pointer
+    margin: 0
+    transition: 0.3s
+    border-bottom: 1px solid #ebebeb
+    margin-bottom: 15px
+    &:last-of-type
+        border-bottom: 0
+    input
+        display: none
+    .inner
+        position: relative
+        line-height: 16px
+        padding-left: 30px
+        display: block
+        text-decoration: none
+        &:before
+            content: ""
+            position: absolute
+            left: 4px
+            top: 4px
+            width: 8px
+            height: 8px
+            background-color: #707810
+            display: none
+        &:after
+            content: ""
+            position: absolute
+            left: 0
+            top: 0
+            width: 16px
+            height: 16px
+            border: 1px #e1e1e1 solid
+    input:checked + .inner:before
+        display: block
+    input:checked + .inner:after
+        border: 1px #707810 solid
+    input[type=radio] + .inner:before
+        border-radius: 50%
+    input[type=radio] + .inner:after
+        border-radius: 50%
+        border: 2px solid #b1b1b1
+    input[type=radio]:checked + .inner:after
+        border: 2px solid #707810
+
+    .price
+        color: #505348
+        font-size: 16px
+        font-weight: 700
+        padding-left: 10px
+        white-space: nowrap
+    .inner
+        font-size: 16px
+        color: #293202
+        font-weight: 400
+        min-height: 18px
+        p
+            color: #505348
+            margin-top: 8px
+            font-weight: 300
+        .min
+            display: block
+            color: #505348
+            margin-top: 8px
+            font-weight: 300
+        .icon
+            display: inline-block
+            max-width: 58px
+            line-height: 0
+            img 
+                max-width: 100%
+    .icon-wrapper
+        display: flex
+        align-items: center
+        line-height: 0
+        .icon
+            display: inline-block
+            width: 28px
+            margin-left: 25px
+        img 
+            width: 100%
+
+.checkbox-entry-wrap
+    border: 1px solid #ebebeb
+    border-radius: 28px
+    background-color: #ffffff
+    margin-bottom: 15px
+    .checkbox-entry
+        padding: 14px 18px
+        margin-bottom: 0
+
+
+
+/*==========  Hover  ==========*/
+
+@media (min-width: 1200px)
+    .checkbox-entry:hover
+        opacity: 0.8
+
+/*==========  MEDIA QUERIES  ==========*/
+
+// @media (max-width: 1368px)
+
+@media (max-width: 1199px)
+    .form input:not([type=submit]):not([type=file])
+        height: 45px
+
+@media (max-width: 991px)
+    .form .label.mr-top
+        margin-top: 20px
+
+// @media (max-width: 768px)
+            
+// @media (max-width: 575px)
+
+        
+

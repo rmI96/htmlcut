@@ -1,0 +1,182 @@
+/*==========  Footer Style  ==========*/
+
+.footer{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding-top: 22px;
+	padding-bottom: 22px;
+	transition: $transition;
+	&-inner{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&-link{
+		padding-left: 35px;
+		position: relative;
+		font-size: 14px;
+		font-weight: 500;
+		color: $mainTextColor;
+		text-decoration: none;
+		.icon{
+			display: inline-block;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 24px;
+			line-height: 0;
+			svg{
+				max-width: 100%;
+				stroke: #B3B3B3;
+				transition: $transition;
+			}
+		}
+		&.active{
+			color: $mainColor;
+			.icon{
+				svg{
+					stroke: $mainColor;
+				}
+			}
+		}
+	}
+	.scroll-btn-wrap{
+		position: relative;
+	}
+	.scroll-btn{
+		display: block;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background-color: $mainColor;
+		border: 2px solid $mainColor;
+		position: relative;
+		transition: $transition background;
+		.icon{
+			display: inline-block;
+			width: 24px;
+			line-height: 0;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			transition: 0.8s transform;
+			svg{
+				max-width: 100%;
+				stroke: #fff;
+				transition: $transition;
+			}
+		}
+		&.prev{
+			visibility: hidden;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+	&.last-section{
+		.scroll-btn{
+			&.next{
+				visibility: hidden;
+				.icon{
+					transform: translate(-50%, -50%) rotate(180deg);
+				}
+			}
+			&.prev{
+				visibility: visible;
+				.icon{
+					transform: translate(-50%, -50%) rotate(180deg);
+				}
+			}
+		}
+	}
+}
+
+/*==========  Hover  ==========*/
+
+@media (min-width: 1200px){
+	.footer-link:hover{
+		color: $mainColor;
+		.icon{
+			svg{
+				stroke: $mainColor;
+			}
+		}
+	}
+	.footer .scroll-btn:hover{
+		background-color: #fff;
+		.icon{
+			svg{
+				stroke: $mainColor;
+			}
+		}
+	}
+}
+
+/*==========  MEDIA QUERIES  ==========*/
+@media (max-width: 1600px){
+	.footer{
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}	
+}
+
+
+@media (max-width: 1368px){
+	.footer-link{
+		font-size: 13px;
+	}
+}
+
+@media (max-width: 1199px){
+	.footer{
+		position: static;
+		padding-top: 0;
+		padding-bottom: 20px;
+		.scroll-btn-wrap{
+			display: none;
+		}
+	}
+}
+
+@media (max-height: 599px){
+	.footer{
+		position: static;
+		padding-top: 0;
+		padding-bottom: 20px;
+		.scroll-btn-wrap{
+			display: none;
+		}
+	}	
+}
+
+// @media (max-width: 991px){}
+
+@media (max-width: 768px){
+	
+	.footer-link{
+		padding-left: 32px;
+		font-size: 15px;
+		display: block;
+		width: max-content;
+		margin: 0 auto 12px auto;
+		.icon{
+			width: 20px;
+		}
+	}
+}
+    
+@media (max-width: 575px){
+	.footer-inner{
+		flex-wrap: wrap;
+	}
+	.footer-link{
+		flex: 0 0 50%;
+	}
+}
+
+        
+

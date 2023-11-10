@@ -1,0 +1,364 @@
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* GLOBAL SETTINGS */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+html
+	height: 100%
+body
+	height: 100%
+	overflow: hidden
+
+#content-block
+	overflow: hidden
+	position: relative
+	background-repeat: repeat
+.overflow-hidden
+	overflow: hidden
+html.overflow-hidden body
+	overflow: hidden
+.swiper-slide:not(:first-child)
+	display: none
+
+/* spacers */
+.margin-header
+	height: 85px
+	@media (max-width: 1199px)
+		height: 65px
+.spacer-lg-10
+	height: 10px
+.spacer-lg-15
+	height: 15px
+.spacer-lg-20
+	height: 20px
+.spacer-lg-25
+	height: 25px
+.spacer-lg-30
+	height: 30px
+.spacer-lg-35
+	height: 35px
+.spacer-lg-40
+	height: 40px
+.spacer-lg-50
+	height: 50px
+.spacer-lg-60
+	height: 60px
+.spacer-lg-70
+	height: 70px
+.spacer-lg-80
+	height: 80px
+.spacer-lg-75
+	height: 75px
+.spacer-lg-120
+	height: 120px
+.spacer-lg-150
+	height: 150px
+@media (max-width: 1368px)
+	.spacer-bg-60
+		height: 60px
+	.spacer-bg-70
+		height: 70px
+@media (max-width: 1199px)
+	.spacer-md-60
+		height: 60px
+	.spacer-md-50
+		height: 50px
+	.spacer-md-40
+		height: 40px
+	.spacer-md-30
+		height: 30px
+	.spacer-md-10
+		height: 10px
+	.spacer-md-0
+		height: 0px
+		display: none
+@media (max-width: 991px)
+	.spacer-sm-60
+		height: 60px
+	.spacer-sm-50
+		height: 50px
+	.spacer-sm-40
+		height: 40px
+	.spacer-sm-30
+		height: 30px
+	.spacer-sm-20
+		height: 20px
+	.spacer-sm-15
+		height: 15px
+	.spacer-sm-10
+		height: 10px
+	.spacer-sm-0
+		height: 0px
+@media (max-width: 767px)
+	.spacer-xs-30
+		height: 30px
+	.spacer-xs-15
+		height: 15px
+	.spacer-xs-10
+		height: 10px
+@media (max-width: 575px)
+	.spacer-ds-30
+		height: 30px
+	.spacer-ds-25
+		height: 25px
+	.spacer-ds-15
+		height: 15px
+	.spacer-ds-10
+		height: 10px
+	.spacer-ds-0
+		height: 0
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* ANIMATIONS */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.simple-animation
+	opacity: 0.6
+	transform: translate3d(0, 65px, 0)
+	transition: all 0.8s ease-out
+.animated .simple-animation, .simple-animation.animated
+	transform: none
+	opacity: 1
+
+.decor.left.animation
+	transform: translate(-100%, 20%)
+	transition: all 0.8s ease-out
+	transition-delay: 0.4s
+	&.animated
+		transform: none
+
+.decor.right.animation
+	transform: translate(100%, 20%)
+	transition: all 0.8s ease-out
+	transition-delay: 0.4s
+	&.animated
+		transform: none
+
+.bg-title.animation
+	span
+		display: inline-block
+		opacity: 0
+		transform: scale(0.9)
+		transition: all 0.7s ease-out
+		transition-delay: 0.2s
+	&.animated
+		span
+			opacity: 1
+			transform: none
+
+.popup-content
+	.decor:nth-child(1)
+		
+
+.delay-01
+	transition-delay: .2s
+.delay-02
+	transition-delay: .4s
+.delay-03
+	transition-delay: .6s
+.delay-04
+	transition-delay: .8s
+.delay-05
+	transition-delay: 1s
+.delay-06
+	transition-delay: 1.2s
+.delay-07
+	transition-delay: 1.4s
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* ELEMENTS */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+.video-bg:after,
+.bg:after
+	content: ''
+	display: block
+.video-bg, .video-bg:after, .wr-hd, .bg, .bg:after
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+.bg
+	background-size: cover
+	background-repeat: no-repeat
+.wr-hd
+	overflow: hidden
+
+.bg.parallax-bg
+	height: 125%
+	top: -10%
+
+.video-bg
+	video 
+		position: absolute
+		top: 50%
+		left: 50%
+		min-width: 100%
+		min-height: 100%
+		width: auto
+		height: auto
+		-webkit-transform: translate(-50%, -50%)
+		-ms-transform: translate(-50%, -50%)
+		transform: translate(-50%, -50%) scale(1.1)
+
+.icon-arrow
+	position: relative
+	display: inline-block
+	width: 7px
+	height: 7px
+	&::before,
+	&::after
+		content: ""
+		position: absolute
+		top: 0
+		width: 1px
+		height: 9px
+		background-color: #111111
+	&::before
+		left: 0
+		transform: rotate(-45deg)
+	&::after
+		right: 0
+		transform: rotate(45deg)
+
+
+
+#loader-wrapper
+	position: fixed
+	left: 0
+	top: -100px
+	right: 0
+	bottom: -100px
+	background: #ffffff
+	z-index: 2000
+	animation: loader 1s linear
+	animation-iteration-count: 1
+	animation-fill-mode: forwards
+
+@keyframes loader
+	0%
+		opacity: 1
+	70%
+		opacity: 1
+	99%
+		opacity: 0
+	100%
+		display: none
+		visibility: hidden
+		z-index: -10
+
+.container-cs
+	max-width: 1730px
+	padding: 0 15px
+	margin: 0 auto
+	&.lg 
+		max-width: 1260px
+.section
+	position: relative
+	&.mr-bottom
+		margin-bottom: 170px
+	&.pd-top
+		padding-top: 170px
+	&.pd-bottom
+		padding-bottom: 170px
+	&.pd-bottom-lg
+		padding-bottom: 150px
+	&.pd-bottom-md
+		padding-bottom: 100px
+	&.pd-top-md
+		padding-top: 100px
+
+.default-pg
+	padding-top: 80px
+	padding-bottom: 150px
+
+.separator
+	border-bottom: 1px solid #dcecf2
+
+.image-wrapper
+	img
+		max-width: 100%
+
+.height-wrapper-flex
+	.default-pg
+		padding-top: 70px
+		padding-bottom: 70px 
+
+.mr-bottom-bn
+	margin-bottom: 70px
+	
+@media (max-width: 1199px)
+	.el-hide-lg
+		display: none!important
+@media (min-width: 1200px)
+	.el-show-lg
+		display: none!important
+	
+/*==========  Hover  ==========*/
+
+// @media (min-width: 1200px)
+
+/*==========  MEDIA QUERIES  ==========*/
+
+@media (max-width: 1368px)
+	.section
+		&.pd-bottom
+			padding-bottom: 120px
+		&.pd-top 
+			padding-top: 120px
+
+@media (max-width: 1199px)
+	.section
+		&.mr-bottom
+			margin-bottom: 50px
+		&.pd-bottom
+			padding-bottom: 50px
+		&.pd-top
+			padding-top: 50px
+		&.pd-bottom-md
+			padding-bottom: 50px
+		&.pd-top-md
+			padding-top: 50px
+		&.pd-bottom-lg
+			padding-bottom: 50px
+	.default-pg
+		padding-top: 50px
+		padding-bottom: 60px
+	.height-wrapper-flex
+		.default-pg
+			padding-top: 50px
+			padding-bottom: 60px
+	.mr-bottom-bn
+		margin-bottom: 50px
+
+@media (max-width: 991px)
+	.bg.parallax-bg
+		height: auto
+		top: 0
+		transform: none!important
+
+// @media (max-width: 768px)
+    
+@media (max-width: 575px)
+	.section
+		&.pd-bottom
+			padding-bottom: 40px
+		&.pd-bottom-md
+			padding-bottom: 40px
+		&.pd-top-md
+			padding-top: 40px
+		&.pd-bottom-lg
+			padding-bottom: 40px
+	.default-pg
+		padding-top: 40px
+		padding-bottom: 40px
+
+	.height-wrapper-flex
+		.default-pg
+			padding-top: 40px
+			padding-bottom: 40px 
+
+	.mr-bottom-bn
+		margin-bottom: 30px
+
+

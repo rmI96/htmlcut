@@ -1,0 +1,196 @@
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* Checkout */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+.checkout-inner{
+    margin-top: 25px;
+    .title{
+        margin-bottom: 15px;
+        &.mr-top{
+            margin-top: 35px;
+        }
+        &.mr-top-m{
+            margin-top: 15px;
+        }
+    }
+
+    .input{
+        margin-bottom: 20px;
+    }
+
+    .checkbox-entry{
+        margin-right: 40px;
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+}
+
+.checkout-product{
+    padding: 25px 0;
+    border-top: 1px solid $color-borders;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    .image{
+        width: 120px;
+        height: 120px;
+        flex: 0 0 120px;
+        border: 1px solid $color-borders;
+        position: relative;
+        img{
+            max-width: 80%;
+            max-height: 80%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%)
+        }
+    }
+    .info-wrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 20px;
+        flex: auto;
+    }
+    .info{
+        padding-right: 20px;
+        flex: auto;
+        p{
+           font-size: 14px;
+           color: $color-default; 
+        }
+    }
+    .name{
+        display: inline-block;
+        font-size: 16px;
+        color: $color-primary;
+        margin-bottom: 5px;
+        line-height: 1.4em;
+    }
+    .price{
+        font-size: 16px;
+        color: $color-secondary;
+        margin-left: 15px;
+        min-width: 120px;
+        text-align: right;
+        flex: 0 0 auto;
+        span{
+            font-size: 0.8em;
+        }
+    }
+}
+
+.checkout{
+    &-informer{
+        background-color: $bg-grey;
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .price{
+            color: $color-secondary;
+            font-size: 20px;
+            margin-right: 15px;
+            span{
+                font-size: 0.8em;
+            }
+        }
+    }  
+    &-q-wrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .text-sm{
+            font-weight: 400;
+            color: $color-default;
+        }
+        .qvi{
+            display: inline-block;
+            margin-left: 5px;
+        }
+    }
+
+}
+
+
+
+@media (min-width: 992px) {
+    html:not(.touch-screen) {
+  
+    .checkout-product .image:hover{
+        box-shadow: inset 0px 0px 0px 1px #EBEBEB;
+    }
+    .checkout-product .name:hover{
+        color: $color-secondary;
+    }
+  
+    }
+  }
+@media (max-width: 1199px){
+    .checkout-q-wrap{
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px){
+    .checkout-inner{
+        .title{
+            margin-bottom: 10px;
+            &.mr-top-m{
+                margin-top: 10px;
+            }
+        }
+        .input{
+            margin-bottom: 15px;
+        }
+        .checkbox-entry{
+            margin-right: 20px;
+            margin-bottom: 15px;
+        }
+    }
+    .checkout-product{
+        padding: 20px 0;
+        .image{
+            width: 100px;
+        }
+        .info-wrap{
+            flex-wrap: wrap;
+            padding-left: 15px;
+        }
+        .info{
+            padding-right: 0;
+            margin-bottom: 15px;
+            flex: 0 0 100%;
+        }
+    }
+    .checkout-informer{
+        padding: 15px;
+    }
+}
+
+@media (max-width: 575px){
+    .checkout-product .price {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 10px;
+        text-align: left;
+    }
+    .checkout-informer{
+        flex-wrap: wrap;
+        .content{
+            flex: 0 0 100%;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .price{
+                margin-right: 0;
+            }
+        }
+        .btn{
+            width: 100%;
+            justify-content: center;
+        }
+    }
+}

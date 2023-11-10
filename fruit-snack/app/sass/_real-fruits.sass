@@ -1,0 +1,173 @@
+/*==========  Real fruits Style  ==========*/
+
+.real-fruits
+    &-sc 
+        .swiper-pagination
+            display: none
+        .br-left
+            border-left: 1px solid #e9e9e9
+    &-list
+        li 
+            margin-bottom: 40px
+            font-size: 14px
+            line-height: 1.4em
+            text-transform: uppercase 
+            font-weight: 500 
+            letter-spacing: 0.07em
+            text-decoration: none
+            color: #505348
+            position: relative
+            padding: 5px 5px 5px 45px
+            transition: all .34s ease-out
+            cursor: pointer
+            &:last-of-type
+                margin-bottom: 0
+        .icon
+            display: inline-block
+            width: 28px
+            line-height: 0
+            fill: #505348
+            text-align: center 
+            position: absolute
+            top: 50%
+            left: 0
+            transform: translateY(-50%)
+            transition: all .34s ease-out
+            svg 
+                max-width: 100%
+        li
+            &.active
+                color: $mainColor
+                .icon
+                    fill: $mainColor
+    &-content
+        display: flex
+        align-items: flex-start
+        padding: 25px 0
+        .number
+            font-family: $decorFont
+            color: #ffffff
+            font-size: 22px
+            letter-spacing: 0.04em
+            font-weight: 300
+            display: inline-block
+            width: 40px
+            height: 40px
+            border-radius: 50%
+            text-align: center
+            line-height: 40px
+            background-image: linear-gradient(52deg, #91b428 0%, #4f981e 100%)
+            position: absolute
+            left: 0
+            top: -6px
+        .content
+            padding-top: 90px
+            padding-bottom: 80px
+            flex: 0 0 45%
+        .text-wrap
+            padding-left: 60px
+            padding-right: 60px
+            position: relative
+        .image
+            > img 
+                border-radius: 20px
+                max-width: 100%
+            .img 
+                border-radius: 20px
+                max-width: 100%
+    &-button-wr
+        display: inline-flex
+        align-items: center
+        position: absolute
+        left: 0
+        bottom: 70px
+        &::before
+            content: ''
+            display: block
+            width: 30px
+            height: 1px
+            background-color: #e9e9e9
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+        .swiper-button-prev
+            margin-right: 80px
+        .swiper-button-prev,
+        .swiper-button-next
+            position: static
+            margin-top: 0
+
+// .real-fruits-content 
+//     .content
+//         transition: all 1s, opacity 2s
+//         transform: translateY(-20px)
+//         opacity: 0
+//     .image
+//         transition: all 1s, opacity 2s
+//         transform: translateY(20px)
+//         opacity: 0
+
+// .swiper-slide-active
+//     .content
+//         transform: none
+//         opacity: 1
+//     .image
+//         transform: none
+//         opacity: 1
+
+/*==========  Hover  ==========*/
+
+@media (min-width: 1200px)
+    .real-fruits-list li:hover
+        color: $mainColor
+        .icon
+            fill: $mainColor
+            
+
+/*==========  MEDIA QUERIES  ==========*/
+@media (max-width: 1368px)
+    .real-fruits-content .text-wrap
+        padding-right: 20px
+
+@media (max-width: 1199px)
+    .real-fruits-sc
+        .br-left
+            border-left: 0
+    .real-fruits-content
+        padding: 0
+        flex-wrap: wrap
+        .content
+            padding: 0
+            flex: 0 0 100%
+            order: 1
+        .image
+            flex: 0 0 100%
+            text-align: center
+            line-height: 0
+            margin-bottom: 30px
+        .text-wrap
+            padding-left: 40px
+            padding-right: 0
+        .number
+            font-size: 18px
+            width: 30px
+            height: 30px
+            line-height: 30px
+            top: -1px
+    .real-fruits-list
+        display: none
+    .real-fruits-sc 
+        .swiper-pagination
+            display: block
+        .real-fruits-button-wr
+            display: none
+
+// @media (max-width: 991px)
+
+// @media (max-width: 768px)
+            
+// @media (max-width: 575px)
+
+
+

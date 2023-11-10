@@ -1,0 +1,80 @@
+/*--------------------------------------------------------*/
+/* TABLE OF CONTENTS: */
+/*--------------------------------------------------------*/
+/*00 - FONTS IMPORT*/
+/*01 - LIBRARIES*/
+/*02 - GLOBAL SETTINGS*/
+/*03 - FOOTER*/
+/*04 - ELEMENTS*/
+/*05 - POPUPS*/
+/*06 - ADDITIONAL STYLES CONNECTED TO STYLE-TOP.CSS*/
+/*07 - OTHER*/
+
+//VARIABLES
+@import "c-variables-mixins";
+
+@import "s-fonts";
+@import "s-libraries";
+
+@import "s-global-settings";
+@import "s-footer";
+@import "s-swiper-custom";
+@import "s-form-elements";
+@import "s-elements";
+@import "s-autocomplete";
+@import "s-card";
+@import "s-popups";
+@import "s-categories";
+@import "s-seo-text";
+@import "s-products";
+@import "s-product-detail";
+@import "s-tabs";
+@import "s-checkout";
+@import "s-map";
+@import "s-contacts";
+@import "s-top-in-bottom";
+@import "s-baner";
+@import "s-simple";
+@import "s-warranty";
+@import "s-events";
+@import "s-profile";
+@import "s-decor";
+
+
+@media (max-width: 575px){
+	.el-hide-sm{
+		display: none!important
+	}
+}
+@media (min-width: 576px){
+	.el-show-sm{
+		display: none!important
+	}
+}
+
+body.ie{
+	.event-items{
+		width: 50%;
+	}
+	#content-block{
+		padding-top: 100px;
+	}
+	.categories-item{
+		flex: 25%;
+	}
+	.btn-seo{
+		padding-right: 5px;
+	}
+	.events-items .event_thumb{
+		flex: 0 0 28%;
+	}
+	.warranty-items .item{
+		flex: 0 0 21%;
+	}
+}
+body.safari{
+	.card_bottom{
+		flex: 0 0 auto;
+	}
+}
+

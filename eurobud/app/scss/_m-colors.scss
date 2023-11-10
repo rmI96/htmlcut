@@ -1,0 +1,34 @@
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* COLORS */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+@import "vars";
+.color-primary {
+  color: $color-primary;
+}
+.color-secondary {
+  color: $color-secondary;
+}
+.color-blue {
+  color: $color-blue;
+}
+.color-white {
+  color: #FFF;
+}
+
+.color-dark{
+	color: #000000;
+}
+
+.bg-grey-2 {
+  background-color: $color-grey-2;
+}
+
+.color-yelow{
+	color: #E3A400;
+}
+.color-green{
+	color: #168A59;
+}
+.color-red{
+	color: #D50000;
+}

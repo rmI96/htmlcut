@@ -1,0 +1,117 @@
+
+/*==========  BUTTONS  ==========*/
+
+.btn {
+	display: inline-block; 
+	vertical-align: bottom;
+	text-align: center;
+	position: relative;
+	cursor: pointer;
+	text-decoration: none;
+	border: none;
+	padding: 0;
+	background: none;
+	outline: none;
+}
+
+.btn-primary {
+	font-size: 14px;
+	font-weight: 500;
+	color: #fff;
+	padding: 13px 25px;
+	border-radius: 2px;
+	border: 2px solid $mainColor;
+	background-color: $mainColor;
+	transition: $transition;
+	span{
+		vertical-align: middle;
+	}
+	.icon{
+		display: inline-block;
+		width: 20px;
+		line-height: 0;
+		margin-right: 14px;
+		img{
+			max-width: 100%;
+		}
+		svg{
+			max-width: 100%;
+			fill: #fff;
+			stroke: #fff;
+			transition: $transition;
+		}
+	}
+}
+
+.btn-secondary {
+	font-size: 12px;
+}
+
+.btn-link {
+	font-weight: 700; 
+	color: #f6605c;
+}
+
+.btn-block {
+	display: block;
+	width: 100%;
+}
+
+.btn-close {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	line-height: 38px;
+	border-radius: 50%;
+	background-color: $mainColor;
+	border: 2px solid $mainColor;
+	position: relative;
+	transition: $transition;
+	color: #fff;
+	font-size: 22px;
+	font-weight: 600;
+	cursor: pointer;
+	outline: none;
+	&:before{
+		content: "\02715";
+		transition: $transition;
+	}
+}
+
+/*==========  Hover  ==========*/
+
+@media (min-width: 1200px){
+	.btn-primary:hover{
+		background: rgba(1,1,1,0);
+		color: $mainColor;
+		svg{
+			fill: $mainColor;
+			stroke: $mainColor;
+		}
+	}
+	.btn-close:hover{
+		background-color: #fff;
+		&:before{
+			color: $mainColor;
+		}
+	}
+}
+
+/*==========  MEDIA QUERIES  ==========*/
+
+// @media (max-width: 1368px)
+
+// @media (max-width: 1199px)
+
+@media (max-width: 991px){
+	.btn-primary{
+		padding: 10px 20px;
+		.icon{
+			margin-right: 8px;
+		}
+	}
+}
+
+// @media (max-width: 768px)
+            
+// @media (max-width: 575px)

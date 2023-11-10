@@ -1,0 +1,63 @@
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* GLOBAL SETTINGS */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+html {
+	height: auto;
+}
+
+body {
+	height: auto;
+	overflow: visible;
+}
+
+body ::selection {
+	color: #fff;
+	background: #000;
+}
+
+body ::-moz-selection {
+	color: #fff;
+	background: #000;
+}
+
+.swiper-slide:not(:first-child) {
+	display: block;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* OTHERS STYLES */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+@import 'variables';
+
+@import "popups";
+@import "swiper";
+@import "map";
+@import "form";
+@import 'transitions';
+@import 'elements';
+@import 'decor';
+@import "footer";
+
+.ie{
+	.wrapper-social a svg{
+		max-height: 16px;
+	}
+	.btn-primary .icon{
+		height: 20px;
+	}
+	.navigation-panel-next .icon svg, 
+	.navigation-panel-prev .icon svg{
+		max-height: 10px;
+	}
+	#content-block{
+		position: static;
+	}
+}
+
+.safari{
+	#content-block{
+		background-size: auto;
+	}
+}

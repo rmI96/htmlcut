@@ -1,0 +1,241 @@
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* TYPOGRAPHY */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+body{font-family: $font-default; color: $color-primary;}
+b, strong{font-weight: 700;}
+a{color: inherit;text-decoration: none;transition: $transition}
+a:hover{text-decoration: none;}
+
+ul, ol{list-style: none;}
+body, .text{font-size: 18px;line-height: 1.6em;}
+
+.text-xs{font-size: 12px; line-height: 1.5em}
+.text-sm{font-size: 14px; line-height: 20px;}
+.text-md{font-size: 16px; line-height: 1.5em;}
+
+.text-md{font-size: 16px;line-height: 1.6em;}
+.text {font-size: 18px;line-height: 1.6em;}
+.text-lg {font-size: 20px;line-height: 1.6em;}
+.text-xl{font-size: 24px; line-height: 1.7em;}
+
+.article {font-family: $font-text;}
+
+
+.article > *{margin-bottom: 20px;}
+
+.article img{
+  max-width: 100%; 
+  height: auto; 
+  display: block;
+  margin: 50px 0;
+}
+
+.article > iframe{
+  width: 100%;
+  height: 480px;
+  max-height: calc(56.3vw - 30px);
+  margin: 40px 0;
+}
+
+.article > *:first-child{margin-top: 0;}
+.article > *:last-child{margin-bottom: 0;}
+
+.article ol{counter-reset: number;}
+.article ol li{padding-left: 0;margin-bottom: 10px;}
+.article ol li:before{
+  counter-increment: number; 
+  content: counter(number) "."; 
+  margin-right: 8px;
+  color: $color-secondary;
+  font-weight: 600;
+  font-size: 0.750em;
+}
+.article ul li{padding-left: 20px;position: relative;margin-bottom: 10px;}
+.article ul li:before{
+  display: inline-block; 
+  position: absolute;
+  top: 0.7em;
+  left: 0;
+  width: 5px; 
+  height: 5px; 
+  background: $color-secondary; 
+  content: ""; 
+  vertical-align: middle; 
+  margin-right: 15px;}
+
+
+.article {
+  a {
+    color: $color-secondary;
+  }
+
+  b {
+    color: $color-primary;
+  }
+}
+
+.article{
+  table{
+    width: 100%;
+    border-spacing: 0;
+    th{
+      text-align: left;
+      background-color: $bg-grey;
+      padding: 15px 20px;
+    }
+    td{
+      padding: 15px 20px;
+    }
+    tr{
+      &:nth-child(odd){
+        td{
+          background-color: $bg-grey;
+        }
+      }
+    }
+  }
+}
+
+.article {
+  h1, h2, h3, h4, h5, h6{
+    font-family: $font-default;
+  }
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  //font-family: $font-text;
+  color: $color-primary;
+
+  b {
+    font-weight: 600;
+  }
+}
+
+h1, h2,  h3,  h4,   h5,  h6{
+  font-weight: 600
+}
+
+h1, .h1{font-size: 52px; line-height: 1.3em;}
+h2, .h2{font-size: 38px; line-height: 1.3em;}
+h3, .h3{font-size: 30px; line-height: 1.2em;}
+h4, .h4{font-size: 26px; line-height: 1.2em;}
+h5, .h5{font-size: 20px; line-height: 1.3em;}
+h6, .h6{font-size: 14px; line-height: 1.3em;}
+
+.subtitle {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight: 700;
+}
+
+@media (min-width: 1200px) {
+  html:not(.touch-screen) {
+    .article {
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (max-width: 1600px), (max-height: 800px) {
+  h1, .h1{font-size: 42px;}
+  h2, .h2{font-size: 34px;}
+
+  .text-xl{font-size: 22px;}
+}
+
+@media (max-width: 1368px){
+  h1, .h1{font-size: 36px;}
+  h2, .h2{font-size: 30px;}
+  h3, .h3{font-size: 28px;}
+  h5, .h5{font-size: 18px;}
+  .text-lg{font-size: 18px;}
+  .text{font-size: 16px;}
+}
+
+@media (max-width: 991px){
+    .article img{
+      margin: 0 0 15px 0;
+    }
+
+  .article > iframe{
+    margin: 0 0 15px 0;
+  }
+
+  .article > *:first-child{margin-top: 0;}
+  .article > *:last-child{margin-bottom: 0;}
+}
+
+@media (max-width: 767px) {
+  h1, .h1{font-size: 26px;}
+  h2, .h2{font-size: 24px;}
+  h3, .h3{font-size: 22px;}
+  h4, .h4{font-size: 20px;}
+
+  .text-md{font-size: 15px;line-height: 1.6em;}
+  body, .text {font-size: 16px;}
+  .text-lg {font-size: 16px;}
+  .text-xl{font-size: 20px;}
+  .subtitle{
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 575px) {
+  .article > *{
+    margin-bottom: 15px;
+  }
+
+  .article ul li {
+    margin-bottom: 5px;
+  }
+}
+
+
+
+.font-default{font-family: $font-default;}
+.font-text{font-family: $font-text;}
+
+.text-truncate{white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+.text-left {text-align: left;}
+.text-center {text-align: center;}
+.text-right {text-align: right;}
+
+.w-light { font-weight: 300; }
+.w-regular { font-weight: 400; }
+.w-medium { font-weight: 500; }
+.w-semibold { font-weight: 600; }
+.w-bold { font-weight: 700; }
+
+@media (min-width: 0) {
+  .text-xs-left {text-align: left;}
+  .text-xs-center {text-align: center;}
+  .text-xs-right {text-align: right;}
+}
+@media (min-width: 576px) {
+  .text-sm-left {text-align: left;}
+  .text-sm-center {text-align: center;}
+  .text-sm-right {text-align: right;}
+}
+@media (min-width: 768px) {
+  .text-md-left {text-align: left;}
+  .text-md-center {text-align: center;}
+  .text-md-right {text-align: right;}
+}
+@media (min-width: 992px) {
+  .text-lg-left {text-align: left;}
+  .text-lg-center {text-align: center;}
+  .text-lg-right {text-align: right;}
+}
+@media (min-width: 1200px) {
+  .text-xl-left {text-align: left;}
+  .text-xl-center {text-align: center;}
+  .text-xl-right {text-align: right;}
+}

@@ -1,0 +1,254 @@
+/*==========  Simple Style  ==========*/
+
+.simple-section
+    padding: 0 0 150px 0
+    .swiper-entry
+        margin: 35px 0
+        .swiper-pagination
+            margin-top: 25px
+    .social-block
+        margin-top: 45px
+    .pagination-simple-post
+        margin-top: 65px
+.news-date
+    display: inline-block
+    border: 1px solid rgba(233,233,233,0.4)
+    border-radius: 5px
+    padding: 16px 30px
+    font-size: 14px
+    letter-spacing: 0.07em
+    line-height: 1.2em
+    color: #ffffff
+    font-weight: 600
+.breadcrumbs
+    li 
+        position: relative
+        display: inline-block
+        padding-right: 17px
+        padding-right: 30px
+    a
+        color: #dadada
+        font-size: 14px
+        letter-spacing: 0.07em
+        text-transform: uppercase
+        font-weight: 700
+        text-decoration: none
+        cursor: pointer
+        &:after
+            content: ""
+            position: absolute
+            top: 13px
+            right: 10px
+            width: 5px
+            height: 1px
+            background: #dadada
+            cursor: inherit
+            pointer-events: none
+            transform: skew(-20deg)
+    li
+        &:last-of-type
+            padding-right: 0
+            pointer-events: none
+            a  
+                color: #ffffff
+                &:after
+                    display: none
+
+.social-block
+    display: flex
+    align-items: center
+    .border
+        display: inline-block
+        position: absolute
+        width: calc(100% + 1px)
+        height: calc(100% + 1px)
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        background-image: linear-gradient(242deg, #91b428 0%, #3f8a0e 100%)
+        border-radius: 50%
+        &::before
+            content: ''
+            display: block
+            width: calc(100% - 4px)
+            height: calc(100% - 4px)
+            border-radius: 50%
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            background-color: #ffffff
+            z-index: 1
+    a
+        display: block
+        width: 45px
+        height: 45px
+        border-radius: 50%
+        position: relative
+        margin-right: 15px
+        &::before
+            content: ''
+            display: block
+            width: calc(100% + 2px)
+            height: calc(100% + 2px)
+            border-radius: 50%
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            transition: all .37s ease-out
+            background-image: linear-gradient(242deg, #91b428 0%, #3f8a0e 100%)
+            z-index: 1
+    svg
+        max-width: 18px
+        max-height: 18px
+        fill: #ffffff
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        transition: all .37s ease-out
+        z-index: 2
+    .title
+        font-size: 18px
+        color: #242815
+        font-weight: 700
+        margin-right: 20px
+
+.pagination-simple-post
+    display: flex
+    border: 1px solid  #e9e9e9
+    border-radius: 28px
+    overflow: hidden
+    a 
+        flex: 0 0 50%
+        padding: 25px 15px
+        background-color: #ffffff
+        font-size: 14px
+        line-height: 1.2em
+        letter-spacing: 0.2em
+        text-transform: uppercase
+        text-decoration: none
+        text-align: center
+        color: #707810
+        font-weight: 800
+        .icon
+            width: 11px
+            img 
+                max-width: 100%
+        span
+            vertical-align: middle
+    .next
+        .icon
+           margin-left: 60px 
+    .prev
+        border-right: 1px solid  #e9e9e9
+        .icon
+            margin-right: 60px
+    
+.not-found-pg
+    padding: 60px 0
+    height: calc(100vh - 85px)
+    display: table-cell
+    vertical-align: middle
+    width: 9999px
+    .title-wrapper
+        margin-bottom: 80px
+    .bg-title
+        font-size: 350px
+        transform: translate(-50%, -50%)
+    .decor-title
+        font-size: 285px
+        color: #293202
+    .title
+        margin-bottom: 20px
+    .text
+        margin-bottom: 30px
+
+.seo-text-sc
+    .wrapper-hidden
+        padding-top: 20px
+    .wr-btn-show
+        margin-top: 25px
+
+.height-wrapper-flex
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    min-height: 100vh
+
+/*==========  Hover  ==========*/
+
+@media (min-width: 1200px)
+    .breadcrumbs a:hover
+        color: #ffffff
+    .social-block
+        a:hover
+            &::before
+                width: 0
+                height: 0
+            svg 
+                fill: #3f8a0e
+    .pagination-simple-post a:hover
+        background-color: #e9e9e9
+
+/*==========  MEDIA QUERIES  ==========*/
+@media (max-width: 1368px)
+    .not-found-pg
+        .title-wrapper
+            margin-bottom: 50px
+        .decor-title
+            font-size: 200px
+        .bg-title
+            font-size: 250px
+        .title
+            margin-bottom: 10px
+
+@media (max-width: 1199px)
+    .not-found-pg
+        height: calc(100vh - 65px)
+    .news-date
+        padding: 10px 20px
+    .breadcrumbs
+        display: none
+    .banner 
+        .news-date
+            margin-bottom: 15px
+        .baner-scroll
+            display: none
+    .simple-section
+        padding-bottom: 60px
+    .simple-section 
+        .social-block
+            margin-top: 30px
+
+// @media (max-width: 991px)
+
+@media (max-width: 768px)
+    .not-found-pg 
+        .decor-title
+            font-size: 160px
+        .title-wrapper
+            margin-bottom: 30px
+    .simple-section .pagination-simple-post
+        display: none
+            
+@media (max-width: 575px)
+    .seo-text-sc 
+        .wrapper-hidden
+            padding-top: 15px
+        .wr-btn-show
+            margin-top: 15px
+    .simple-section
+        padding-bottom: 30px
+        .swiper-entry 
+            margin: 30px 0
+            .swiper-pagination
+                margin-top: 15px
+    .not-found-pg 
+        padding: 40px 0 90px 0
+        .title-wrapper
+            margin-bottom: 0
+
+
+

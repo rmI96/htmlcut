@@ -1,0 +1,369 @@
+/*==========  Checkbox Style  ==========*/
+
+.product-detail{
+  &-title{
+    margin-bottom: 30px;
+  }
+  &-info{
+    .btn-toggle{
+      margin-top: 15px;
+    }
+  }
+  &-filter{
+    display: flex;
+    margin-top: 35px;
+    align-items: center;
+    .title{
+      margin-right: 15px;
+      font-weight: 400;
+      color: #000000;
+    }
+    .item{
+      font-size: 14px;
+      color: $color-primary;
+      border: 1px solid $color-grey;
+      font-weight: 400;
+      padding: 12px 15px;
+      margin-left: -1px;
+      line-height: 1.2em;
+      cursor: pointer;
+      position: relative;
+      min-width: 70px;
+      text-align: center;
+      transition: $transition; 
+      &.active{
+        border-color: $color-blue;
+        box-shadow: inset 0 0 0 1px $color-blue;
+        color: $color-blue;
+        z-index: 2;
+      }   
+    }
+
+  }
+  &-color{
+      display: flex;
+      margin-top: 30px;
+      .title{
+        margin-right: 15px;
+        font-weight: 400;
+        color: #000000;
+        min-width: 140px;
+      }
+      .wrap-item{
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .item-color{
+        display: inline-block;
+        flex: 0 0 50px;
+        width: 50px;
+        height: 38px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        outline: 2px solid rgba(1,1,1,0);
+        outline-offset: 2px;
+        transition: $transition;
+        &.active{
+          outline-color: $color-blue;
+        }
+    }
+  }
+  &-color-sw{
+    display: none;
+        background: #FCFCFC;
+    padding-bottom: 30px;
+    &.active{
+      display: block;
+    }
+  }
+  &-price{
+    font-size: 1.25rem;
+    margin-top:  35px;
+    margin-bottom: 35px;
+  }
+  &-image{
+    &-sn{
+      padding-bottom: 80%;
+      position: relative;
+      img{
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  &-tabs{
+    .mr-bt-sm{
+      margin-bottom: 30px;
+    }
+    .text-mr{
+      margin-bottom: 10px;
+    }
+  }
+  &-title-sw{
+    margin-right: 160px;
+  }
+}
+
+
+.order-popup{
+  .title-popup{
+    margin-bottom: 40px;
+  }
+  &-top{
+    background-color: $color-grey-2; 
+    border: 1px solid $color-grey;
+    padding: 30px 35px 40px 35px;
+    margin-bottom: 20px;
+  }
+  .product-detail-filter{
+    margin-top: 20px;
+    &:first-of-type{
+      margin-top: 25px;
+    }
+    .title{
+      min-width: 110px;
+    }
+    .input{
+      height: 45px;
+      max-width: 285px;
+      background-color: #fff;
+    }
+    .checkbox-entry{
+      margin-right: 30px;
+      span{
+        padding-left: 25px;
+        font-weight: 400;
+        color: $color-secondary;
+      }
+    }
+    .SumoSelect{
+      width: 100%;
+    }
+    .quantity-elements{
+      margin-right: 15px;
+    }
+  }
+  .product-detail-color{
+    margin-top: 20px;
+    .wrap-item{
+      margin-bottom: -10px;
+    }
+    .title{
+      min-width: 110px;
+    }
+  }
+  &-type-1{
+    .blockquote-1{
+      margin-bottom: 20px;
+    }
+  }
+  &-tel-block{
+    margin-top: 60px;
+    margin-bottom: 40px;
+    .title{
+      margin-bottom: 10px;
+    }
+    a{
+      font-size: 1.625rem;
+      color: $color-blue;
+      font-weight: 700;
+      margin-right: 15px;
+      &:last-of-type{
+        margin-right: 0;
+      }
+    }
+  }
+  &-type-2{
+    .label{
+      margin-bottom: 15px;
+    }
+    .form-group .btn{
+      margin-top: 40px;
+    }
+  }
+}
+
+
+.color-range-wrap{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+  .color-bl{
+    display: block;
+    width: 100%;
+    padding-bottom: 50%;
+    margin-bottom: 15px;
+  }
+  .item{
+    flex: 0 0 20%;
+    padding: 0 5px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+}
+
+/*==========  Hover  ==========*/
+
+@media (min-width: 1200px){
+  .product-detail-filter .item:hover{
+      border-color: $color-blue;
+      box-shadow: inset 0 0 0 1px $color-blue;
+      color: $color-blue;
+      z-index: 2;
+  }
+  .order-popup-tel-block a:hover{
+    opacity: 0.8;
+  }
+  .product-detail-color .item-color:hover{
+    outline-color: $color-blue;
+  }
+}
+
+/*==========  MEDIA QUERIES  ==========*/
+
+@media (max-width: 1368px){
+  .color-range-wrap{
+    .item{
+      margin-bottom: 10px;
+    }
+    .color-bl{
+      margin-bottom: 5px;
+    }
+  }
+}
+
+@media (max-width: 1199px){
+  .product-detail{
+    &-image{
+      margin-bottom: 30px;
+    }
+  }
+  .color-range-wrap .item{
+    flex: 0 0 33.33%;
+  }
+}
+
+@media (max-width: 991px){
+  .product-detail{
+    &-title{
+      margin-bottom: 15px;
+    }
+    &-filter{
+      margin-top: 20px;
+    }
+    &-price{
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    &-image{
+      margin-bottom: 15px;
+    }
+    &-color-sw{
+      padding-bottom: 10px;
+    }
+    &-color{
+      .title{
+        min-width: 110px;
+      }
+      .item-color{
+        flex: 0 0 40px;
+        width: 40px;
+        height: 28px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        outline-offset: 1px;
+      }
+    }
+  }
+
+  .order-popup{
+    .title-popup{
+      margin-bottom: 25px;
+    }
+    &-top{
+      padding: 15px 15px 20px 15px;
+    }
+    .product-detail-filter{
+      margin-top: 15px;
+
+      &:first-of-type{
+        margin-top: 20px;
+      }
+    }
+    &-tel-block{
+      margin-top: 25px;
+      margin-bottom: 25px;
+      a{
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 768px){
+  .product-detail-filter{
+    .item{
+      padding: 8px 10px;
+      min-width: 55px;
+    }
+  }
+  .order-popup-type-2{
+    .form-group .btn{
+      margin-top: 25px;
+    }
+  }
+}
+    
+@media (max-width: 575px){
+    .order-popup{
+      .product-detail-filter{
+        flex-wrap: wrap;
+        .title{
+          flex: 0 0 100%;
+          margin-bottom: 5px;
+          margin-right: 0;
+        }
+      }
+    }
+    .product-detail{
+      &-color{
+        margin-top: 20px;
+        flex-wrap: wrap;
+        .title{
+          flex: 0 0 100%;
+          margin-bottom: 8px;
+          margin-right: 0;
+        }
+      }
+    }
+
+    .product-detail-tabs .mr-bt-sm{
+      margin-bottom: 15px;
+    }
+}
+
+
+@media (max-width: 480px){
+  .order-popup{
+    &-tel-block{
+      a{
+        font-size: 1.2rem;
+        display: block;
+        margin-right: 0;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  
+}
+
+
+
+        
+

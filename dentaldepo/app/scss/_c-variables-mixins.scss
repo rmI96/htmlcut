@@ -1,0 +1,77 @@
+$color-default: #666;
+$color-primary: #1A1A1A;
+$color-dark: #000;
+$color-secondary: #F07E2D;
+$color-white: #FFF;
+$color-lighter: rgba(255,255,255,.6);
+$color-lighter2: rgba(255,255,255,.8);
+$color-lg-br: rgba(235, 235, 235, 0.2);
+
+
+$color-grey: #666;
+$color-grey2: #C2C2C2;
+
+$color-borders: #EBEBEB;
+
+$transition: .25s;
+
+$font-text: 'Roboto', Arial, Helvetica, sans-serif;
+$font-default: 'Exo 2', sans-serif;
+
+$bg-grey: #F7F7F7;
+
+@mixin centerAbsolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin beforeFull {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin background-gradient($start-color, $end-color, $orientation) {
+  background: $start-color;
+
+  @if $orientation == 'vertical' {
+    background: -webkit-linear-gradient(top, $start-color, $end-color);
+    background: linear-gradient(to bottom, $start-color, $end-color);
+  } @else if $orientation == 'horizontal' {
+    background: -webkit-linear-gradient(left, $start-color, $end-color);
+    background: linear-gradient(to right, $start-color, $end-color);
+  } @else {
+    background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+    background: radial-gradient(ellipse at center, $start-color, $end-color);
+  }
+}
+//Usage:
+//$start-color, $end-color, $orientation - vertical/horizontal/radial
+//.foo {
+//  @include background-gradient(red, black, 'vertical');
+//}
+//Output
+//.foo {
+//  background: -webkit-linear-gradient(top, red, black);
+//  background: linear-gradient(to bottom, red, black);
+//}
+
+@mixin font-face($font-name, $file-name, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src: url($file-name + '.eot');
+    src: url($file-name + '.eot?#iefix')  format('embedded-opentype'),
+    url($file-name + '.woff') format('woff'),
+    url($file-name + '.ttf')  format('truetype'),
+    url($file-name + '.svg##{$font-name}')  format('svg');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+//Usage
+//@include font-face('gotham', '/fonts/gotham');

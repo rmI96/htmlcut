@@ -1,0 +1,150 @@
+/*==========  Banner Style  ==========*/
+
+.main-baner
+    .bg 
+        width: 50%
+        left: auto
+        right: 0
+        z-index: 0
+        border-bottom-left-radius: 20px
+    &-inner
+        height: calc(100vh - 85px)
+        padding: 110px 0
+        display: table-cell
+        vertical-align: middle
+        width: 9999px
+        .bg-title
+            font-size: 200px
+        .title-wrapper
+            margin-bottom: 35px
+        .text
+            margin-bottom: 35px
+    &-left
+        position: relative
+        padding-right: 15%
+        .product-image
+            max-width: 510px
+            line-height: 0
+            position: absolute
+            top: 50%
+            right: 0
+            transform: translate(50%, -50%)
+            img 
+                max-width: 100%
+    .baner-scroll
+        position: absolute
+        left: 40px
+        bottom: 75px
+
+.baner-scroll
+    display: inline-block
+    font-size: 14px
+    letter-spacing: 0.2em
+    color: #293202
+    font-weight: 800
+    text-decoration: none
+    text-transform: uppercase
+    cursor: pointer
+    transition: all .34s ease-out
+    transform: rotate(-90deg)
+    span
+        vertical-align: middle
+    .icon
+        display: inline-block
+        width: 40px
+        line-height: 0
+        margin-right: 15px
+        transition: all .34s ease-out
+        img 
+            max-width: 100%
+
+.banner
+    position: relative
+    border-bottom-right-radius: 20px
+    border-bottom-left-radius: 20px
+    overflow: hidden
+    &-inner
+        height: 630px
+        padding: 50px 0
+        display: table-cell
+        vertical-align: middle
+        width: 99999px
+        position: relative
+    .bg 
+        &:after
+            background-color: rgba(1,1,1,0.3)
+        &.style-2
+            &:after
+                background-color: rgba(1,1,1,0.4)
+    .baner-scroll
+        position: absolute
+        left: -60px
+        bottom: 95px
+        color: #ffffff
+    .breadcrumbs
+        position: absolute
+        top: 20px
+        padding: 0 11%
+    .news-date
+        margin-bottom: 30px
+
+
+/*==========  Hover  ==========*/
+
+@media (min-width: 1200px)
+    .main-baner .baner-scroll:hover
+        color: $mainColor
+        .icon
+            transform: translateX(-5px)
+    .banner .baner-scroll:hover
+        .icon
+            transform: translateX(-5px)
+
+/*==========  MEDIA QUERIES  ==========*/
+@media (max-width: 1368px)
+    .main-baner-inner .bg-title
+        font-size: 140px
+    .main-baner-left .product-image
+        max-width: 360px
+    .banner-inner
+        height: 480px
+    .banner .baner-scroll
+        left: 20px
+
+
+@media (max-width: 1199px)
+    .main-baner .bg
+        width: 33.33%
+    .main-baner-inner
+        height: auto
+        padding: 140px 0
+    .main-baner .baner-scroll
+        display: none
+    .banner-inner
+        height: 50vw
+
+
+// @media (max-width: 991px)
+
+@media (max-width: 768px)
+    .main-baner-left
+        padding-right: 20%
+        .product-image
+            max-width: 330px
+            transform: translate(60%, -50%)
+            
+@media (max-width: 575px)
+    .main-baner-left
+        padding-right: 30%
+    .main-baner .bg
+        display: none
+    .main-baner-inner
+        padding: 110px 0 60px 0
+    .main-baner-inner 
+        .title-wrapper
+            margin-bottom: 15px
+        .text
+            margin-bottom: 15px
+
+
+

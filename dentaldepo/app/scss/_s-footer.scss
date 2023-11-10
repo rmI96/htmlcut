@@ -1,0 +1,149 @@
+/*--------------------------------------------------------*/
+/* FOOTER: */
+/*--------------------------------------------------------*/
+.footer { 
+
+  &_top {
+    background: #1A1A1A;
+    padding: 50px 0;
+  }
+
+  &_bottom {
+    background: #1F1F1F;
+    padding: 20px 0;
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-links {
+      text-align: center;
+      li {
+        display: inline-block;
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+    }
+  }
+
+  &_nav {
+    li {
+      margin-bottom: 5px;
+    }
+
+    &.text {
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+
+  &-block {
+    .simple-link {
+      margin-left: 30px;
+      font-size: 11px;
+      .arr{
+        margin-top: 3px;
+        margin-left: 10px;
+      }
+    }
+
+    b {
+      font-weight: 600;
+    }
+  }
+
+  .socials {
+    justify-content: flex-end;
+  }
+}
+
+.dev {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  white-space: nowrap;
+
+  .img {
+    height: 20px;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .footer {
+    .simple-link {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  html:not(.touch-screen) {
+    .footer {
+      a:hover {
+        color: $color-secondary;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .footer {
+    &-block {
+      margin-top: 20px;
+    }
+
+    &_bottom {
+      padding: 20px 0;
+
+      &-links {
+        margin-bottom: 15px;
+      }
+
+      .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .copyright {
+          margin: 15px 0;
+        }
+      }
+    }
+
+    .socials {
+      justify-content: flex-start;
+    }
+
+  }
+}
+
+@media (max-width: 575px) {
+  .footer {
+    &_top {
+      padding: 30px 0;
+    }
+
+    .socials {
+      margin-top: 30px;
+      justify-content: center;
+    }
+
+    &_bottom {
+      &-links {
+        li {
+          display: block;
+          margin: 0 0 15px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
